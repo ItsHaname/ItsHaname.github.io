@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>{{ page.title }} - {{ site.title }}</title>
+  <link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1 class="site-title"><a href="{{ '/' | relative_url }}">{{ site.title }}</a></h1>
+      <nav class="site-nav">
+        <a href="{{ '/' | relative_url }}" {% if page.nav == 'home' %}class="active"{% endif %}>Accueil</a>
+        <a href="{{ '/about.html' | relative_url }}" {% if page.nav == 'about' %}class="active"{% endif %}>About</a>
+        <a href="{{ '/fssm.html' | relative_url }}" {% if page.nav == 'fssm' %}class="active"{% endif %}>Path FSSM</a>
+        <a href="{{ '/tryhackme.html' | relative_url }}" {% if page.nav == 'tryhackme' %}class="active"{% endif %}>Path TryHackMe</a>
+        <a href="{{ '/my-lab.html' | relative_url }}" {% if page.nav == 'my-lab' %}class="active"{% endif %}>My Lab</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    {{ content }}
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© {{ site.time | date: "%Y" }} {{ site.title }} — Étudiante en cybersécurité, FSSM</p>
+    </div>
+  </footer>
+</body>
+</html>
