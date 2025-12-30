@@ -84,30 +84,12 @@ body {
   z-index: 1;
 }
 
-/* CYBERIA Header avec ligne circulaire */
+/* CYBERIA Header avec ligne horizontale */
 .cyberia-header {
   text-align: center;
   margin-bottom: 60px;
-  padding: 60px 20px;
+  padding: 40px 20px;
   position: relative;
-}
-
-.cyberia-circle {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 400px;
-  height: 400px;
-  border: 2px solid #ff00ff;
-  border-radius: 50%;
-  pointer-events: none;
-  z-index: -1;
-  box-shadow: 
-    0 0 20px #ff00ff,
-    0 0 40px #ff00ff,
-    inset 0 0 20px #ff00ff;
-  animation: pulse 3s infinite;
 }
 
 .cyberia-title {
@@ -120,6 +102,21 @@ body {
   text-transform: uppercase;
   animation: cyberiaGlitch 0.8s infinite;
   position: relative;
+}
+
+/* Ligne horizontale comme dans l'image */
+.cyberia-line {
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, 
+    transparent, 
+    #ff00ff, 
+    #00ffff, 
+    #ff00ff, 
+    transparent);
+  margin: 20px auto;
+  max-width: 500px;
+  box-shadow: 0 0 10px #ff00ff;
 }
 
 .cyberia-subtitle {
@@ -335,11 +332,6 @@ body {
 }
 
 @media (max-width: 768px) {
-  .cyberia-circle {
-    width: 300px;
-    height: 300px;
-  }
-  
   .cyberia-title {
     font-size: 3em;
     letter-spacing: 5px;
@@ -348,6 +340,10 @@ body {
   .cyberia-subtitle {
     font-size: 1.2em;
     letter-spacing: 2px;
+  }
+  
+  .cyberia-line {
+    max-width: 300px;
   }
   
   .neon-title {
@@ -462,11 +458,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
 <div class="container">
 
-  <!-- CYBERIA Header avec ligne circulaire -->
+  <!-- CYBERIA Header avec ligne horizontale -->
   <div class="cyberia-header">
-    <div class="cyberia-circle"></div>
-    
     <div class="cyberia-title">CYBERIA</div>
+    <div class="cyberia-line"></div>
     <div class="cyberia-subtitle">Cafe & Club</div>
   </div>
 
