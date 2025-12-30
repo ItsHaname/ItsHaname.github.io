@@ -48,7 +48,7 @@ nav: home
 }
 
 body {
-  background: #0a0e1a;
+  background: #0d1b2a;
   min-height: 100vh;
   margin: 0;
   position: relative;
