@@ -6,13 +6,13 @@ nav: home
 
 <style>
 @keyframes matrixRain {
-  0% { background-position: 0% 0%; }
-  100% { background-position: 0% 100%; }
+  0% { transform: translateY(-100vh); }
+  100% { transform: translateY(100vh); }
 }
 
-@keyframes float {
-  0%, 100% { transform: translateY(0) rotate(0deg); opacity: 0.1; }
-  50% { opacity: 0.3; }
+@keyframes floatUpDown {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
 }
 
 @keyframes gradientBG {
@@ -33,14 +33,7 @@ nav: home
 }
 
 body {
-  background: 
-    linear-gradient(135deg, #0a0a0f 0%, #1a1a2e 100%),
-    repeating-linear-gradient(0deg, 
-      transparent, 
-      transparent 2px, 
-      rgba(0, 170, 255, 0.03) 2px, 
-      rgba(0, 170, 255, 0.03) 4px);
-  animation: matrixRain 20s linear infinite;
+  background: #0a0a0f;
   min-height: 100vh;
   margin: 0;
   position: relative;
@@ -63,7 +56,11 @@ body {
   font-size: 16px;
   color: rgba(0, 170, 255, 0.15);
   opacity: 0;
-  animation: float linear infinite;
+  animation: matrixRain linear infinite;
+}
+
+.binary-digit.float {
+  animation: floatUpDown 3s ease-in-out infinite;
 }
 
 .container {
@@ -136,8 +133,8 @@ body {
 
 .hologram-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 25px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
   margin: 60px 0;
 }
 
@@ -153,7 +150,6 @@ body {
   text-decoration: none;
   color: inherit;
   display: block;
-  backdrop-filter: blur(10px);
 }
 
 .holo-card:before {
@@ -223,7 +219,6 @@ body {
   font-weight: 500;
   transition: all 0.3s;
   animation: pulse 2s infinite;
-  backdrop-filter: blur(5px);
 }
 
 .floating-badge:hover {
@@ -243,24 +238,10 @@ body {
   font-size: 0.9em;
 }
 
-.scan-line {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background: linear-gradient(90deg, 
-    transparent, 
-    rgba(138, 141, 255, 0.8), 
-    transparent);
-  animation: scan 4s linear infinite;
-  z-index: 1000;
-  pointer-events: none;
-}
-
-@keyframes scan {
-  0% { transform: translateY(-100%); }
-  100% { transform: translateY(100vh); }
+@media (max-width: 1024px) {
+  .hologram-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media (max-width: 768px) {
@@ -289,30 +270,29 @@ body {
 </style>
 
 <script>
-// Create binary rain background
+// Create binary rain background with moving 0 and 1
 document.addEventListener('DOMContentLoaded', function() {
   const binaryContainer = document.createElement('div');
   binaryContainer.className = 'binary-background';
   document.body.appendChild(binaryContainer);
   
-  // Create more binary digits for full background
-  for (let i = 0; i < 150; i++) {
+  // Create falling binary digits (matrix rain style)
+  for (let i = 0; i < 100; i++) {
     const digit = document.createElement('div');
     digit.className = 'binary-digit';
     digit.textContent = Math.random() > 0.5 ? '1' : '0';
     
     // Random position
     digit.style.left = Math.random() * 100 + 'vw';
-    digit.style.top = Math.random() * 100 + 'vh';
     
     // Random size
-    const size = Math.random() * 20 + 10;
+    const size = Math.random() * 18 + 12;
     digit.style.fontSize = size + 'px';
     
-    // Random animation
-    const duration = Math.random() * 20 + 10;
-    const delay = Math.random() * 10;
-    digit.style.animation = `float ${duration}s linear infinite`;
+    // Random animation speed
+    const duration = Math.random() * 10 + 5;
+    const delay = Math.random() * 5;
+    digit.style.animationDuration = duration + 's';
     digit.style.animationDelay = delay + 's';
     
     // Random opacity
@@ -330,10 +310,36 @@ document.addEventListener('DOMContentLoaded', function() {
     binaryContainer.appendChild(digit);
   }
   
-  // Create scan line
-  const scanLine = document.createElement('div');
-  scanLine.className = 'scan-line';
-  document.body.appendChild(scanLine);
+  // Create floating binary digits (up and down movement)
+  for (let i = 0; i < 30; i++) {
+    const floatDigit = document.createElement('div');
+    floatDigit.className = 'binary-digit float';
+    floatDigit.textContent = Math.random() > 0.5 ? '1' : '0';
+    
+    // Random position
+    floatDigit.style.left = Math.random() * 100 + 'vw';
+    floatDigit.style.top = Math.random() * 100 + 'vh';
+    
+    // Random size
+    const floatSize = Math.random() * 22 + 14;
+    floatDigit.style.fontSize = floatSize + 'px';
+    
+    // Random animation delay
+    floatDigit.style.animationDelay = Math.random() * 2 + 's';
+    
+    // Random opacity
+    floatDigit.style.opacity = Math.random() * 0.3 + 0.1;
+    
+    // Random color - brighter for floating ones
+    const floatColors = [
+      'rgba(0, 170, 255, 0.25)',
+      'rgba(138, 141, 255, 0.25)',
+      'rgba(255, 107, 157, 0.25)'
+    ];
+    floatDigit.style.color = floatColors[Math.floor(Math.random() * floatColors.length)];
+    
+    binaryContainer.appendChild(floatDigit);
+  }
   
   // Add subtle floating animation to cards
   const cards = document.querySelectorAll('.holo-card');
@@ -344,8 +350,6 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 </script>
-
-<div class="scan-line"></div>
 
 <div class="container">
 
