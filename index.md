@@ -40,10 +40,9 @@ nav: home
   100% { text-shadow: 2px 2px 0px #ff00ff, -2px -2px 0px #00ffff; }
 }
 
-@keyframes terminalFlicker {
+@keyframes blink {
   0%, 100% { opacity: 1; }
-  50% { opacity: 0.8; }
-  51% { opacity: 0.9; }
+  50% { opacity: 0; }
 }
 
 body {
@@ -52,7 +51,6 @@ body {
   margin: 0;
   position: relative;
   overflow-x: hidden;
-  font-family: 'Courier New', 'Consolas', monospace;
 }
 
 .binary-background {
@@ -86,66 +84,42 @@ body {
   z-index: 1;
 }
 
+/* CYBERIA Header - Simple and clean */
 .cyberia-header {
   text-align: center;
-  margin-bottom: 40px;
-  padding: 30px;
-  background: rgba(0, 0, 0, 0.7);
-  border: 2px solid #ff00ff;
-  border-radius: 10px;
+  margin-bottom: 60px;
+  padding: 40px 20px;
   position: relative;
-  overflow: hidden;
-  animation: terminalFlicker 3s infinite;
-}
-
-.cyberia-header::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: repeating-linear-gradient(
-    0deg,
-    rgba(0, 0, 0, 0.15) 0px,
-    rgba(0, 0, 0, 0.15) 1px,
-    transparent 1px,
-    transparent 2px
-  );
-  pointer-events: none;
 }
 
 .cyberia-title {
-  font-size: 4.5em;
-  color: #00ffff;
-  text-shadow: 0 0 10px #00ffff;
+  font-size: 5em;
+  color: #ff00ff;
+  text-shadow: 0 0 20px #ff00ff;
   margin: 0;
   font-weight: 900;
-  letter-spacing: 8px;
+  letter-spacing: 10px;
   text-transform: uppercase;
-  animation: cyberiaGlitch 0.5s infinite;
+  animation: cyberiaGlitch 0.8s infinite;
   position: relative;
 }
 
 .cyberia-subtitle {
   font-size: 1.8em;
-  color: #ff00ff;
+  color: #00ffff;
   margin: 10px 0 0 0;
-  text-shadow: 0 0 5px #ff00ff;
-  letter-spacing: 3px;
-  position: relative;
+  text-shadow: 0 0 10px #00ffff;
+  letter-spacing: 4px;
+  font-weight: 300;
 }
 
 .cyberia-subtitle::after {
   content: '_';
   animation: blink 1s infinite;
+  color: #ff00ff;
 }
 
-@keyframes blink {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0; }
-}
-
+/* Rest of the page - keeping original style */
 .cyber-header {
   text-align: center;
   margin-bottom: 60px;
@@ -222,10 +196,10 @@ body {
 }
 
 .holo-card {
-  background: rgba(0, 0, 0, 0.85);
-  border: 1px solid rgba(0, 255, 255, 0.3);
-  border-radius: 5px;
-  padding: 25px;
+  background: rgba(13, 17, 23, 0.85);
+  border: 1px solid rgba(138, 141, 255, 0.3);
+  border-radius: 15px;
+  padding: 30px;
   text-align: center;
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   position: relative;
@@ -233,44 +207,42 @@ body {
   text-decoration: none;
   color: inherit;
   display: block;
-  font-family: 'Courier New', monospace;
 }
 
-.holo-card::before {
+.holo-card:before {
   content: '';
   position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(0, 255, 255, 0.1), transparent);
-  transition: left 0.5s;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, #ff00ff, #00ffff, transparent);
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.4s;
 }
 
-.holo-card:hover::before {
-  left: 100%;
+.holo-card:hover:before {
+  opacity: 0.5;
 }
 
 .holo-card:hover {
-  transform: translateY(-5px);
-  border-color: #ff00ff;
-  box-shadow: 0 0 20px rgba(255, 0, 255, 0.3);
+  transform: translateY(-10px) scale(1.02);
+  border-color: #00ffff;
+  box-shadow: 0 15px 35px rgba(0, 255, 255, 0.2);
 }
 
 .holo-card h3 {
-  color: #00ffff;
+  color: #ff00ff;
   margin: 0 0 15px 0;
-  font-size: 1.4em;
+  font-size: 1.5em;
   font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 1px;
 }
 
 .holo-card p {
   color: #c9d1d9;
   margin: 0;
   line-height: 1.6;
-  font-size: 0.95em;
 }
 
 .welcome-text {
@@ -279,11 +251,10 @@ body {
   color: #8b949e;
   margin: 50px 0;
   padding: 30px;
-  background: rgba(0, 0, 0, 0.7);
-  border-radius: 5px;
+  background: rgba(13, 17, 23, 0.7);
+  border-radius: 15px;
   border-left: 4px solid #ff00ff;
   animation: slideIn 1s ease-out;
-  font-family: 'Courier New', monospace;
 }
 
 .mission-statement {
@@ -292,10 +263,9 @@ body {
   color: #00ffff;
   margin: 40px 0;
   padding: 20px;
-  background: rgba(0, 0, 0, 0.5);
-  border-radius: 5px;
+  background: rgba(13, 17, 23, 0.5);
+  border-radius: 10px;
   border: 1px solid rgba(0, 255, 255, 0.2);
-  font-family: 'Courier New', monospace;
 }
 
 .mission-statement strong {
@@ -313,26 +283,22 @@ body {
 .floating-badge {
   display: inline-block;
   padding: 12px 25px;
-  background: rgba(0, 0, 0, 0.8);
-  border: 1px solid #00ffff;
-  border-radius: 0;
+  background: rgba(22, 27, 34, 0.8);
+  border: 1px solid #30363d;
+  border-radius: 25px;
   color: #00ffff;
   text-decoration: none;
   font-weight: 500;
   transition: all 0.3s;
   animation: pulse 2s infinite;
-  font-family: 'Courier New', monospace;
-  text-transform: uppercase;
-  letter-spacing: 1px;
 }
 
 .floating-badge:hover {
   background: #ff00ff;
-  color: black;
+  color: white;
   transform: translateY(-3px);
-  box-shadow: 0 0 20px rgba(255, 0, 255, 0.5);
+  box-shadow: 0 10px 20px rgba(255, 0, 255, 0.3);
   animation: none;
-  border-color: #ff00ff;
 }
 
 .cyber-footer {
@@ -340,24 +306,8 @@ body {
   margin-top: 80px;
   padding-top: 30px;
   border-top: 1px solid rgba(255, 0, 255, 0.3);
-  color: #8b949e;
+  color: #586069;
   font-size: 0.9em;
-  font-family: 'Courier New', monospace;
-}
-
-.terminal-line {
-  color: #00ff00;
-  font-family: 'Courier New', monospace;
-  margin: 10px 0;
-  padding-left: 20px;
-  position: relative;
-}
-
-.terminal-line::before {
-  content: '>';
-  position: absolute;
-  left: 0;
-  color: #ff00ff;
 }
 
 @media (max-width: 1024px) {
@@ -368,12 +318,13 @@ body {
 
 @media (max-width: 768px) {
   .cyberia-title {
-    font-size: 2.8em;
-    letter-spacing: 4px;
+    font-size: 3em;
+    letter-spacing: 5px;
   }
   
   .cyberia-subtitle {
     font-size: 1.2em;
+    letter-spacing: 2px;
   }
   
   .neon-title {
@@ -412,7 +363,7 @@ document.addEventListener('DOMContentLoaded', function() {
   document.body.appendChild(binaryContainer);
   
   // Create falling binary digits (matrix rain style)
-  for (let i = 0; i < 120; i++) {
+  for (let i = 0; i < 100; i++) {
     const digit = document.createElement('div');
     digit.className = 'binary-digit';
     digit.textContent = Math.random() > 0.5 ? '1' : '0';
@@ -433,12 +384,12 @@ document.addEventListener('DOMContentLoaded', function() {
     // Random opacity
     digit.style.opacity = Math.random() * 0.2 + 0.05;
     
-    // Cyberia colors (magenta and cyan)
+    // Cyberia colors
     const colors = [
       'rgba(255, 0, 255, 0.15)',
       'rgba(0, 255, 255, 0.15)',
       'rgba(255, 107, 157, 0.15)',
-      'rgba(0, 255, 0, 0.15)'
+      'rgba(88, 166, 255, 0.15)'
     ];
     digit.style.color = colors[Math.floor(Math.random() * colors.length)];
     
@@ -446,7 +397,7 @@ document.addEventListener('DOMContentLoaded', function() {
   }
   
   // Create floating binary digits (up and down movement)
-  for (let i = 0; i < 40; i++) {
+  for (let i = 0; i < 30; i++) {
     const floatDigit = document.createElement('div');
     floatDigit.className = 'binary-digit float';
     floatDigit.textContent = Math.random() > 0.5 ? '1' : '0';
@@ -467,9 +418,9 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Cyberia colors - brighter for floating ones
     const floatColors = [
-      'rgba(255, 0, 255, 0.3)',
-      'rgba(0, 255, 255, 0.3)',
-      'rgba(255, 107, 157, 0.3)'
+      'rgba(255, 0, 255, 0.25)',
+      'rgba(0, 255, 255, 0.25)',
+      'rgba(255, 107, 157, 0.25)'
     ];
     floatDigit.style.color = floatColors[Math.floor(Math.random() * floatColors.length)];
     
@@ -483,42 +434,15 @@ document.addEventListener('DOMContentLoaded', function() {
     card.style.animation = 'slideIn 0.8s ease-out forwards';
     card.style.opacity = '0';
   });
-  
-  // Add some terminal-style text effects
-  const cyberiaHeader = document.querySelector('.cyberia-header');
-  const terminalText = [
-    "CONNECTION ESTABLISHED",
-    "WELCOME TO CYBERIA NEXUS",
-    "ACCESSING KNOWLEDGE DATABASE...",
-    "USER: HANAME | CLEARANCE: LEVEL 7",
-    "NAVIGATION SYSTEMS ONLINE"
-  ];
-  
-  let lineIndex = 0;
-  function addTerminalLine() {
-    if (lineIndex < terminalText.length) {
-      const line = document.createElement('div');
-      line.className = 'terminal-line';
-      line.textContent = terminalText[lineIndex];
-      line.style.opacity = '0';
-      line.style.animation = 'slideIn 0.5s forwards';
-      line.style.animationDelay = (lineIndex * 0.3) + 's';
-      cyberiaHeader.appendChild(line);
-      lineIndex++;
-      setTimeout(addTerminalLine, 300);
-    }
-  }
-  
-  setTimeout(addTerminalLine, 1000);
 });
 </script>
 
 <div class="container">
 
+  <!-- Simple CYBERIA Header -->
   <div class="cyberia-header">
     <div class="cyberia-title">CYBERIA</div>
     <div class="cyberia-subtitle">Cafe & Club</div>
-    <!-- Terminal lines will be added by JavaScript -->
   </div>
 
   <div class="cyber-header">
@@ -567,8 +491,7 @@ document.addEventListener('DOMContentLoaded', function() {
   </div>
 
   <div class="cyber-footer">
-    <div class="terminal-line">© 2025 CYBERIA NEXUS — HANAME — FSSM</div>
-    <div class="terminal-line">CONNECTION: ACTIVE — PROTOCOL: SSH-2.0</div>
+    © 2025 CYBERIA — HANAME — FSSM — Personal Knowledge Repository
   </div>
 
 </div>
