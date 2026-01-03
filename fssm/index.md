@@ -185,10 +185,17 @@ nav: fssm
 
 .modules-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   gap: 30px;
   margin: 60px 0;
   perspective: 1000px;
+}
+
+.modules-grid .module-card:nth-child(5) {
+  grid-column: 1 / -1;
+  max-width: 600px;
+  margin: 0 auto;
+  width: 100%;
 }
 
 .module-card {
@@ -261,6 +268,14 @@ nav: fssm
   display: inline-block;
   animation: float 3s ease-in-out infinite;
   filter: drop-shadow(0 0 15px currentColor);
+  background: linear-gradient(135deg, #3b82f6, #60a5fa);
+  width: 80px;
+  height: 80px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 30px rgba(59, 130, 246, 0.4);
 }
 
 .module-number {
@@ -377,14 +392,14 @@ nav: fssm
 </div>
 
 <h2 style="color: #60a5fa; text-align: center; margin: 60px 0 40px 0; font-size: 2.5em; text-shadow: 0 0 20px rgba(96, 165, 250, 0.5);">
-  📚 Modules S6
+  Modules S6
 </h2>
 
 <div class="modules-grid">
   
   <a href="/fssm/iot-analyse-connexion" class="module-card">
     <span class="module-number">M1</span>
-    <div class="module-icon">🌐</div>
+    <div class="module-icon"></div>
     <h3>IoT Analyse et Connexion</h3>
     <div class="module-status">
       <span class="status-dot"></span>
@@ -394,7 +409,7 @@ nav: fssm
 
   <a href="/fssm/parallelisme-programmation-reseaux" class="module-card">
     <span class="module-number">M2</span>
-    <div class="module-icon">⚡</div>
+    <div class="module-icon"></div>
     <h3>Parallélisme et Programmation Réseaux</h3>
     <div class="module-status">
       <span class="status-dot"></span>
@@ -404,7 +419,7 @@ nav: fssm
 
   <a href="/fssm/droit-digital" class="module-card">
     <span class="module-number">M3</span>
-    <div class="module-icon">⚖️</div>
+    <div class="module-icon"></div>
     <h3>Droit Digital</h3>
     <div class="module-status">
       <span class="status-dot"></span>
@@ -414,7 +429,7 @@ nav: fssm
 
   <a href="/fssm/gouvernance-securite" class="module-card">
     <span class="module-number">M4</span>
-    <div class="module-icon">🛡️</div>
+    <div class="module-icon"></div>
     <h3>Gouvernance de la Sécurité</h3>
     <div class="module-status">
       <span class="status-dot"></span>
@@ -424,7 +439,7 @@ nav: fssm
 
   <a href="/fssm/cryptographie-cybersecurite" class="module-card">
     <span class="module-number">M5</span>
-    <div class="module-icon">🔐</div>
+    <div class="module-icon"></div>
     <h3>Cryptographie et Cybersécurité</h3>
     <div class="module-status">
       <span class="status-dot"></span>
@@ -435,16 +450,16 @@ nav: fssm
 </div>
 
 <div class="coming-soon">
-  <h2>🚀 Notes & Projets</h2>
+  <h2>Notes & Projets</h2>
   <p>Le contenu détaillé de chaque module sera ajouté au fur et à mesure du semestre.</p>
   <p style="margin-top: 15px; color: #60a5fa;">Stay tuned for updates...</p>
 </div>
 
 <div style="text-align: center; margin-top: 80px; padding: 40px; background: linear-gradient(135deg, rgba(15, 23, 42, 0.8), rgba(0, 20, 40, 0.9)); border-radius: 20px; border: 2px solid #1e4d7b;">
   <p style="color: #94a3b8; font-size: 1.1em; line-height: 1.8;">
-    🎓 Année académique <span style="color: #60a5fa; font-weight: bold;">2024-2025</span><br>
-    📍 FSSM - Faculté des Sciences Semlalia, Marrakech<br>
-    💼 Spécialité: <span style="color: #3b82f6; font-weight: bold;">Cybersécurité & Ingénierie Réseau</span>
+    Année académique <span style="color: #60a5fa; font-weight: bold;">2024-2025</span><br>
+    FSSM - Faculté des Sciences Semlalia, Marrakech<br>
+    Spécialité: <span style="color: #3b82f6; font-weight: bold;">Cybersécurité & Ingénierie Réseau</span>
   </p>
 </div>
 
