@@ -436,32 +436,32 @@ document.addEventListener('DOMContentLoaded', function() {
     From academic notes to hands-on labs, this is my personal knowledge repository.</p>
   </div>
   <div class="hologram-grid">
-    <a href="/about/me.html" class="holo-card">
+    <a href="/about/me" class="holo-card">
       <h3>À PROPOS</h3>
       <p>Mon parcours, passions et motivation dans la cybersécurité</p>
     </a>
     
-    <a href="/fssm/index.html" class="holo-card">
+   <a href="/fssm/" class="holo-card">
       <h3>FSSM</h3>
       <p>Formation académique, projets et compétences acquises</p>
     </a>
     
-    <a href="/tryhackme/index.html" class="holo-card">
+   <a href="/tryhackme/" class="holo-card">
       <h3>TRYHACKME</h3>
       <p>Paths complétés, badges et write-ups de challenges</p>
     </a>
     
-    <a href="/my-lab/index.html" class="holo-card">
+  <a href="/my-lab/" class="holo-card">
       <h3>MON LAB</h3>
       <p>Environnement de test, machines virtuelles et expériences</p>
-    </a>
+   </a>
   </div>
   <div class="welcome-text">
     <p>Salut — je suis <strong style="color: #3b82f6;">Haname</strong>, étudiante en cybersécurité à la FSSM.<br>
     Bienvenue sur mon site où je partage mon parcours, mes parcours (paths) TryHackMe, la formation FSSM, et mes laboratoires personnels.</p>
   </div>
   <div class="badge-container">
-    <a href="/tryhackme/index.html" class="floating-badge">TRYHACKME</a>
+    <a href="/tryhackme/" class="floating-badge">TRYHACKME</a>
     <a href="https://github.com/ItsHaname" class="floating-badge" target="_blank">GITHUB</a>
     <a href="#" class="floating-badge">TWITTER</a>
     <a href="#" class="floating-badge">LINKEDIN</a>
