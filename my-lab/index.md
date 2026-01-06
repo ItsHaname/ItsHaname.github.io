@@ -306,7 +306,7 @@ body {
     <!-- Arch Linux -->
     <a href="/my-lab/archlinux" class="lab-card">
       <div class="lab-icon">
-        <img src="https://github.com/user-attachments/assets/bb2efbd2-dcce-4bdf-bf1b-7b5a8ecad9bd" alt="Arch Linux" style="width: 80px; height: 80px;">
+        <img src="https://raw.githubusercontent.com/user-attachments/assets/306bea0b-5089-4e15-ac97-b6d99e986cc4" alt="Arch Linux" style="width: 80px; height: 80px;">
       </div>
       <h3>Arch Linux</h3>
       <p>Machines virtuelles pour pentesting et développement d'outils</p>
@@ -315,7 +315,7 @@ body {
     <!-- VulHub -->
     <a href="/my-lab/vulhub_cve" class="lab-card">
       <div class="lab-icon">
-        <img src="https://github.com/user-attachments/assets/aab0a525-1694-4a66-9c20-9baca10e9675" alt="VulHub" style="width: 90px; height: 90px;">
+        <img src="https://raw.githubusercontent.com/user-attachments/assets/a2df6ec4-fda0-4c02-b9c2-05bb6e9b0384" alt="VulHub" style="width: 90px; height: 90px;">
       </div>
       <h3>VulHub CVE</h3>
       <p>Environnements Docker pour exploitation de CVE réels</p>
@@ -324,7 +324,7 @@ body {
     <!-- Other Labs -->
     <a href="/my-lab/other_lab" class="lab-card">
       <div class="lab-icon">
-        <img src="https://github.com/user-attachments/assets/f1b9a84f-ada5-4084-8fe0-ef0b2be83314" alt="Other Labs" style="width: 80px; height: 80px;">
+        <img src="https://raw.githubusercontent.com/user-attachments/assets/c5b86404-2ba7-423d-a218-e9e963d5420d" alt="Other Labs" style="width: 80px; height: 80px;">
       </div>
       <h3>Other Labs</h3>
       <p>Projets expérimentaux et environnements de test additionnels</p>
