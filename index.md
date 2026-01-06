@@ -460,6 +460,20 @@ document.addEventListener('DOMContentLoaded', function() {
     <p>Salut — je suis <strong style="color: #3b82f6;">Haname</strong>, étudiante en cybersécurité à la FSSM.<br>
     Bienvenue sur mon site où je partage mon parcours, mes parcours (paths) TryHackMe, la formation FSSM, et mes laboratoires personnels.</p>
   </div>
+  <!-- COMPTEUR SIMPLE -->
+<div style="text-align: center; margin: 30px 0;">
+  <div style="display: inline-block; background: rgba(15, 23, 42, 0.7); border: 1px solid #3b82f6; border-radius: 10px; padding: 15px 30px; box-shadow: 0 0 15px rgba(59, 130, 246, 0.3);">
+    <div style="color: #94a3b8; font-size: 0.9em; margin-bottom: 8px; letter-spacing: 2px;">👁️ VISITEURS</div>
+    <div style="color: #60a5fa; font-size: 2em; font-weight: 700; text-shadow: 0 0 10px #60a5fa;" id="visitorCount">0</div>
+  </div>
+</div>
+
+<script>
+let visits = parseInt(localStorage.getItem('cyberiaVisits') || '0');
+visits++;
+localStorage.setItem('cyberiaVisits', visits);
+document.getElementById('visitorCount').textContent = visits;
+</script>
   <div class="badge-container">
     <a href="/tryhackme/" class="floating-badge">TRYHACKME</a>
     <a href="https://github.com/ItsHaname" class="floating-badge" target="_blank">GITHUB</a>
