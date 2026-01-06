@@ -38,7 +38,7 @@ nav: about
     min-height: 100vh;
     margin: -60px -20px;
     padding: 60px 20px;
-    background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #1e3a8a 100%);
+    background: linear-gradient(135deg, #fef3f7 0%, #f0f4ff 50%, #e8f0fe 100%);
 }
 
 .particle-background {
@@ -57,7 +57,7 @@ nav: about
     font-size: 16px;
     opacity: 0;
     animation: floatParticle linear infinite;
-    color: rgba(196, 64, 122, 0.2);
+    color: rgba(236, 64, 122, 0.15);
 }
 
 .particle.floating {
@@ -70,7 +70,7 @@ nav: about
     padding: 60px 20px;
     position: relative;
     z-index: 1;
-    color: #e2e8f0;
+    color: #4a4a4a;
 }
 
 .about-header {
@@ -81,7 +81,7 @@ nav: about
 
 .about-header h1 {
     font-size: 3em;
-    background: linear-gradient(90deg, #c2185b, #3b82f6, #ec407a);
+    background: linear-gradient(90deg, #ec407a, #3b82f6, #f06292);
     background-size: 200% auto;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -94,14 +94,14 @@ nav: about
 
 .about-tagline {
     font-size: 1.2em;
-    color: #94a3b8;
+    color: #7986a3;
     font-weight: 300;
 }
 
 .divider {
     width: 150px;
     height: 2px;
-    background: linear-gradient(90deg, transparent, #c2185b, #3b82f6, #c2185b, transparent);
+    background: linear-gradient(90deg, transparent, #ec407a, #3b82f6, #ec407a, transparent);
     margin: 25px auto;
 }
 
@@ -126,11 +126,11 @@ nav: about
     height: 280px;
     border-radius: 50%;
     overflow: hidden;
-    border: 6px solid #c2185b;
+    border: 6px solid #ec407a;
     box-shadow: 
-        0 10px 40px rgba(194, 24, 91, 0.5),
-        0 0 0 12px rgba(59, 130, 246, 0.2);
-    background: #1e293b;
+        0 10px 40px rgba(236, 64, 122, 0.4),
+        0 0 0 12px rgba(59, 130, 246, 0.1);
+    background: #ffffff;
     transition: all 0.4s ease;
     flex-shrink: 0;
 }
@@ -138,8 +138,8 @@ nav: about
 .profile-image:hover {
     transform: scale(1.05);
     box-shadow: 
-        0 15px 50px rgba(194, 24, 91, 0.6),
-        0 0 0 15px rgba(59, 130, 246, 0.3);
+        0 15px 50px rgba(236, 64, 122, 0.5),
+        0 0 0 15px rgba(59, 130, 246, 0.2);
 }
 
 .profile-image img {
@@ -149,32 +149,32 @@ nav: about
 }
 
 .quick-info {
-    background: rgba(30, 41, 59, 0.8);
-    border: 2px solid rgba(194, 24, 91, 0.4);
+    background: rgba(255, 255, 255, 0.9);
+    border: 2px solid rgba(236, 64, 122, 0.3);
     border-radius: 15px;
     padding: 25px;
     flex: 1;
     text-align: left;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 5px 20px rgba(236, 64, 122, 0.15);
     transition: all 0.3s ease;
 }
 
 .quick-info:hover {
-    box-shadow: 0 12px 35px rgba(194, 24, 91, 0.3);
-    border-color: #c2185b;
+    box-shadow: 0 8px 30px rgba(236, 64, 122, 0.25);
+    border-color: #ec407a;
 }
 
 .quick-info h3 {
-    color: #c2185b;
+    color: #ec407a;
     font-size: 1.3em;
     margin-bottom: 20px;
     font-weight: 600;
-    border-bottom: 2px solid #c2185b;
+    border-bottom: 2px solid #ec407a;
     padding-bottom: 10px;
 }
 
 .quick-info p {
-    color: #cbd5e1;
+    color: #5a5a5a;
     font-size: 0.95em;
     line-height: 1.8;
     margin-bottom: 10px;
@@ -182,21 +182,21 @@ nav: about
 }
 
 .quick-info strong {
-    color: #60a5fa;
+    color: #3b82f6;
 }
 
 .about-section {
-    background: rgba(30, 41, 59, 0.7);
-    border: 2px solid rgba(194, 24, 91, 0.3);
+    background: rgba(255, 255, 255, 0.85);
+    border: 2px solid rgba(236, 64, 122, 0.2);
     border-radius: 20px;
     padding: 45px;
     margin-bottom: 50px;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 8px 30px rgba(236, 64, 122, 0.15);
     animation: fadeIn 1.4s ease-out;
 }
 
 .about-section h2 {
-    color: #c2185b;
+    color: #ec407a;
     font-size: 2.2em;
     margin-bottom: 25px;
     font-weight: 700;
@@ -211,23 +211,23 @@ nav: about
     left: 0;
     width: 60%;
     height: 3px;
-    background: linear-gradient(90deg, #c2185b, #3b82f6);
+    background: linear-gradient(90deg, #ec407a, #3b82f6);
 }
 
 .about-section p {
-    color: #cbd5e1;
+    color: #5a5a5a;
     line-height: 1.9;
     margin-bottom: 18px;
     font-size: 1.05em;
 }
 
 .highlight {
-    color: #60a5fa;
+    color: #3b82f6;
     font-weight: 600;
 }
 
 .section-title {
-    color: #c2185b;
+    color: #ec407a;
     font-size: 2em;
     margin: 60px 0 30px 0;
     font-weight: 700;
@@ -243,8 +243,8 @@ nav: about
 }
 
 .focus-card {
-    background: rgba(30, 41, 59, 0.7);
-    border: 2px solid rgba(194, 24, 91, 0.3);
+    background: rgba(255, 255, 255, 0.8);
+    border: 2px solid rgba(236, 64, 122, 0.25);
     border-radius: 15px;
     padding: 30px;
     transition: all 0.3s ease;
@@ -253,12 +253,12 @@ nav: about
 
 .focus-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(194, 24, 91, 0.4);
-    border-color: #c2185b;
+    box-shadow: 0 10px 30px rgba(236, 64, 122, 0.2);
+    border-color: #ec407a;
 }
 
 .focus-card h3 {
-    color: #60a5fa;
+    color: #3b82f6;
     font-size: 1.3em;
     margin-bottom: 15px;
     font-weight: 600;
@@ -270,7 +270,7 @@ nav: about
 }
 
 .focus-card li {
-    color: #cbd5e1;
+    color: #5a5a5a;
     margin-bottom: 10px;
     padding-left: 20px;
     position: relative;
@@ -281,30 +281,29 @@ nav: about
     content: "→";
     position: absolute;
     left: 0;
-    color: #c2185b;
+    color: #ec407a;
     font-weight: bold;
 }
 
 .newsletter-section {
-    background: linear-gradient(135deg, rgba(194, 24, 91, 0.15), rgba(59, 130, 246, 0.15));
-    border: 2px solid rgba(194, 24, 91, 0.4);
+    background: linear-gradient(135deg, rgba(236, 64, 122, 0.1), rgba(59, 130, 246, 0.1));
+    border: 2px solid rgba(236, 64, 122, 0.3);
     border-radius: 20px;
     padding: 40px;
     margin: 50px 0;
     text-align: center;
     animation: fadeIn 1.6s ease-out;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
 }
 
 .newsletter-section h3 {
-    color: #c2185b;
+    color: #ec407a;
     font-size: 1.8em;
     margin-bottom: 15px;
     font-weight: 700;
 }
 
 .newsletter-section p {
-    color: #cbd5e1;
+    color: #5a5a5a;
     font-size: 1.1em;
     margin-bottom: 25px;
     line-height: 1.6;
@@ -323,23 +322,23 @@ nav: about
     flex: 1;
     min-width: 250px;
     padding: 15px 20px;
-    border: 2px solid rgba(194, 24, 91, 0.4);
+    border: 2px solid rgba(236, 64, 122, 0.3);
     border-radius: 8px;
     font-size: 1em;
-    background: rgba(30, 41, 59, 0.8);
-    color: #e2e8f0;
+    background: white;
+    color: #5a5a5a;
     transition: all 0.3s ease;
 }
 
 .subscribe-form input:focus {
     outline: none;
-    border-color: #c2185b;
-    box-shadow: 0 0 15px rgba(194, 24, 91, 0.3);
+    border-color: #ec407a;
+    box-shadow: 0 0 15px rgba(236, 64, 122, 0.2);
 }
 
 .subscribe-form button {
     padding: 15px 35px;
-    background: linear-gradient(135deg, #c2185b, #3b82f6);
+    background: linear-gradient(135deg, #ec407a, #3b82f6);
     color: white;
     border: none;
     border-radius: 8px;
@@ -351,7 +350,7 @@ nav: about
 
 .subscribe-form button:hover {
     transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(194, 24, 91, 0.5);
+    box-shadow: 0 8px 20px rgba(236, 64, 122, 0.4);
     animation: pulse 1s infinite;
 }
 
@@ -365,13 +364,13 @@ nav: about
 .subscribe-message.success {
     background: rgba(76, 175, 80, 0.1);
     border: 1px solid rgba(76, 175, 80, 0.3);
-    color: #4caf50;
+    color: #2e7d32;
 }
 
 .subscribe-message.error {
     background: rgba(244, 67, 54, 0.1);
     border: 1px solid rgba(244, 67, 54, 0.3);
-    color: #f44336;
+    color: #c62828;
 }
 
 .social-links {
@@ -384,9 +383,9 @@ nav: about
 
 .social-btn {
     padding: 12px 28px;
-    background: rgba(194, 24, 91, 0.15);
-    border: 2px solid #c2185b;
-    color: #c2185b;
+    background: rgba(236, 64, 122, 0.1);
+    border: 2px solid #ec407a;
+    color: #ec407a;
     text-decoration: none;
     border-radius: 8px;
     font-weight: 600;
@@ -395,18 +394,18 @@ nav: about
 }
 
 .social-btn:hover {
-    background: linear-gradient(135deg, #c2185b, #3b82f6);
+    background: linear-gradient(135deg, #ec407a, #3b82f6);
     color: white;
     transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(194, 24, 91, 0.5);
+    box-shadow: 0 8px 20px rgba(236, 64, 122, 0.4);
 }
 
 .about-footer {
     text-align: center;
     margin-top: 80px;
     padding-top: 30px;
-    border-top: 2px solid rgba(194, 24, 91, 0.3);
-    color: #94a3b8;
+    border-top: 2px solid rgba(236, 64, 122, 0.2);
+    color: #7986a3;
     font-size: 0.9em;
 }
 
@@ -599,7 +598,6 @@ document.addEventListener('DOMContentLoaded', function() {
         const email = emailInput.value.trim();
         
         if (email) {
-            // Stocker localement pour démonstration
             let subscribers = JSON.parse(localStorage.getItem('subscribers') || '[]');
             
             if (subscribers.includes(email)) {
