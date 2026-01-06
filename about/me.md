@@ -38,7 +38,7 @@ nav: about
     min-height: 100vh;
     margin: 0;
     padding: 0;
-    background: linear-gradient(135deg, #ffe0ec 0%, #ffd4e5 50%, #ffc9e0 100%);
+    background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #1e3a8a 100%);
 }
 
 .particle-background {
@@ -57,7 +57,7 @@ nav: about
     font-size: 16px;
     opacity: 0;
     animation: floatParticle linear infinite;
-    color: rgba(255, 182, 193, 0.25);
+    color: rgba(59, 130, 246, 0.2);
 }
 
 .particle.floating {
@@ -70,7 +70,7 @@ nav: about
     padding: 60px 20px;
     position: relative;
     z-index: 1;
-    color: #4a4a4a;
+    color: #e2e8f0;
 }
 
 .about-header {
@@ -81,7 +81,7 @@ nav: about
 
 .about-header h1 {
     font-size: 3em;
-    background: linear-gradient(90deg, #ff69b4, #ff1493, #ff69b4);
+    background: linear-gradient(90deg, #60a5fa, #3b82f6, #2563eb);
     background-size: 200% auto;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -94,14 +94,14 @@ nav: about
 
 .about-tagline {
     font-size: 1.2em;
-    color: #c2588d;
+    color: #94a3b8;
     font-weight: 300;
 }
 
 .divider {
     width: 150px;
     height: 2px;
-    background: linear-gradient(90deg, transparent, #ff69b4, #ff1493, #ff69b4, transparent);
+    background: linear-gradient(90deg, transparent, #3b82f6, #60a5fa, #3b82f6, transparent);
     margin: 25px auto;
 }
 
@@ -126,11 +126,11 @@ nav: about
     height: 280px;
     border-radius: 50%;
     overflow: hidden;
-    border: 6px solid #ff69b4;
+    border: 6px solid #3b82f6;
     box-shadow: 
-        0 10px 40px rgba(255, 105, 180, 0.5),
-        0 0 0 12px rgba(255, 182, 193, 0.3);
-    background: #ffffff;
+        0 10px 40px rgba(59, 130, 246, 0.5),
+        0 0 0 12px rgba(96, 165, 250, 0.2);
+    background: #1e293b;
     transition: all 0.4s ease;
     flex-shrink: 0;
 }
@@ -138,8 +138,8 @@ nav: about
 .profile-image:hover {
     transform: scale(1.05);
     box-shadow: 
-        0 15px 50px rgba(255, 105, 180, 0.6),
-        0 0 0 15px rgba(255, 182, 193, 0.4);
+        0 15px 50px rgba(59, 130, 246, 0.6),
+        0 0 0 15px rgba(96, 165, 250, 0.3);
 }
 
 .profile-image img {
@@ -149,32 +149,32 @@ nav: about
 }
 
 .quick-info {
-    background: rgba(255, 255, 255, 0.95);
-    border: 2px solid rgba(255, 105, 180, 0.4);
+    background: rgba(30, 41, 59, 0.8);
+    border: 2px solid rgba(59, 130, 246, 0.4);
     border-radius: 15px;
     padding: 25px;
     flex: 1;
     text-align: left;
-    box-shadow: 0 5px 20px rgba(255, 105, 180, 0.2);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
     transition: all 0.3s ease;
 }
 
 .quick-info:hover {
-    box-shadow: 0 8px 30px rgba(255, 105, 180, 0.35);
-    border-color: #ff69b4;
+    box-shadow: 0 8px 30px rgba(59, 130, 246, 0.35);
+    border-color: #3b82f6;
 }
 
 .quick-info h3 {
-    color: #ff1493;
+    color: #3b82f6;
     font-size: 1.3em;
     margin-bottom: 20px;
     font-weight: 600;
-    border-bottom: 2px solid #ff69b4;
+    border-bottom: 2px solid #3b82f6;
     padding-bottom: 10px;
 }
 
 .quick-info p {
-    color: #5a5a5a;
+    color: #cbd5e1;
     font-size: 0.95em;
     line-height: 1.8;
     margin-bottom: 10px;
@@ -182,21 +182,21 @@ nav: about
 }
 
 .quick-info strong {
-    color: #ff69b4;
+    color: #60a5fa;
 }
 
 .about-section {
-    background: rgba(255, 255, 255, 0.9);
-    border: 2px solid rgba(255, 105, 180, 0.3);
+    background: rgba(30, 41, 59, 0.7);
+    border: 2px solid rgba(59, 130, 246, 0.3);
     border-radius: 20px;
     padding: 45px;
     margin-bottom: 50px;
-    box-shadow: 0 8px 30px rgba(255, 105, 180, 0.2);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
     animation: fadeIn 1.4s ease-out;
 }
 
 .about-section h2 {
-    color: #ff1493;
+    color: #3b82f6;
     font-size: 2.2em;
     margin-bottom: 25px;
     font-weight: 700;
@@ -211,23 +211,23 @@ nav: about
     left: 0;
     width: 60%;
     height: 3px;
-    background: linear-gradient(90deg, #ff1493, #ff69b4);
+    background: linear-gradient(90deg, #3b82f6, #60a5fa);
 }
 
 .about-section p {
-    color: #5a5a5a;
+    color: #cbd5e1;
     line-height: 1.9;
     margin-bottom: 18px;
     font-size: 1.05em;
 }
 
 .highlight {
-    color: #ff69b4;
+    color: #60a5fa;
     font-weight: 600;
 }
 
 .section-title {
-    color: #ff1493;
+    color: #3b82f6;
     font-size: 2em;
     margin: 60px 0 30px 0;
     font-weight: 700;
@@ -243,8 +243,8 @@ nav: about
 }
 
 .focus-card {
-    background: rgba(255, 255, 255, 0.85);
-    border: 2px solid rgba(255, 105, 180, 0.3);
+    background: rgba(30, 41, 59, 0.7);
+    border: 2px solid rgba(59, 130, 246, 0.3);
     border-radius: 15px;
     padding: 30px;
     transition: all 0.3s ease;
@@ -253,12 +253,12 @@ nav: about
 
 .focus-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(255, 105, 180, 0.3);
-    border-color: #ff69b4;
+    box-shadow: 0 10px 30px rgba(59, 130, 246, 0.4);
+    border-color: #3b82f6;
 }
 
 .focus-card h3 {
-    color: #ff1493;
+    color: #60a5fa;
     font-size: 1.3em;
     margin-bottom: 15px;
     font-weight: 600;
@@ -270,7 +270,7 @@ nav: about
 }
 
 .focus-card li {
-    color: #5a5a5a;
+    color: #cbd5e1;
     margin-bottom: 10px;
     padding-left: 20px;
     position: relative;
@@ -281,29 +281,30 @@ nav: about
     content: "→";
     position: absolute;
     left: 0;
-    color: #ff69b4;
+    color: #3b82f6;
     font-weight: bold;
 }
 
 .newsletter-section {
-    background: linear-gradient(135deg, rgba(255, 182, 193, 0.3), rgba(255, 105, 180, 0.2));
-    border: 2px solid rgba(255, 105, 180, 0.4);
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.15), rgba(96, 165, 250, 0.1));
+    border: 2px solid rgba(59, 130, 246, 0.4);
     border-radius: 20px;
     padding: 40px;
     margin: 50px 0;
     text-align: center;
     animation: fadeIn 1.6s ease-out;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
 }
 
 .newsletter-section h3 {
-    color: #ff1493;
+    color: #3b82f6;
     font-size: 1.8em;
     margin-bottom: 15px;
     font-weight: 700;
 }
 
 .newsletter-section p {
-    color: #5a5a5a;
+    color: #cbd5e1;
     font-size: 1.1em;
     margin-bottom: 25px;
     line-height: 1.6;
@@ -322,23 +323,23 @@ nav: about
     flex: 1;
     min-width: 250px;
     padding: 15px 20px;
-    border: 2px solid rgba(255, 105, 180, 0.4);
+    border: 2px solid rgba(59, 130, 246, 0.4);
     border-radius: 8px;
     font-size: 1em;
-    background: white;
-    color: #5a5a5a;
+    background: rgba(30, 41, 59, 0.8);
+    color: #e2e8f0;
     transition: all 0.3s ease;
 }
 
 .subscribe-form input:focus {
     outline: none;
-    border-color: #ff69b4;
-    box-shadow: 0 0 15px rgba(255, 105, 180, 0.3);
+    border-color: #3b82f6;
+    box-shadow: 0 0 15px rgba(59, 130, 246, 0.3);
 }
 
 .subscribe-form button {
     padding: 15px 35px;
-    background: linear-gradient(135deg, #ff1493, #ff69b4);
+    background: linear-gradient(135deg, #3b82f6, #60a5fa);
     color: white;
     border: none;
     border-radius: 8px;
@@ -350,7 +351,7 @@ nav: about
 
 .subscribe-form button:hover {
     transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(255, 105, 180, 0.5);
+    box-shadow: 0 8px 20px rgba(59, 130, 246, 0.5);
     animation: pulse 1s infinite;
 }
 
@@ -383,9 +384,9 @@ nav: about
 
 .social-btn {
     padding: 12px 28px;
-    background: rgba(255, 105, 180, 0.15);
-    border: 2px solid #ff69b4;
-    color: #ff1493;
+    background: rgba(59, 130, 246, 0.15);
+    border: 2px solid #3b82f6;
+    color: #60a5fa;
     text-decoration: none;
     border-radius: 8px;
     font-weight: 600;
@@ -394,18 +395,18 @@ nav: about
 }
 
 .social-btn:hover {
-    background: linear-gradient(135deg, #ff1493, #ff69b4);
+    background: linear-gradient(135deg, #3b82f6, #60a5fa);
     color: white;
     transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(255, 105, 180, 0.5);
+    box-shadow: 0 8px 20px rgba(59, 130, 246, 0.5);
 }
 
 .about-footer {
     text-align: center;
     margin-top: 80px;
     padding-top: 30px;
-    border-top: 2px solid rgba(255, 105, 180, 0.3);
-    color: #c2588d;
+    border-top: 2px solid rgba(59, 130, 246, 0.3);
+    color: #94a3b8;
     font-size: 0.9em;
 }
 
