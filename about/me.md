@@ -115,17 +115,17 @@ body::before {
 }
 
 .about-container {
-    max-width: 1400px;
+    max-width: 1600px;
     margin: 0 auto;
-    padding: 80px 30px;
+    padding: 100px 50px;
     position: relative;
     z-index: 1;
 }
 
 .main-layout {
     display: grid;
-    grid-template-columns: 450px 1fr;
-    gap: 80px;
+    grid-template-columns: 550px 1fr;
+    gap: 100px;
     align-items: start;
 }
 
@@ -144,8 +144,8 @@ body::before {
         linear-gradient(135deg, #3b82f6, #60a5fa, #3b82f6);
     background-origin: border-box;
     background-clip: padding-box, border-box;
-    border-radius: 25px;
-    padding: 50px;
+    border-radius: 30px;
+    padding: 60px;
     text-align: center;
     position: relative;
     overflow: hidden;
@@ -173,9 +173,9 @@ body::before {
 
 .profile-image-wrapper {
     position: relative;
-    width: 280px;
-    height: 280px;
-    margin: 0 auto 35px;
+    width: 340px;
+    height: 340px;
+    margin: 0 auto 40px;
 }
 
 .profile-image-wrapper::before {
@@ -205,11 +205,11 @@ body::before {
 }
 
 .profile-image {
-    width: 280px;
-    height: 280px;
+    width: 340px;
+    height: 340px;
     border-radius: 50%;
     overflow: hidden;
-    border: 4px solid #3b82f6;
+    border: 5px solid #3b82f6;
     animation: float 6s ease-in-out infinite;
     transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
     position: relative;
@@ -229,46 +229,46 @@ body::before {
 }
 
 .profile-name {
-    font-size: 2.2em;
+    font-size: 2.8em;
     font-weight: 700;
     background: linear-gradient(135deg, #60a5fa, #3b82f6, #60a5fa);
     background-size: 200% auto;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    margin-bottom: 12px;
+    margin-bottom: 15px;
     animation: gradientShift 4s ease infinite, textGlow 2s ease-in-out infinite;
 }
 
 .profile-title {
     color: #94a3b8;
-    font-size: 1.05em;
-    margin-bottom: 30px;
+    font-size: 1.2em;
+    margin-bottom: 35px;
     line-height: 1.7;
     font-weight: 300;
 }
 
 .profile-divider {
-    width: 80px;
-    height: 3px;
+    width: 100px;
+    height: 4px;
     background: linear-gradient(90deg, transparent, #3b82f6, #60a5fa, #3b82f6, transparent);
-    margin: 30px auto;
+    margin: 35px auto;
     border-radius: 2px;
 }
 
 .profile-info {
     text-align: left;
-    margin-top: 35px;
+    margin-top: 40px;
     background: rgba(30, 41, 59, 0.4);
-    border-radius: 15px;
-    padding: 25px;
+    border-radius: 18px;
+    padding: 30px;
     border: 1px solid rgba(59, 130, 246, 0.2);
 }
 
 .info-row {
     display: flex;
     justify-content: space-between;
-    padding: 16px 0;
+    padding: 18px 0;
     border-bottom: 1px solid rgba(59, 130, 246, 0.15);
     transition: all 0.3s ease;
 }
@@ -284,14 +284,14 @@ body::before {
 
 .info-label {
     color: #94a3b8;
-    font-size: 0.9em;
+    font-size: 1em;
     font-weight: 500;
 }
 
 .info-value {
     color: #60a5fa;
     font-weight: 600;
-    font-size: 0.95em;
+    font-size: 1.05em;
     text-shadow: 0 0 10px rgba(96, 165, 250, 0.3);
 }
 
@@ -306,7 +306,7 @@ body::before {
 }
 
 .content-header h1 {
-    font-size: 3.5em;
+    font-size: 4em;
     background: linear-gradient(120deg, #60a5fa 0%, #3b82f6 50%, #2563eb 100%);
     background-size: 200% auto;
     -webkit-background-clip: text;
@@ -315,12 +315,12 @@ body::before {
     animation: gradientShift 3s ease infinite;
     font-weight: 800;
     letter-spacing: 3px;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
     line-height: 1.2;
 }
 
 .content-tagline {
-    font-size: 1.5em;
+    font-size: 1.7em;
     color: #94a3b8;
     font-weight: 300;
     letter-spacing: 1px;
@@ -336,9 +336,9 @@ body::before {
 .content-section {
     background: rgba(15, 23, 42, 0.9);
     border: 1px solid rgba(59, 130, 246, 0.3);
-    border-radius: 25px;
-    padding: 55px;
-    margin-bottom: 35px;
+    border-radius: 30px;
+    padding: 65px;
+    margin-bottom: 40px;
     transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
     position: relative;
     overflow: hidden;
@@ -368,19 +368,19 @@ body::before {
 
 .content-section h2 {
     color: #60a5fa;
-    font-size: 2em;
-    margin-bottom: 30px;
+    font-size: 2.2em;
+    margin-bottom: 35px;
     font-weight: 700;
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 18px;
     text-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
 }
 
 .content-section h2::before {
     content: '';
-    width: 5px;
-    height: 35px;
+    width: 6px;
+    height: 40px;
     background: linear-gradient(180deg, #3b82f6, #60a5fa);
     border-radius: 3px;
     box-shadow: 0 0 10px rgba(59, 130, 246, 0.5);
@@ -389,8 +389,8 @@ body::before {
 .content-section p {
     color: #cbd5e1;
     line-height: 2;
-    font-size: 1.1em;
-    margin-bottom: 20px;
+    font-size: 1.2em;
+    margin-bottom: 22px;
 }
 
 .highlight {
@@ -403,15 +403,15 @@ body::before {
 .focus-vertical {
     display: flex;
     flex-direction: column;
-    gap: 18px;
-    margin-top: 35px;
+    gap: 22px;
+    margin-top: 40px;
 }
 
 .focus-item {
     background: linear-gradient(135deg, rgba(30, 41, 59, 0.6), rgba(30, 41, 59, 0.4));
     border: 2px solid rgba(59, 130, 246, 0.2);
-    border-radius: 15px;
-    padding: 30px;
+    border-radius: 18px;
+    padding: 35px;
     transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
     position: relative;
     overflow: hidden;
@@ -422,7 +422,7 @@ body::before {
     position: absolute;
     left: 0;
     top: 0;
-    width: 4px;
+    width: 5px;
     height: 0;
     background: linear-gradient(180deg, #3b82f6, #60a5fa);
     transition: height 0.4s ease;
@@ -441,12 +441,12 @@ body::before {
 
 .focus-item h3 {
     color: #60a5fa;
-    font-size: 1.3em;
-    margin-bottom: 12px;
+    font-size: 1.4em;
+    margin-bottom: 15px;
     font-weight: 700;
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 12px;
 }
 
 .focus-item h3::before {
@@ -462,8 +462,8 @@ body::before {
 
 .focus-item p {
     color: #94a3b8;
-    font-size: 1em;
-    line-height: 1.7;
+    font-size: 1.1em;
+    line-height: 1.8;
     margin: 0;
 }
 
@@ -518,12 +518,11 @@ body::before {
                     </div>
                 </div>
                 
-   <h2 class="profile-name">HANANE</h2>
+ <h2 class="profile-name">HANANE</h2>
                 <p class="profile-title">Network Security Student<br>Cybersecurity Enthusiast</p>
+                <div class="profile-divider"></div>
                 
-   <div class="profile-divider"></div>
-         
- <div class="profile-info">
+  <div class="profile-info">
                     <div class="info-row">
                         <span class="info-label">Location</span>
                         <span class="info-value">Marrakech</span>
@@ -545,14 +544,14 @@ body::before {
         </aside>
 
         <!-- Right Content Area -->
-  <main class="content-area">
+ <main class="content-area">
             <div class="content-header">
                 <h1>WELCOME TO CYBERIA</h1>
                 <p class="content-tagline">My Personal Cybersecurity Journey</p>
             </div>
 
   <section class="content-section">
-           <h2>About Me</h2>
+                <h2>About Me</h2>
                 <p>
                     I'm <span class="highlight">Hanane</span>, a cybersecurity student at FSSM, Cadi Ayyad University, pursuing a Bachelor's in Networking and Cybersecurity. Passionate about <span class="highlight">offensive security</span>, <span class="highlight">vulnerability analysis</span>, and <span class="highlight">reverse engineering</span>.
                 </p>
@@ -561,7 +560,7 @@ body::before {
                 </p>
             </section>
 
- <section class="content-section">
+  <section class="content-section">
                 <h2>What You'll Find Here</h2>
                 <div class="focus-vertical">
                     <div class="focus-item">
@@ -569,17 +568,17 @@ body::before {
                         <p>Course materials and university projects from NSC</p>
                     </div>
                     
-<div class="focus-item">
+  <div class="focus-item">
                         <h3>TryHackMe</h3>
                         <p>Write-ups and walkthroughs from challenges</p>
                     </div>
                     
-  <div class="focus-item">
+ <div class="focus-item">
                         <h3>Personal Lab</h3>
                         <p>Home lab setups and experiments</p>
                     </div>
-      
-  <div class="focus-item">
+                    
+ <div class="focus-item">
                         <h3>Learning Journey</h3>
                         <p>Reflections and discoveries</p>
                     </div>
