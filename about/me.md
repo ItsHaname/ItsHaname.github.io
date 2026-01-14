@@ -244,7 +244,7 @@ section p {
             Passionate about <span class="highlight">offensive security</span>, <span class="highlight">vulnerability analysis</span>, and <span class="highlight">reverse engineering</span>. Currently pursuing a Bachelor's in Networking and Cybersecurity at FSSM, Cadi Ayyad University.
         </p>
         
-  <div class="stats">
+ <div class="stats">
             <div class="stat">
                 <span class="stat-value">2026</span>
                 <span class="stat-label">Blog Launch</span>
@@ -261,7 +261,7 @@ section p {
     </div>
 
     <!-- Focus Areas -->
-<section>
+ <section>
         <h2>Focus Areas</h2>
         <div class="skills">
             <div class="skill-tag">Penetration Testing</div>
@@ -276,7 +276,7 @@ section p {
     </section>
 
     <!-- Education -->
-  <section>
+ <section>
         <h2>Education</h2>
         <div class="timeline-item">
             <h3>Bachelor's in Networking & Cybersecurity</h3>
@@ -314,7 +314,7 @@ section p {
                 </ul>
             </div>
             
-div class="card">
+  <div class="card">
                 <h3>Personal Lab</h3>
                 <p class="meta">Hands-On Learning Environment</p>
                 <ul>
