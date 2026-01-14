@@ -33,8 +33,8 @@ body {
 }
 
 .hero img {
-    width: 280px;
-    height: 280px;
+    width: 260px;
+    height: 260px;
     border-radius: 50%;
     border: 5px solid #3b82f6;
     margin: 0 auto 30px;
@@ -42,7 +42,7 @@ body {
     object-position: center 30%;
     display: block;
     box-shadow: 0 10px 40px rgba(59, 130, 246, 0.4);
-    transform: scale(1.35);
+    transform: scale(1.4);
 }
 
 .hero h1 {
@@ -261,7 +261,7 @@ section p {
     </div>
 
     <!-- Focus Areas -->
-<section>
+ <section>
         <h2>Focus Areas</h2>
         <div class="skills">
             <div class="skill-tag">Penetration Testing</div>
@@ -276,7 +276,7 @@ section p {
     </section>
 
     <!-- Education -->
- <section>
+   <section>
         <h2>Education</h2>
         <div class="timeline-item">
             <h3>Bachelor's in Networking & Cybersecurity</h3>
@@ -291,7 +291,7 @@ section p {
     </section>
 
     <!-- What You'll Find Here -->
- <section>
+  <section>
         <h2>What You'll Find Here</h2>
         <div class="cards">
             <div class="card">
@@ -304,7 +304,7 @@ section p {
                 </ul>
             </div>
             
-<div class="card">
+  <div class="card">
                 <h3>TryHackMe Journey</h3>
                 <p class="meta">Practical Cybersecurity Training</p>
                 <ul>
@@ -314,7 +314,7 @@ section p {
                 </ul>
             </div>
             
-   <div class="card">
+  <div class="card">
                 <h3>Personal Lab</h3>
                 <p class="meta">Hands-On Learning Environment</p>
                 <ul>
@@ -324,7 +324,7 @@ section p {
                 </ul>
             </div>
             
-  <div class="card">
+ <div class="card">
                 <h3>Learning Resources</h3>
                 <p class="meta">Community & Knowledge Sharing</p>
                 <ul>
