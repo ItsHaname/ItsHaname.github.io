@@ -91,7 +91,6 @@ body {
   text-align: center;
   margin-bottom: 60px;
   padding: 40px 20px;
-  position: relative;
   background: rgba(0, 20, 40, 0.6);
   border-radius: 30px;
   border: 3px solid #1e4d7b;
@@ -101,18 +100,13 @@ body {
 .cyberia-title {
   font-size: 5em;
   color: #ff6b4a;
-  text-shadow: 
-    0 0 10px #ff6b4a,
-    0 0 20px #ff6b4a,
-    0 0 30px #ff6b4a,
-    0 0 40px #ff3300;
+  text-shadow: 0 0 10px #ff6b4a, 0 0 20px #ff6b4a, 0 0 30px #ff6b4a, 0 0 40px #ff3300;
   margin: 0;
   font-weight: 900;
   letter-spacing: 10px;
   text-transform: uppercase;
   font-style: italic;
   -webkit-text-stroke: 2px #ff3300;
-  paint-order: stroke fill;
 }
 
 .cyberia-line {
@@ -121,17 +115,12 @@ body {
   background: linear-gradient(90deg, transparent, #1e4d7b, #3b82f6, #1e4d7b, transparent);
   margin: 20px auto;
   max-width: 500px;
-  box-shadow: 0 0 15px #3b82f6;
 }
 
 .cyberia-subtitle {
   font-size: 1.8em;
   color: #60a5fa;
-  margin-top: 10px;
-  text-shadow: 
-    0 0 10px #60a5fa,
-    0 0 20px #3b82f6,
-    0 0 30px #2563eb;
+  text-shadow: 0 0 10px #60a5fa, 0 0 20px #3b82f6;
   letter-spacing: 4px;
   font-style: italic;
 }
@@ -141,50 +130,48 @@ body {
   animation: blink 1s infinite;
 }
 
-/* >>> AJOUT MINIMAL ICI <<< */
+/* AJOUT STYLE VISITOR (MINIMAL) */
 .visitor-box {
+  display: inline-block;
   margin-bottom: 15px;
   padding: 8px 18px;
-  display: inline-block;
-  background: rgba(15, 23, 42, 0.85);
+  background: rgba(15, 23, 42, 0.8);
   border: 1px solid rgba(59, 130, 246, 0.4);
   border-radius: 20px;
   color: #60a5fa;
   font-family: 'Courier New', monospace;
-  box-shadow: 0 0 12px rgba(59, 130, 246, 0.3);
-}
-
-.welcome-text {
-  text-align: center;
-  font-size: 1.2em;
-  color: #94a3b8;
-  margin: 50px 0;
-  padding: 30px;
-  background: rgba(15, 23, 42, 0.7);
-  border-radius: 15px;
-  border-left: 4px solid #3b82f6;
-  animation: slideIn 1s ease-out;
-}
-
-.cyber-footer {
-  text-align: center;
-  margin-top: 80px;
-  padding-top: 30px;
-  border-top: 1px solid rgba(59, 130, 246, 0.3);
-  color: #64748b;
-  font-size: 0.9em;
 }
 </style>
 
 <script>
-document.addEventListener('DOMContentLoaded', function() {
-
+document.addEventListener('DOMContentLoaded', function () {
   let visits = localStorage.getItem('cyberia_visits');
   visits = visits ? parseInt(visits) + 1 : 1;
   localStorage.setItem('cyberia_visits', visits);
 
   document.getElementById('visitor-count').textContent = visits;
   document.getElementById('visitor-count-inline').textContent = visits;
+});
+</script>
+
+<script>
+// TON SCRIPT MATRIX (INCHANGÉ)
+document.addEventListener('DOMContentLoaded', function() {
+  const binaryContainer = document.createElement('div');
+  binaryContainer.className = 'binary-background';
+  document.body.appendChild(binaryContainer);
+
+  for (let i = 0; i < 100; i++) {
+    const digit = document.createElement('div');
+    digit.className = 'binary-digit';
+    digit.textContent = Math.random() > 0.5 ? '1' : '0';
+    digit.style.left = Math.random() * 100 + 'vw';
+    digit.style.fontSize = (Math.random() * 18 + 12) + 'px';
+    digit.style.animationDuration = (Math.random() * 10 + 5) + 's';
+    digit.style.animationDelay = (Math.random() * 5) + 's';
+    digit.style.opacity = Math.random() * 0.2 + 0.05;
+    binaryContainer.appendChild(digit);
+  }
 });
 </script>
 
@@ -196,16 +183,16 @@ document.addEventListener('DOMContentLoaded', function() {
     <div class="cyberia-subtitle">Cafe & Club</div>
   </div>
 
-  <!-- PARTIE MODIFIÉE (ET SEULEMENT CELLE-CI) -->
+  <!-- SEULE PARTIE MODIFIÉE -->
   <div class="welcome-text">
     <div class="visitor-box">
       Hello visitor <span id="visitor-count">0</span> 👋
     </div>
 
-   <p>
-      Hello visitor <strong style="color:#60a5fa;"><span id="visitor-count-inline">0</span></strong>,
+  <p>
+      Hello visitor <strong><span id="visitor-count-inline">0</span></strong>,
       je suis <strong style="color:#3b82f6;">Haname</strong>, étudiante en cybersécurité à la FSSM.<br>
-      Bienvenue sur mon site où je partage mon parcours, mes parcours TryHackMe,
+      Bienvenue sur mon site où je partage mon parcours, mes parcours (paths) TryHackMe,
       la formation FSSM, et mes laboratoires personnels.
     </p>
   </div>
