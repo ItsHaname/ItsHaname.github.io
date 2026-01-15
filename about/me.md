@@ -286,7 +286,7 @@ section p {
         <div class="timeline-item">
             <h3>Computer Science Foundations</h3>
             <p class="period">FSSM | 2022 - 2024</p>
-            <p>Core studies in programming, algorithms, databases, and computer architecture. Developed strong problem-solving skills and technical fundamentals.</p>
+            <p>Core studies in programming, algorithms, databases, and computer architecture. and technical fundamentals.</p>
         </div>
     </section>
 
