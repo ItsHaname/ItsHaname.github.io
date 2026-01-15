@@ -128,7 +128,10 @@ body {
   font-size: 1.8em;
   color: #60a5fa;
   margin-top: 10px;
-  text-shadow: 0 0 10px #60a5fa, 0 0 20px #3b82f6;
+  text-shadow: 
+    0 0 10px #60a5fa,
+    0 0 20px #3b82f6,
+    0 0 30px #2563eb;
   letter-spacing: 4px;
   font-style: italic;
 }
@@ -136,6 +139,19 @@ body {
 .cyberia-subtitle::after {
   content: '_';
   animation: blink 1s infinite;
+}
+
+/* >>> AJOUT MINIMAL ICI <<< */
+.visitor-box {
+  margin-bottom: 15px;
+  padding: 8px 18px;
+  display: inline-block;
+  background: rgba(15, 23, 42, 0.85);
+  border: 1px solid rgba(59, 130, 246, 0.4);
+  border-radius: 20px;
+  color: #60a5fa;
+  font-family: 'Courier New', monospace;
+  box-shadow: 0 0 12px rgba(59, 130, 246, 0.3);
 }
 
 .welcome-text {
@@ -150,19 +166,6 @@ body {
   animation: slideIn 1s ease-out;
 }
 
-/* NEW small container for visitor count */
-.visitor-box {
-  margin-bottom: 15px;
-  padding: 10px 20px;
-  display: inline-block;
-  background: rgba(15, 23, 42, 0.9);
-  border: 1px solid rgba(59, 130, 246, 0.4);
-  border-radius: 20px;
-  color: #60a5fa;
-  font-family: 'Courier New', monospace;
-  box-shadow: 0 0 15px rgba(59, 130, 246, 0.3);
-}
-
 .cyber-footer {
   text-align: center;
   margin-top: 80px;
@@ -174,14 +177,14 @@ body {
 </style>
 
 <script>
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', function() {
 
-  // Visitor counter (localStorage)
   let visits = localStorage.getItem('cyberia_visits');
   visits = visits ? parseInt(visits) + 1 : 1;
   localStorage.setItem('cyberia_visits', visits);
 
   document.getElementById('visitor-count').textContent = visits;
+  document.getElementById('visitor-count-inline').textContent = visits;
 });
 </script>
 
@@ -193,17 +196,17 @@ document.addEventListener('DOMContentLoaded', function () {
     <div class="cyberia-subtitle">Cafe & Club</div>
   </div>
 
-  <!-- MODIFIED PART ONLY -->
+  <!-- PARTIE MODIFIÉE (ET SEULEMENT CELLE-CI) -->
   <div class="welcome-text">
     <div class="visitor-box">
       Hello visitor <span id="visitor-count">0</span> 👋
     </div>
 
    <p>
-      Hello visitor <strong style="color:#60a5fa;"><span id="visitor-count-inline"></span></strong>,
-      je suis <strong style="color: #3b82f6;">Hanane</strong>, étudiante en cybersécurité à la FSSM.<br>
-      Bienvenue à <strong>CYBERIA</strong>, mon espace personnel où je partage mes parcours TryHackMe,
-      ma formation FSSM et mes laboratoires personnels.
+      Hello visitor <strong style="color:#60a5fa;"><span id="visitor-count-inline">0</span></strong>,
+      je suis <strong style="color:#3b82f6;">Haname</strong>, étudiante en cybersécurité à la FSSM.<br>
+      Bienvenue sur mon site où je partage mon parcours, mes parcours TryHackMe,
+      la formation FSSM, et mes laboratoires personnels.
     </p>
   </div>
 
@@ -212,9 +215,3 @@ document.addEventListener('DOMContentLoaded', function () {
   </div>
 
 </div>
-
-<script>
-  // sync inline visitor number
-  document.getElementById('visitor-count-inline').textContent =
-    localStorage.getItem('cyberia_visits');
-</script>
