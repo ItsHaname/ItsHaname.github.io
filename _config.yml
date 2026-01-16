@@ -5,3 +5,4 @@ url: "https://itshaname.github.io"
 theme: null
 plugins: []
 markdown: kramdown
+favicon_url: "https://raw.githubusercontent.com/ItsHaname/ItsHaname.github.io/main/logo"
