@@ -5,6 +5,14 @@ nav: lab
 ---
 
 <style>
+/* Arrière-plan binaire global */
+body {
+  background-color: #0a0e1a;
+  background-image: 
+    linear-gradient(rgba(10, 14, 26, 0.9), rgba(10, 14, 26, 0.9)),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Ctext x='10' y='30' fill='rgba(59, 130, 246, 0.05)' font-family='monospace' font-size='12'%3E01101%3C/text%3E%3Ctext x='50' y='70' fill='rgba(59, 130, 246, 0.05)' font-family='monospace' font-size='12'%3E10101%3C/text%3E%3Ctext x='80' y='20' fill='rgba(59, 130, 246, 0.05)' font-family='monospace' font-size='12'%3E01%3C/text%3E%3Ctext x='30' y='90' fill='rgba(59, 130, 246, 0.05)' font-family='monospace' font-size='12'%3E110%3C/text%3E%3C/svg%3E");
+}
+
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
@@ -127,13 +135,14 @@ nav: lab
   color: #cbd5e1;
   line-height: 1.8;
   margin: 15px 0;
+  font-size: 1.05em;
 }
 
 .code-block {
   background: rgba(10, 14, 26, 0.8);
   border: 1px solid #1e40af;
   border-radius: 10px;
-  padding: 20px;
+  padding: 25px;
   margin: 20px 0;
   overflow-x: auto;
 }
@@ -142,20 +151,22 @@ nav: lab
   margin: 0;
   color: #60a5fa;
   font-family: 'Courier New', monospace;
-  font-size: 0.95em;
+  font-size: 1.1em;
+  line-height: 1.8;
 }
 
 .code-block code {
   color: #60a5fa;
+  font-size: 1.1em;
 }
 
 .command-line {
   color: #3b82f6;
   font-family: 'Courier New', monospace;
   background: rgba(10, 14, 26, 0.6);
-  padding: 3px 8px;
+  padding: 5px 10px;
   border-radius: 4px;
-  font-size: 0.95em;
+  font-size: 1.05em;
 }
 
 .info-box {
@@ -332,21 +343,11 @@ table tr:last-child td {
 }
 
 @media (max-width: 768px) {
-  .article-title {
-    font-size: 2em;
-  }
-  
-  .content-section {
-    padding: 25px;
-  }
-  
-  .step-list li {
-    padding-left: 50px;
-  }
-  
-  .key-points {
-    grid-template-columns: 1fr;
-  }
+  .article-title { font-size: 2em; }
+  .content-section { padding: 25px; }
+  .step-list li { padding-left: 50px; }
+  .key-points { grid-template-columns: 1fr; }
+  .code-block pre { font-size: 1em; }
 }
 </style>
 
@@ -365,7 +366,7 @@ table tr:last-child td {
     <h2>Why Regular Maintenance</h2>
     <p>Arch Linux follows a rolling release model, receiving constant updates. Unlike Ubuntu or Fedora with scheduled releases, Arch requires regular maintenance to stay clean and performant. A weekly 15-minute routine prevents file accumulation and keeps your system stable.</p>
     
-  <div class="key-points">
+   <div class="key-points">
       <div class="key-point">
         <h4>Clean System</h4>
         <p>Remove unused packages and cached files</p>
@@ -404,7 +405,7 @@ yay -Syu</code></pre>
         </div>
       </li>
       
-   <li>
+  <li>
         <h3>Clean Package Cache</h3>
         <div class="code-block">
 <pre><code># Keep last 3 versions of each package
@@ -416,7 +417,7 @@ sudo paccache -ruk0</code></pre>
         <p>This typically frees between 500 MB to 2 GB of disk space on my system.</p>
       </li>
       
-   <li>
+  <li>
         <h3>Remove Orphan Packages</h3>
         <div class="code-block">
 <pre><code># List orphan packages
@@ -436,6 +437,7 @@ sudo find /etc -name "*.pacnew" -o -name "*.pacsave"
 
 # Merge interactively
 sudo DIFFPROG=vimdiff pacdiff
+
 # or with meld (graphical)
 sudo DIFFPROG=meld pacdiff</code></pre>
         </div>
@@ -453,7 +455,7 @@ sudo journalctl --vacuum-time=2weeks</code></pre>
         </div>
       </li>
       
- <li>
+   <li>
         <h3>Check Failed Services</h3>
         <div class="code-block">
 <pre><code># List failed services
@@ -478,7 +480,7 @@ yay -Sc</code></pre>
         </div>
       </li>
       
-   <li>
+  <li>
         <h3>Check Disk Space</h3>
         <div class="code-block">
 <pre><code># Overview
@@ -494,13 +496,13 @@ ncdu /</code></pre>
   <div class="content-section">
     <h2>Automation Script</h2>
     
-  <div class="script-container">
+   <div class="script-container">
       <div class="script-header">
         <span class="script-icon">#!/bin/bash</span>
         <h3 class="script-title">arch-maintenance.sh</h3>
       </div>
       
-   <div class="code-block">
+  <div class="code-block">
 <pre><code>#!/bin/bash
 
 echo "═══════════════════════════════════════════"
@@ -573,7 +575,7 @@ echo "════════════════════════�
 </div>
     </div>
     
-   <div class="info-box">
+  <div class="info-box">
       <strong>Installation:</strong>
       <div class="code-block" style="margin-top: 10px;">
 <pre><code># Create the file
@@ -592,7 +594,7 @@ chmod +x ~/Scripts/arch-maintenance.sh
     <h2>Monthly Tasks</h2>
     <p>In addition to weekly maintenance, perform these tasks monthly:</p>
     
-   ] <div class="key-points">
+   <div class="key-points">
       <div class="key-point">
         <h4>Update Mirrorlist</h4>
         <p>Use reflector for fastest servers</p>
