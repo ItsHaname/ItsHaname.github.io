@@ -3,7 +3,7 @@ layout: default
 title: Accueil
 nav: home
 ---
-<link rel="icon" href="https://github.com/ItsHaname/ItsHaname.github.io/blob/main/logo?raw=true" type="image/png">
+<link rel="icon" href="https://raw.githubusercontent.com/ItsHaname/ItsHaname.github.io/main/logo" type="image/png">
 <style>
 @keyframes matrixRain {
   0% { transform: translateY(-100vh); }
