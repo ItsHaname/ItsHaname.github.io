@@ -455,10 +455,10 @@ body {
   <h2 class="section-title">Rooms & Write-ups</h2>
   
   <div class="rooms-grid">
-    <!-- Honeypot Room -->
-    <a href="{{ site.baseurl }}/my-lab/tryhackme/honeypot" class="room-card">
-      <div class="room-icon">🍯</div>
-      <h3>Honeypot</h3>
+    <!-- Introduction To Honeypots -->
+    <a href="{{ site.baseurl }}/my-lab/tryhackme/intro-to-honeypots" class="room-card">
+      <img src="{{ site.baseurl }}/assets/images/honey.png" alt="Honeypots" class="room-image">
+      <h3>Introduction To Honeypots</h3>
       <p class="room-description">Learn about honeypots and how they can be used to detect and analyze malicious activity in a network environment.</p>
       <div class="status-badge done">
         <span class="status-dot done"></span>
@@ -466,9 +466,9 @@ body {
       </div>
     </a>
 
-\ <!-- Introduction to Docker -->
-    <a href="{{ site.baseurl }}/my-lab/tryhackme/intro-to-docker" class="room-card">
-      <div class="room-icon">🐳</div>
+    <!-- Introduction to Docker -->
+    <a href="https://www.canva.com/design/DAG-rGFAO3Q/3FW6lGUjPm0yXQBBDkcSKQ/edit?utm_content=DAG-rGFAO3Q&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" target="_blank" class="room-card">
+      <img src="{{ site.baseurl }}/assets/images/dock.png" alt="Docker" class="room-image">
       <h3>Introduction to Docker</h3>
       <p class="room-description">Learn the basics of Docker containerization, understand core concepts, and get hands-on experience with containers.</p>
       <div class="status-badge done">
@@ -477,8 +477,19 @@ body {
       </div>
     </a>
 
+    <!-- Intro to IoT Pentesting -->
+    <a href="{{ site.baseurl }}/my-lab/tryhackme/intro-to-iot-pentesting" class="room-card">
+      <img src="{{ site.baseurl }}/assets/images/iot.png" alt="IoT Pentesting" class="room-image">
+      <h3>Intro to IoT Pentesting</h3>
+      <p class="room-description">Discover the fundamentals of IoT security and learn penetration testing techniques for Internet of Things devices.</p>
+      <div class="status-badge done">
+        <span class="status-dot done"></span>
+        Done
+      </div>
+    </a>
+
     <!-- Nmap Room -->
-   <a href="#" class="room-card">
+    <a href="#" class="room-card">
       <h3>Nmap</h3>
       <p class="room-description">X</p>
       <div class="status-badge">
@@ -488,7 +499,7 @@ body {
     </a>
 
     <!-- OWASP Top 10 -->
-  <a href="#" class="room-card">
+    <a href="#" class="room-card">
       <h3>OWASP Top 10</h3>
       <p class="room-description">X</p>
       <div class="status-badge">
@@ -498,7 +509,7 @@ body {
     </a>
 
     <!-- SQL Injection -->
-  <a href="#" class="room-card">
+    <a href="#" class="room-card">
       <h3>SQL Injection</h3>
       <p class="room-description">X</p>
       <div class="status-badge">
@@ -508,7 +519,7 @@ body {
     </a>
 
     <!-- Burp Suite -->
-   <a href="#" class="room-card">
+    <a href="#" class="room-card">
       <h3>Burp Suite</h3>
       <p class="room-description">X</p>
       <div class="status-badge">
@@ -518,7 +529,7 @@ body {
     </a>
 
     <!-- Metasploit -->
-  <a href="#" class="room-card">
+    <a href="#" class="room-card">
       <h3>Metasploit</h3>
       <p class="room-description">X</p>
       <div class="status-badge">
@@ -528,7 +539,7 @@ body {
     </a>
 
     <!-- Linux PrivEsc -->
-   <a href="#" class="room-card">
+    <a href="#" class="room-card">
       <h3>Linux Privilege Escalation</h3>
       <p class="room-description">X</p>
       <div class="status-badge">
@@ -538,7 +549,7 @@ body {
     </a>
 
     <!-- Windows PrivEsc -->
-  <a href="#" class="room-card">
+    <a href="#" class="room-card">
       <h3>Windows Privilege Escalation</h3>
       <p class="room-description">X</p>
       <div class="status-badge">
@@ -548,7 +559,7 @@ body {
     </a>
 
     <!-- Active Directory -->
-   <a href="#" class="room-card">
+    <a href="#" class="room-card">
       <h3>Active Directory</h3>
       <p class="room-description">X</p>
       <div class="status-badge">
@@ -558,7 +569,7 @@ body {
     </a>
 
     <!-- Blue Team -->
-   <a href="#" class="room-card">
+    <a href="#" class="room-card">
       <h3>Blue Team Fundamentals</h3>
       <p class="room-description">X</p>
       <div class="status-badge">
@@ -568,7 +579,7 @@ body {
     </a>
 
     <!-- Cryptography -->
-   <a href="#" class="room-card">
+    <a href="#" class="room-card">
       <h3>Cryptography</h3>
       <p class="room-description">X</p>
       <div class="status-badge">
@@ -578,7 +589,7 @@ body {
     </a>
 
     <!-- Reverse Engineering -->
-   <a href="#" class="room-card">
+    <a href="#" class="room-card">
       <h3>Reverse Engineering</h3>
       <p class="room-description">X</p>
       <div class="status-badge">
@@ -588,7 +599,7 @@ body {
     </a>
 
     <!-- Network Services -->
-  <a href="#" class="room-card">
+    <a href="#" class="room-card">
       <h3>Network Services</h3>
       <p class="room-description">X</p>
       <div class="status-badge">
@@ -598,7 +609,7 @@ body {
     </a>
 
     <!-- Web Enumeration -->
-  <a href="#" class="room-card">
+    <a href="#" class="room-card">
       <h3>Web Enumeration</h3>
       <p class="room-description">X</p>
       <div class="status-badge">
