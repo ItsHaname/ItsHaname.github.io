@@ -1,3 +1,8 @@
+# My Lab - CYBERIA - Code HTML Complet
+
+## Code HTML mis à jour avec les vraies images
+
+```html
 <!DOCTYPE html>
 
 <html lang="fr">
@@ -187,8 +192,8 @@ body {
   border: 2px solid rgba(59, 130, 246, 0.3);
 }
 .lab-icon img {
-  max-width: 100px;
-  max-height: 100px;
+  width: 100px;
+  height: 100px;
   object-fit: contain;
 }
 .lab-card h3 {
@@ -289,7 +294,7 @@ body {
     <!-- Raspberry Pi -->
     <a href="/my-lab/pi" class="lab-card">
       <div class="lab-icon">
-        <img src="https://raw.githubusercontent.com/user-attachments/assets/b338770a-a381-4aac-82f8-a9c083b06536" alt="Raspberry Pi" style="width: 100px; height: 100px;">
+        <img src="/assets/images/pi.png" alt="Raspberry Pi">
       </div>
       <h3>Raspberry Pi</h3>
       <p>Serveur principal du lab, héberge les containers Docker et services réseau</p>
@@ -307,7 +312,7 @@ body {
     <!-- Arch Linux -->
     <a href="/my-lab/archlinux" class="lab-card">
       <div class="lab-icon">
-        <img src="https://raw.githubusercontent.com/user-attachments/assets/306bea0b-5089-4e15-ac97-b6d99e986cc4" alt="Arch Linux" style="width: 80px; height: 80px;">
+        <img src="/assets/images/arch-mascot.png" alt="Arch Linux">
       </div>
       <h3>Arch Linux</h3>
       <p>Machines virtuelles pour pentesting et développement d'outils</p>
@@ -316,7 +321,7 @@ body {
     <!-- VulHub -->
     <a href="/my-lab/vulhub_cve" class="lab-card">
       <div class="lab-icon">
-        <img src="https://raw.githubusercontent.com/user-attachments/assets/a2df6ec4-fda0-4c02-b9c2-05bb6e9b0384" alt="VulHub" style="width: 90px; height: 90px;">
+        <img src="/assets/images/vulhub.png" alt="VulHub">
       </div>
       <h3>VulHub CVE</h3>
       <p>Environnements Docker pour exploitation de CVE réels</p>
@@ -325,7 +330,7 @@ body {
     <!-- Other Labs -->
     <a href="/my-lab/other_lab" class="lab-card">
       <div class="lab-icon">
-        <img src="https://raw.githubusercontent.com/user-attachments/assets/c5b86404-2ba7-423d-a218-e9e963d5420d" alt="Other Labs" style="width: 80px; height: 80px;">
+        <img src="/assets/images/otherlab.png" alt="Other Labs">
       </div>
       <h3>Other Labs</h3>
       <p>Projets expérimentaux et environnements de test additionnels</p>
@@ -385,3 +390,20 @@ document.addEventListener('DOMContentLoaded', function() {
 
 </body>
 </html>
+```
+
+## Images utilisées
+
+- **Raspberry Pi**: `/assets/images/pi.png`
+- **Docker**: `https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg`
+- **Arch Linux**: `/assets/images/arch-mascot.png`
+- **VulHub**: `/assets/images/vulhub.png`
+- **Other Labs**: `/assets/images/otherlab.png`
+
+## Fichiers requis dans `/assets/images/`
+
+Assure-toi d'avoir ces fichiers dans ton dossier :
+- `pi.png`
+- `arch-mascot.png`
+- `vulhub.png`
+- `otherlab.png`
