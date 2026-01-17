@@ -2,7 +2,7 @@
 layout: default
 title: Arch Linux Setup
 ---
-
+<link rel="icon" href="https://raw.githubusercontent.com/ItsHaname/ItsHaname.github.io/main/logo" type="image/png">
 <style>
 @keyframes matrixRain {
   0% { transform: translateY(-100vh); }
