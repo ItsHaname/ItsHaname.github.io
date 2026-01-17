@@ -357,21 +357,21 @@ body {
         letter-spacing: 5px;
     }
     
-    .cyberia-subtitle {
+ .cyberia-subtitle {
         font-size: 1.2em;
         letter-spacing: 2px;
     }
     
-    .fssm-title {
+ .fssm-title {
         font-size: 2.5em;
     }
     
-    .semester-badge {
+  .semester-badge {
         font-size: 1.3em;
         padding: 12px 30px;
     }
     
-    .hologram-grid {
+ .hologram-grid {
         grid-template-columns: 1fr;
         gap: 20px;
     }
@@ -389,7 +389,7 @@ body {
     </div>
    
    <!-- FSSM Hero Section -->
- <div class="fssm-hero">
+  <div class="fssm-hero">
         <div class="semester-badge">S6</div>
         <div class="fssm-title">Formation FSSM</div>
         <div class="fssm-subtitle">Cybersecurity & Network Engineering</div>
@@ -402,7 +402,7 @@ body {
     </div>
    
    <!-- Modules Grid S6 -->
-  <div class="hologram-grid">
+ <div class="hologram-grid">
         <a href="{{ site.baseurl }}/fssm/Iot" class="holo-card">
             <div class="module-icon">M1</div>
             <h3>IoT Analyse et Connexion</h3>
@@ -413,7 +413,7 @@ body {
             </div>
         </a>
 
-<a href="{{ site.baseurl }}/fssm/programmation-reseau" class="holo-card">
+   <a href="{{ site.baseurl }}/fssm/programmation-reseau" class="holo-card">
             <div class="module-icon">M2</div>
             <h3>Parallélisme & Programmation Réseaux</h3>
             <p>Programmation parallèle, sockets, protocoles réseau avancés</p>
@@ -423,7 +423,7 @@ body {
             </div>
         </a>
         
-  <a href="{{ site.baseurl }}/fssm/droit" class="holo-card">
+ <a href="{{ site.baseurl }}/fssm/droit" class="holo-card">
             <div class="module-icon">M3</div>
             <h3>Droit Digital</h3>
             <p>RGPD, propriété intellectuelle, aspects juridiques du numérique</p>
@@ -443,7 +443,7 @@ body {
             </div>
         </a>
         
- <a href="{{ site.baseurl }}/fssm/crypto" class="holo-card">
+  <a href="{{ site.baseurl }}/fssm/crypto" class="holo-card">
             <div class="module-icon">M5</div>
             <h3>Cryptographie & Cybersécurité</h3>
             <p>Chiffrement, PKI, signatures numériques, sécurité applicative</p>
@@ -454,14 +454,7 @@ body {
         </a>
     </div>
 
-    <!-- Semester Divider -->
-   <div class="semester-divider">
-        <h2>📚 Modules from Previous Semester</h2>
-    </div>
-
-    <!-- Modules Grid S5 -->
-<div class="hologram-grid">
-        <a href="{{ site.baseurl }}/fssm/s5" class="holo-card done">
+ <a href="{{ site.baseurl }}/fssm/s5" class="holo-card done">
             <div class="module-icon">S5</div>
             <h3>Pentesting Digital Forensics<br>& Services Réseau et Cloud</h3>
             <p>Pentest, analyse forensique, Cloud Computing, services réseau avancés</p>
@@ -476,7 +469,7 @@ body {
  <div class="cyber-footer">
         Année académique <span style="color: #60a5fa; font-weight: bold;">2025-2026</span><br>
         FSSM - Faculté des Sciences Semlalia, Marrakech<br>
-        Spécialité: <span style="color: #3b82f6; font-weight: bold;">Cybersécurité & Réseau</span>
+        Spécialité: <span style="color: #3b82f6; font-weight: bold;">Cybersécurité & Ingénierie Réseau</span>
     </div>
 </div>
 
