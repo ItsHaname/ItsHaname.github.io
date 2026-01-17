@@ -1,22 +1,25 @@
 <style>
-  /* On force le container à être large (92% de l'écran) */
+  /* On force le conteneur à sortir du cadre du thème et à se centrer réellement */
   .img-wrapper {
-    width: 92vw !important; 
-    max-width: 1500px !important; 
-    /* Cette formule magique centre l'image parfaitement avec des petits bords */
-    margin-left: calc(50% - 46vw) !important; 
+    width: 90vw !important; /* Largeur de 90% de l'écran */
+    max-width: 1400px !important;
+    
+    /* LA CORRECTION : On centre par rapport à la fenêtre (viewport) */
     position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 10px 0;
+    margin: 40px 0 !important;
   }
 
   .img-wrapper img {
     display: block;
     width: 100% !important;
     height: auto !important;
-    margin-bottom: 45px;
+    margin-bottom: 40px;
     border-radius: 12px;
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
     transition: all 0.4s ease-in-out;
@@ -28,8 +31,8 @@
     filter: brightness(1.05);
   }
 
-  /* Évite les bugs de défilement sur mobile */
-  body {
+  /* Indispensable pour éviter que la page bouge sur les côtés */
+  html, body {
     overflow-x: hidden;
   }
 </style>
