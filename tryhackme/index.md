@@ -2,7 +2,7 @@
 layout: default
 title: TryHackMe
 ---
-
+<link rel="icon" href="https://raw.githubusercontent.com/ItsHaname/ItsHaname.github.io/main/logo" type="image/png">
 <style>
 * {
   margin: 0;
