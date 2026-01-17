@@ -18,10 +18,12 @@ body {
     line-height: 1.6;
 }
 
+/* CHANGEMENT ICI : Contenu plus large et marges équilibrées */
 .container {
-    max-width: 900px;
+    max-width: 1100px; /* Passage de 900px à 1100px */
+    width: 90%;
     margin: 0 auto;
-    padding: 60px 30px;
+    padding: 60px 0;
 }
 
 /* Hero Section */
@@ -70,7 +72,7 @@ body {
 .hero .bio {
     font-size: 1.1em;
     color: #cbd5e1;
-    max-width: 700px;
+    max-width: 800px; /* Légèrement augmenté pour l'équilibre */
     margin: 0 auto 30px;
 }
 
@@ -172,8 +174,9 @@ section p {
 /* Cards Grid */
 .cards {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+    /* CHANGEMENT ICI : S'adapte mieux à la nouvelle largeur */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
     margin-top: 25px;
 }
 
@@ -218,34 +221,30 @@ section p {
 @media (max-width: 768px) {
     .container {
         padding: 40px 20px;
+        width: 100%;
     }
 
-    .hero h1 {
+  .hero h1 {
         font-size: 2em;
     }
 
-    .hero img {
-        width: 150px;
-        height: 150px;
+  .hero-image-container {
+        width: 200px;
+        height: 200px;
     }
 
-    .stats {
+ .stats {
         flex-direction: column;
         gap: 20px;
     }
 
-    .info-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .cards {
+  .cards {
         grid-template-columns: 1fr;
     }
 }
 </style>
 
 <div class="container">
-    <!-- Hero Section -->
     <div class="hero">
         <div class="hero-image-container">
             <img src="/assets/images/me.png" alt="Hanane AIT BAH">
@@ -255,8 +254,7 @@ section p {
         <p class="bio">
             Passionate about <span class="highlight">offensive security</span>, <span class="highlight">vulnerability analysis</span>, and <span class="highlight">reverse engineering</span>. Currently pursuing a Bachelor's in Networking and Cybersecurity at FSSM, Cadi Ayyad University.
         </p>
-        
- <div class="stats">
+             <div class="stats">
             <div class="stat">
                 <span class="stat-value">2026</span>
                 <span class="stat-label">Blog Launch</span>
@@ -272,8 +270,7 @@ section p {
         </div>
     </div>
 
-    <!-- Focus Areas -->
- <section>
+<section>
         <h2>Focus Areas</h2>
         <div class="skills">
             <div class="skill-tag">Penetration Testing</div>
@@ -287,7 +284,6 @@ section p {
         </div>
     </section>
 
-    <!-- Education -->
  <section>
         <h2>Education</h2>
         <div class="timeline-item">
@@ -302,7 +298,6 @@ section p {
         </div>
     </section>
 
-    <!-- What You'll Find Here -->
   <section>
         <h2>What You'll Find Here</h2>
         <div class="cards">
@@ -316,7 +311,7 @@ section p {
                 </ul>
             </div>
             
- <div class="card">
+   <div class="card">
                 <h3>TryHackMe Journey</h3>
                 <p class="meta">Practical Cybersecurity Training</p>
                 <ul>
@@ -326,7 +321,7 @@ section p {
                 </ul>
             </div>
             
-  <div class="card">
+ <div class="card">
                 <h3>Personal Lab</h3>
                 <p class="meta">Hands-On Learning Environment</p>
                 <ul>
@@ -336,7 +331,7 @@ section p {
                 </ul>
             </div>
             
-   <div class="card">
+  <div class="card">
                 <h3>Learning Resources</h3>
                 <p class="meta">Community & Knowledge Sharing</p>
                 <ul>
@@ -348,7 +343,6 @@ section p {
         </div>
     </section>
 
-    <!-- About This Blog -->
  <section>
         <h2>About This Blog</h2>
         <p>
