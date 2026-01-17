@@ -1,33 +1,36 @@
 <style>
-  body {
-    background: #1a1f2e;
-    margin: 0;
-    padding: 0;
+  /* On force le container à être large (92% de l'écran) */
+  .img-wrapper {
+    width: 92vw !important; 
+    max-width: 1500px !important; 
+    /* Cette formule magique centre l'image parfaitement avec des petits bords */
+    margin-left: calc(50% - 46vw) !important; 
+    position: relative;
     display: flex;
     flex-direction: column;
-    align-items: center; 
-  }
-
-  .img-wrapper {
-    width: 85%; 
-    max-width: 1400px; 
-    margin: 40px auto;
+    align-items: center;
+    padding: 10px 0;
   }
 
   .img-wrapper img {
     display: block;
-    width: 100%;
-    height: auto;
-    margin-bottom: 50px;
-    border-radius: 15px;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
-    transition: all 0.4s ease-in-out; 
+    width: 100% !important;
+    height: auto !important;
+    margin-bottom: 45px;
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+    transition: all 0.4s ease-in-out;
   }
 
   .img-wrapper img:hover {
     transform: translateY(-5px);
     box-shadow: 0 20px 50px rgba(0, 217, 255, 0.3);
     filter: brightness(1.05);
+  }
+
+  /* Évite les bugs de défilement sur mobile */
+  body {
+    overflow-x: hidden;
   }
 </style>
 
