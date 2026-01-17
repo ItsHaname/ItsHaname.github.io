@@ -39,10 +39,10 @@ body {
     border: 5px solid #3b82f6;
     margin: 0 auto 30px;
     object-fit: cover;
-    object-position: center 30%;
+    object-position: center center;
     display: block;
     box-shadow: 0 10px 40px rgba(59, 130, 246, 0.4);
-    transform: scale(1.4);
+    background: transparent;
 }
 
 .hero h1 {
