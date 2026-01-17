@@ -3,7 +3,7 @@ layout: default
 title: My Lab
 nav: my-lab
 ---
-
+<link rel="icon" href="https://raw.githubusercontent.com/ItsHaname/ItsHaname.github.io/main/logo" type="image/png">
 <style>
 @keyframes matrixRain {
   0% { transform: translateY(-100vh); }
