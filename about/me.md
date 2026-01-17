@@ -32,20 +32,27 @@ body {
     border-bottom: 2px solid rgba(59, 130, 246, 0.2);
 }
 
-.hero img {
-    width: 280px;
-    height: 280px;
-    border-radius: 50%;
-    border: 5px solid #3b82f6;
+.hero-image-container {
+    position: relative;
+    width: 300px;
+    height: 300px;
     margin: 0 auto 30px;
-    object-fit: cover;
-    object-position: center 40%;
-    display: block;
-    box-shadow: 0 10px 40px rgba(59, 130, 246, 0.4);
+    border-radius: 50%;
+    overflow: hidden;
+    border: 6px solid #00d4ff;
+    box-shadow: 
+        0 0 30px rgba(0, 212, 255, 0.5),
+        0 10px 40px rgba(59, 130, 246, 0.4);
     background: #0a0e1a;
-    transform: scale(1.2);
-    filter: brightness(1.1) contrast(1.05);
-    mix-blend-mode: lighten;
+}
+
+.hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 30%;
+    display: block;
+    transform: scale(1.15);
 }
 
 .hero h1 {
@@ -240,7 +247,9 @@ section p {
 <div class="container">
     <!-- Hero Section -->
     <div class="hero">
-        <img src="https://github.com/user-attachments/assets/6c553521-15b0-4d1a-aa6f-798d79f1c896" alt="Hanane AIT BAH">
+        <div class="hero-image-container">
+            <img src="/assets/images/me.png" alt="Hanane AIT BAH">
+        </div>
         <h1>HANANE AIT BAH</h1>
         <p class="role">Network Security Student | Cybersecurity Enthusiast</p>
         <p class="bio">
