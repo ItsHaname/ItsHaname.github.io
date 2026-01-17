@@ -464,8 +464,8 @@ body {
             </div>
         </a>
     </div>
-
-    <!-- Footer -->
+  <!-- Footer -->
+  <div>
  <div class="cyber-footer">
         Année académique <span style="color: #60a5fa; font-weight: bold;">2025-2026</span><br>
         FSSM - Faculté des Sciences Semlalia, Marrakech<br>
