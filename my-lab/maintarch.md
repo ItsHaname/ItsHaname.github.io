@@ -3,7 +3,7 @@ layout: default
 title: System Maintenance
 nav: lab
 ---
-
+<link rel="icon" href="https://raw.githubusercontent.com/ItsHaname/ItsHaname.github.io/main/logo" type="image/png">
 <style>
 /* Arrière-plan binaire global */
 body {
