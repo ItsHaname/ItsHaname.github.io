@@ -1,9 +1,9 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>My Lab - CYBERIA</title>
+---
+layout: default
+title: My Lab
+nav: my-lab
+---
+
 <style>
 @keyframes matrixRain {
   0% { transform: translateY(-100vh); }
@@ -30,6 +30,7 @@ body {
   background: #0a0e1a;
   min-height: 100vh;
   margin: 0;
+  padding: 0;
   position: relative;
   overflow-x: hidden;
   font-family: 'Courier New', monospace;
@@ -42,7 +43,7 @@ body {
   width: 100%;
   height: 100%;
   pointer-events: none;
-  z-index: -1;
+  z-index: 0;
 }
 .binary-digit {
   position: absolute;
@@ -60,7 +61,7 @@ body {
   margin: 0 auto;
   padding: 40px 20px;
   position: relative;
-  z-index: 1;
+  z-index: 10;
 }
 
 /* Header */
@@ -175,8 +176,8 @@ body {
   transform: translateY(-5px);
 }
 .lab-icon {
-  width: 120px;
-  height: 120px;
+  width: 180px;
+  height: 180px;
   margin: 0 auto 20px;
   display: flex;
   align-items: center;
@@ -186,8 +187,8 @@ body {
   border: 2px solid rgba(59, 130, 246, 0.3);
 }
 .lab-icon img {
-  width: 100px;
-  height: 100px;
+  width: 150px;
+  height: 150px;
   object-fit: contain;
 }
 .lab-card h3 {
@@ -253,10 +254,45 @@ body {
   }
 }
 </style>
-</head>
-<body>
 
-<div class="binary-background" id="binaryBG"></div>
+<script>
+// Create binary rain background
+document.addEventListener('DOMContentLoaded', function() {
+  const binaryContainer = document.createElement('div');
+  binaryContainer.className = 'binary-background';
+  document.body.appendChild(binaryContainer);
+
+  // Falling binary digits
+  for (let i = 0; i < 80; i++) {
+    const digit = document.createElement('div');
+    digit.className = 'binary-digit';
+    digit.textContent = Math.random() > 0.5 ? '1' : '0';
+    digit.style.left = Math.random() * 100 + 'vw';
+    digit.style.fontSize = (Math.random() * 18 + 12) + 'px';
+    digit.style.animationDuration = (Math.random() * 10 + 5) + 's';
+    digit.style.animationDelay = (Math.random() * 5) + 's';
+    digit.style.opacity = Math.random() * 0.2 + 0.05;
+    const colors = ['rgba(59, 130, 246, 0.15)', 'rgba(96, 165, 250, 0.15)', 'rgba(37, 99, 235, 0.15)'];
+    digit.style.color = colors[Math.floor(Math.random() * colors.length)];
+    binaryContainer.appendChild(digit);
+  }
+
+  // Floating binary digits
+  for (let i = 0; i < 25; i++) {
+    const floatDigit = document.createElement('div');
+    floatDigit.className = 'binary-digit float';
+    floatDigit.textContent = Math.random() > 0.5 ? '1' : '0';
+    floatDigit.style.left = Math.random() * 100 + 'vw';
+    floatDigit.style.top = Math.random() * 100 + 'vh';
+    floatDigit.style.fontSize = (Math.random() * 22 + 14) + 'px';
+    floatDigit.style.animationDelay = (Math.random() * 2) + 's';
+    floatDigit.style.opacity = Math.random() * 0.3 + 0.1;
+    const floatColors = ['rgba(59, 130, 246, 0.25)', 'rgba(96, 165, 250, 0.25)', 'rgba(37, 99, 235, 0.25)'];
+    floatDigit.style.color = floatColors[Math.floor(Math.random() * floatColors.length)];
+    binaryContainer.appendChild(floatDigit);
+  }
+});
+</script>
 
 <div class="container">
   <!-- Header -->
@@ -293,8 +329,7 @@ body {
       <h3>Raspberry Pi</h3>
       <p>Serveur principal du lab, héberge les containers Docker et services réseau</p>
     </a>
-
-    <!-- Docker -->
+ <!-- Docker -->
     <a href="/my-lab/dockerlab" class="lab-card">
       <div class="lab-icon">
         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker">
@@ -304,7 +339,7 @@ body {
     </a>
 
     <!-- Arch Linux -->
-    <a href="/my-lab/archlinux" class="lab-card">
+   <a href="/my-lab/archlinux" class="lab-card">
       <div class="lab-icon">
         <img src="/assets/images/arch-mascot.png" alt="Arch Linux">
       </div>
@@ -313,7 +348,7 @@ body {
     </a>
 
     <!-- VulHub -->
-    <a href="/my-lab/vulhub_cve" class="lab-card">
+  <a href="/my-lab/vulhub_cve" class="lab-card">
       <div class="lab-icon">
         <img src="/assets/images/vulhub.png" alt="VulHub">
       </div>
@@ -322,7 +357,7 @@ body {
     </a>
 
     <!-- Other Labs -->
-    <a href="/my-lab/other_lab" class="lab-card">
+  <a href="/my-lab/other_lab" class="lab-card">
       <div class="lab-icon">
         <img src="/assets/images/otherlab.png" alt="Other Labs">
       </div>
@@ -341,46 +376,6 @@ body {
   <!-- Footer -->
   <div class="cyber-footer">
     <a href="/" style="color: #60a5fa; text-decoration: none;">← Retour à l'accueil</a><br><br>
-    © 2025 CYBERIA — HANAME — Home Lab Setup
+    © 2026CYBERIA — HANAME — Home Lab Setup
   </div>
 </div>
-
-<script>
-// Create binary rain background
-document.addEventListener('DOMContentLoaded', function() {
-  const binaryContainer = document.getElementById('binaryBG');
-
-  // Falling binary digits
-  for (let i = 0; i < 80; i++) {
-    const digit = document.createElement('div');
-    digit.className = 'binary-digit';
-    digit.textContent = Math.random() > 0.5 ? '1' : '0';
-    digit.style.left = Math.random() * 100 + 'vw';
-    digit.style.fontSize = (Math.random() * 18 + 12) + 'px';
-    digit.style.animationDuration = (Math.random() * 10 + 5) + 's';
-    digit.style.animationDelay = (Math.random() * 5) + 's';
-    digit.style.opacity = Math.random() * 0.2 + 0.05;
-    const colors = ['rgba(59, 130, 246, 0.15)', 'rgba(96, 165, 250, 0.15)', 'rgba(37, 99, 235, 0.15)'];
-    digit.style.color = colors[Math.floor(Math.random() * colors.length)];
-    binaryContainer.appendChild(digit);
-  }
-
-  // Floating binary digits
-  for (let i = 0; i < 25; i++) {
-    const floatDigit = document.createElement('div');
-    floatDigit.className = 'binary-digit float';
-    floatDigit.textContent = Math.random() > 0.5 ? '1' : '0';
-    floatDigit.style.left = Math.random() * 100 + 'vw';
-    floatDigit.style.top = Math.random() * 100 + 'vh';
-    floatDigit.style.fontSize = (Math.random() * 22 + 14) + 'px';
-    floatDigit.style.animationDelay = (Math.random() * 2) + 's';
-    floatDigit.style.opacity = Math.random() * 0.3 + 0.1;
-    const floatColors = ['rgba(59, 130, 246, 0.25)', 'rgba(96, 165, 250, 0.25)', 'rgba(37, 99, 235, 0.25)'];
-    floatDigit.style.color = floatColors[Math.floor(Math.random() * floatColors.length)];
-    binaryContainer.appendChild(floatDigit);
-  }
-});
-</script>
-
-</body>
-</html>
