@@ -1,7 +1,3 @@
----
-layout: default
----
-
 <style>
   body {
     background: #1a1f2e;
