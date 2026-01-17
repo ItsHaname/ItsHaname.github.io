@@ -2,7 +2,7 @@
 layout: default
 title: Chapitre 1 - Fondamentaux IoT
 ---
-
+<link rel="icon" href="https://raw.githubusercontent.com/ItsHaname/ItsHaname.github.io/main/logo" type="image/png">
 <style>
 .course-container {
   max-width: 1000px;
