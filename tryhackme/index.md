@@ -478,7 +478,7 @@ body {
     </a>
 
     <!-- Intro to IoT Pentesting -->
-   <a href="{{ site.baseurl }}/my-lab/tryhackme/intro-to-iot-pentesting" class="room-card">
+   <a href="https://www.canva.com/design/DAG-yGatPVg/TdUJPJGrO0DccBwOh2OtTw/edit?utm_content=DAG-yGatPVg&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" class="room-card">
       <img src="{{ site.baseurl }}/assets/images/iot.png" alt="IoT Pentesting" class="room-image">
       <h3>Intro to IoT Pentesting</h3>
       <p class="room-description">Discover the fundamentals of IoT security and learn penetration testing techniques for Internet of Things devices.</p>
