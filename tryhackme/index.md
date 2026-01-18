@@ -388,7 +388,7 @@ body {
     </a>
 
     <!-- Introduction to Docker -->
-  <a href="https://www.canva.com/design/DAG-rGFAO3Q/3FW6lGUjPm0yXQBBDkcSKQ/edit?utm_content=DAG-rGFAO3Q&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" target="_blank" class="room-card">
+   <a href="https://www.canva.com/design/DAG-rGFAO3Q/3FW6lGUjPm0yXQBBDkcSKQ/edit?utm_content=DAG-rGFAO3Q&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" target="_blank" class="room-card">
       <img src="{{ site.baseurl }}/assets/images/dock.png" alt="Docker" class="room-image">
       <h3>Introduction to Docker</h3>
       <p class="room-description">Learn the basics of Docker containerization, understand core concepts, and get hands-on experience with containers.</p>
@@ -410,7 +410,7 @@ body {
     </a>
 
     <!-- Cryptography Basics -->
-   <a href="#" class="room-card">
+  <a href="#" class="room-card">
       <img src="{{ site.baseurl }}/assets/images/crypto1.png" alt="Cryptography Basics" class="room-image">
       <h3>Cryptography Basics</h3>
       <p class="room-description">Learn the basics of cryptography and symmetric encryption.</p>
@@ -421,7 +421,7 @@ body {
     </a>
 
     <!-- Public Key Cryptography Basics -->
-   <a href="#" class="room-card">
+  <a href="#" class="room-card">
       <img src="{{ site.baseurl }}/assets/images/crypto1.png" alt="Public Key Cryptography" class="room-image">
       <h3>Public Key Cryptography Basics</h3>
       <p class="room-description">Discover how public key ciphers such as RSA work and explore their role in applications such as SSH.</p>
@@ -432,7 +432,7 @@ body {
     </a>
 
     <!-- Hashing Basics -->
-  <a href="#" class="room-card">
+   <a href="#" class="room-card">
       <img src="{{ site.baseurl }}/assets/images/crypto2.png" alt="Hashing Basics" class="room-image">
       <h3>Hashing Basics</h3>
       <p class="room-description">Learn about hashing functions and their uses in password verification and file integrity checking.</p>
@@ -454,7 +454,7 @@ body {
     </a>
 
     <!-- Nmap Room -->
-   <a href="#" class="room-card">
+  <a href="#" class="room-card">
       <h3>Nmap</h3>
       <p class="room-description">X</p>
       <div class="status-badge">
@@ -494,7 +494,7 @@ body {
     </a>
 
     <!-- Metasploit -->
-  <a href="#" class="room-card">
+   <a href="#" class="room-card">
       <h3>Metasploit</h3>
       <p class="room-description">X</p>
       <div class="status-badge">
@@ -504,7 +504,7 @@ body {
     </a>
 
     <!-- Linux PrivEsc -->
-  <a href="#" class="room-card">
+   <a href="#" class="room-card">
       <h3>Linux Privilege Escalation</h3>
       <p class="room-description">X</p>
       <div class="status-badge">
@@ -514,7 +514,7 @@ body {
     </a>
 
     <!-- Windows PrivEsc -->
-    <a href="#" class="room-card">
+   <a href="#" class="room-card">
       <h3>Windows Privilege Escalation</h3>
       <p class="room-description">X</p>
       <div class="status-badge">
@@ -524,7 +524,7 @@ body {
     </a>
 
     <!-- Active Directory -->
-   <a href="#" class="room-card">
+  <a href="#" class="room-card">
       <h3>Active Directory</h3>
       <p class="room-description">X</p>
       <div class="status-badge">
@@ -544,7 +544,7 @@ body {
     </a>
 
     <!-- Reverse Engineering -->
-   <a href="#" class="room-card">
+  <a href="#" class="room-card">
       <h3>Reverse Engineering</h3>
       <p class="room-description">X</p>
       <div class="status-badge">
@@ -564,7 +564,7 @@ body {
     </a>
 
     <!-- Web Enumeration -->
-  <a href="#" class="room-card">
+   <a href="#" class="room-card">
       <h3>Web Enumeration</h3>
       <p class="room-description">X</p>
       <div class="status-badge">
