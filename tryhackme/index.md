@@ -210,13 +210,15 @@ body {
   background: rgba(15, 23, 42, 0.85);
   border: 1px solid rgba(220, 38, 38, 0.3);
   border-radius: 15px;
-  padding: 30px;
+  padding: 25px; /* Réduit un peu le padding interne */
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   position: relative;
   overflow: hidden;
   text-decoration: none;
   color: inherit;
-  display: block;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Aligne le contenu à gauche */
 }
 
 .room-card:before {
@@ -242,26 +244,30 @@ body {
   box-shadow: 0 15px 35px rgba(220, 38, 38, 0.3);
 }
 
+/* MODIFICATION ICI : Image petite en haut à gauche */
 .room-image {
-  width: 100%;
-  height: 150px;
-  object-fit: cover;
-  border-radius: 10px;
+  width: 80px; /* Taille réduite */
+  height: 50px; /* Taille réduite */
+  object-fit: contain; /* Garde les proportions de l'icône */
+  border-radius: 5px;
   margin-bottom: 15px;
+  background: rgba(255,255,255,0.05); /* Optionnel : léger fond pour l'icône */
 }
 
 .room-card h3 {
   color: #fff;
-  font-size: 1.6em;
-  margin: 0 0 15px 0;
+  font-size: 1.4em;
+  margin: 0 0 10px 0;
   font-weight: 600;
+  text-align: left;
 }
 
 .room-description {
   color: #cbd5e1;
-  font-size: 0.95em;
-  line-height: 1.6;
+  font-size: 0.9em;
+  line-height: 1.5;
   margin-bottom: 15px;
+  text-align: left;
 }
 
 .status-badge {
@@ -269,12 +275,12 @@ body {
   align-items: center;
   gap: 8px;
   background: rgba(220, 38, 38, 0.15);
-  padding: 8px 16px;
+  padding: 6px 14px;
   border-radius: 20px;
-  font-size: 0.9em;
+  font-size: 0.85em;
   color: #ef4444;
   border: 1px solid rgba(220, 38, 38, 0.3);
-  margin-top: 15px;
+  margin-top: auto; /* Pousse le badge vers le bas */
 }
 
 .status-badge.done {
@@ -344,19 +350,16 @@ body {
 <div class="binary-background"></div>
 
 <div class="container">
-  <!-- Hero Section -->
   <div class="page-header">
     <div class="platform-badge">TRYHACKME</div>
     <h1 class="page-title">CYBERSECURITY</h1>
     <p class="page-subtitle">Learning Journey & Room Notes</p>
   </div>
 
-  <!-- Profile Section -->
   <div class="profile-section">
     <iframe src="https://tryhackme.com/api/v2/badges/public-profile?userPublicId=3165378"></iframe>
   </div>
 
-  <!-- Terminal Info -->
   <div class="terminal">
     <div class="terminal-header">
       <div class="terminal-dot red"></div>
@@ -372,11 +375,9 @@ body {
     </div>
   </div>
 
-  <!-- Rooms Section -->
   <h2 class="section-title">Rooms & Write-ups</h2>
   
   <div class="rooms-grid">
-    <!-- Introduction To Honeypots -->
     <a href="https://www.canva.com/design/DAG-szd4Ha4/FUYHK4XgKzJ9cewGWGoNaw/edit?utm_content=DAG-szd4Ha4&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" class="room-card">
       <img src="{{ site.baseurl }}/assets/images/honey.png" alt="Honeypots" class="room-image">
       <h3>Introduction To Honeypots</h3>
@@ -387,7 +388,6 @@ body {
       </div>
     </a>
 
-    <!-- Introduction to Docker -->
    <a href="https://www.canva.com/design/DAG-rGFAO3Q/3FW6lGUjPm0yXQBBDkcSKQ/edit?utm_content=DAG-rGFAO3Q&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" target="_blank" class="room-card">
       <img src="{{ site.baseurl }}/assets/images/dock.png" alt="Docker" class="room-image">
       <h3>Introduction to Docker</h3>
@@ -398,8 +398,7 @@ body {
       </div>
     </a>
 
-    <!-- Intro to IoT Pentesting -->
-  <a href="https://www.canva.com/design/DAG-yGatPVg/TdUJPJGrO0DccBwOh2OtTw/edit?utm_content=DAG-yGatPVg&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" class="room-card">
+   <a href="https://www.canva.com/design/DAG-yGatPVg/TdUJPJGrO0DccBwOh2OtTw/edit?utm_content=DAG-yGatPVg&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" class="room-card">
       <img src="{{ site.baseurl }}/assets/images/iot.png" alt="IoT Pentesting" class="room-image">
       <h3>Intro to IoT Pentesting</h3>
       <p class="room-description">Discover the fundamentals of IoT security and learn penetration testing techniques for Internet of Things devices.</p>
@@ -409,8 +408,7 @@ body {
       </div>
     </a>
 
-    <!-- Cryptography Basics -->
-  <a href="#" class="room-card">
+   <a href="#" class="room-card">
       <img src="{{ site.baseurl }}/assets/images/crypto1.png" alt="Cryptography Basics" class="room-image">
       <h3>Cryptography Basics</h3>
       <p class="room-description">Learn the basics of cryptography and symmetric encryption.</p>
@@ -420,8 +418,7 @@ body {
       </div>
     </a>
 
-    <!-- Public Key Cryptography Basics -->
-  <a href="#" class="room-card">
+   <a href="#" class="room-card">
       <img src="{{ site.baseurl }}/assets/images/crypto1.png" alt="Public Key Cryptography" class="room-image">
       <h3>Public Key Cryptography Basics</h3>
       <p class="room-description">Discover how public key ciphers such as RSA work and explore their role in applications such as SSH.</p>
@@ -431,7 +428,6 @@ body {
       </div>
     </a>
 
-    <!-- Hashing Basics -->
    <a href="#" class="room-card">
       <img src="{{ site.baseurl }}/assets/images/crypto2.png" alt="Hashing Basics" class="room-image">
       <h3>Hashing Basics</h3>
@@ -442,8 +438,7 @@ body {
       </div>
     </a>
 
-    <!-- John the Ripper: The Basics -->
-  <a href="#" class="room-card">
+   <a href="#" class="room-card">
       <img src="{{ site.baseurl }}/assets/images/crypto2.png" alt="John the Ripper" class="room-image">
       <h3>John the Ripper: The Basics</h3>
       <p class="room-description">Learn how to use John the Ripper, a powerful and adaptable hash-cracking tool.</p>
@@ -453,120 +448,27 @@ body {
       </div>
     </a>
 
-    <!-- Nmap Room -->
-   <a href="#" class="room-card">
+  <a href="#" class="room-card">
       <h3>Nmap</h3>
-      <p class="room-description">X</p>
+      <p class="room-description">Nmap is a powerful network scanning tool used for security auditing.</p>
       <div class="status-badge">
         <span class="status-dot"></span>
         À venir
       </div>
     </a>
 
-    <!-- OWASP Top 10 -->
   <a href="#" class="room-card">
       <h3>OWASP Top 10</h3>
-      <p class="room-description">X</p>
+      <p class="room-description">Web application security risks analysis.</p>
       <div class="status-badge">
         <span class="status-dot"></span>
         À venir
       </div>
     </a>
 
-    <!-- SQL Injection -->
-  <a href="#" class="room-card">
+   <a href="#" class="room-card">
       <h3>SQL Injection</h3>
-      <p class="room-description">X</p>
-      <div class="status-badge">
-        <span class="status-dot"></span>
-        À venir
-      </div>
-    </a>
-
-    <!-- Burp Suite -->
-   <a href="#" class="room-card">
-      <h3>Burp Suite</h3>
-      <p class="room-description">X</p>
-      <div class="status-badge">
-        <span class="status-dot"></span>
-        À venir
-      </div>
-    </a>
-
-    <!-- Metasploit -->
-   <a href="#" class="room-card">
-      <h3>Metasploit</h3>
-      <p class="room-description">X</p>
-      <div class="status-badge">
-        <span class="status-dot"></span>
-        À venir
-      </div>
-    </a>
-
-    <!-- Linux PrivEsc -->
-  <a href="#" class="room-card">
-      <h3>Linux Privilege Escalation</h3>
-      <p class="room-description">X</p>
-      <div class="status-badge">
-        <span class="status-dot"></span>
-        À venir
-      </div>
-    </a>
-
-    <!-- Windows PrivEsc -->
-  <a href="#" class="room-card">
-      <h3>Windows Privilege Escalation</h3>
-      <p class="room-description">X</p>
-      <div class="status-badge">
-        <span class="status-dot"></span>
-        À venir
-      </div>
-    </a>
-
-    <!-- Active Directory -->
-   <a href="#" class="room-card">
-      <h3>Active Directory</h3>
-      <p class="room-description">X</p>
-      <div class="status-badge">
-        <span class="status-dot"></span>
-        À venir
-      </div>
-    </a>
-
-    <!-- Blue Team -->
-  <a href="#" class="room-card">
-      <h3>Blue Team Fundamentals</h3>
-      <p class="room-description">X</p>
-      <div class="status-badge">
-        <span class="status-dot"></span>
-        À venir
-      </div>
-    </a>
-
-    <!-- Reverse Engineering -->
-  <a href="#" class="room-card">
-      <h3>Reverse Engineering</h3>
-      <p class="room-description">X</p>
-      <div class="status-badge">
-        <span class="status-dot"></span>
-        À venir
-      </div>
-    </a>
-
-    <!-- Network Services -->
-   <a href="#" class="room-card">
-      <h3>Network Services</h3>
-      <p class="room-description">X</p>
-      <div class="status-badge">
-        <span class="status-dot"></span>
-        À venir
-      </div>
-    </a>
-
-    <!-- Web Enumeration -->
-  <a href="#" class="room-card">
-      <h3>Web Enumeration</h3>
-      <p class="room-description">X</p>
+      <p class="room-description">Exploiting database vulnerabilities via web input.</p>
       <div class="status-badge">
         <span class="status-dot"></span>
         À venir
@@ -574,7 +476,6 @@ body {
     </a>
   </div>
 
-  <!-- Footer -->
   <div class="footer-nav">
     <a href="{{ site.baseurl }}/my-lab" class="nav-button">← Back to Lab</a>
     <a href="https://tryhackme.com" target="_blank" class="nav-button">TryHackMe</a>
