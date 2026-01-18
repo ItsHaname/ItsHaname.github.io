@@ -357,7 +357,7 @@ document.addEventListener('DOMContentLoaded', function() {
     </a>
 
     <!-- Other Labs -->
-  <a href="/my-lab/other_lab" class="lab-card">
+  <a href="/my-lab/tor" class="lab-card">
       <div class="lab-icon">
         <img src="/assets/images/tor.png" alt="Other Labs">
       </div>
