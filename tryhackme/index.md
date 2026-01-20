@@ -451,8 +451,10 @@ body {
   <a href="#" class="room-card">
     <img src="https://github.com/user-attachments/assets/2efe9da6-482f-48d3-a956-d7f432cc3204"class="room-image" />
 
- <h3>Honeynet Collapse CTF</h3>
-      <p class="room-description"></p>
+ <h3>Governance & Regulation</h3>
+  <a href="#" class="room-card">
+ <img src="{{ site.baseurl }}/assets/images/Gouv.png" alt="Governance & Regulation" class="room-image">
+      <p class="room-description">Explore policies and frameworks vital for regulating cyber security in an organisation.</p>
       <div class="status-badge">
         <span class="status-dot"></span>
         À venir
