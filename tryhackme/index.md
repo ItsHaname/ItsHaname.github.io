@@ -77,7 +77,6 @@ body {
   z-index: 1;
 }
 
-/* Hero Section */
 .page-header {
   text-align: center;
   margin-bottom: 60px;
@@ -132,7 +131,6 @@ body {
   color: #ef4444;
 }
 
-/* Profile Section */
 .profile-section {
   text-align: center;
   margin: 40px 0;
@@ -147,7 +145,6 @@ body {
   max-width: 100%;
 }
 
-/* Terminal Section */
 .terminal {
   background: rgba(15, 23, 42, 0.85);
   border: 1px solid rgba(220, 38, 38, 0.3);
@@ -184,7 +181,6 @@ body {
   font-weight: bold;
 }
 
-/* Section Title */
 .section-title {
   font-size: 2.5em;
   color: transparent;
@@ -198,7 +194,6 @@ body {
   text-align: center;
 }
 
-/* Rooms Grid */
 .rooms-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -244,14 +239,12 @@ body {
   box-shadow: 0 15px 35px rgba(220, 38, 38, 0.3);
 }
 
-/* Taille ajustée selon votre demande : un peu plus grande */
 .room-image {
   width: 110px; 
   height: 70px;
   object-fit: contain;
   border-radius: 8px;
   margin-bottom: 18px;
-  /* background: rgba(255,255,255,0.02); Optionnel */
 }
 
 .room-card h3 {
@@ -302,7 +295,6 @@ body {
   animation: none;
 }
 
-/* Footer */
 .footer-nav {
   display: flex;
   justify-content: center;
@@ -388,7 +380,7 @@ body {
       </div>
     </a>
 
-   <a href="https://www.canva.com/design/DAG-rGFAO3Q/3FW6lGUjPm0yXQBBDkcSKQ/edit?utm_content=DAG-rGFAO3Q&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" target="_blank" class="room-card">
+  <a href="https://www.canva.com/design/DAG-rGFAO3Q/3FW6lGUjPm0yXQBBDkcSKQ/edit?utm_content=DAG-rGFAO3Q&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" target="_blank" class="room-card">
       <img src="{{ site.baseurl }}/assets/images/dock.png" alt="Docker" class="room-image">
       <h3>Introduction to Docker</h3>
       <p class="room-description">Learn the basics of Docker containerization, understand core concepts, and get hands-on experience with containers.</p>
@@ -398,7 +390,7 @@ body {
       </div>
     </a>
 
-   <a href="https://www.canva.com/design/DAG-yGatPVg/TdUJPJGrO0DccBwOh2OtTw/edit?utm_content=DAG-yGatPVg&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" class="room-card">
+  <a href="https://www.canva.com/design/DAG-yGatPVg/TdUJPJGrO0DccBwOh2OtTw/edit?utm_content=DAG-yGatPVg&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" class="room-card">
       <img src="{{ site.baseurl }}/assets/images/iot.png" alt="IoT Pentesting" class="room-image">
       <h3>Intro to IoT Pentesting</h3>
       <p class="room-description">Discover the fundamentals of IoT security and learn penetration testing techniques for Internet of Things devices.</p>
@@ -408,7 +400,7 @@ body {
       </div>
     </a>
 
-  <a href="https://www.canva.com/design/DAG-y0eYKzw/5WrIOY1MGnqsIvEns_DpWg/edit?utm_content=DAG-y0eYKzw&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" class="room-card">
+   <a href="https://www.canva.com/design/DAG-y0eYKzw/5WrIOY1MGnqsIvEns_DpWg/edit?utm_content=DAG-y0eYKzw&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" class="room-card">
       <img src="{{ site.baseurl }}/assets/images/crypto1.png" alt="Cryptography Basics" class="room-image">
       <h3>Cryptography Basics</h3>
       <p class="room-description">Learn the basics of cryptography and symmetric encryption.</p>
@@ -428,7 +420,7 @@ body {
       </div>
     </a>
 
-   <a href="#" class="room-card">
+  <a href="#" class="room-card">
       <img src="{{ site.baseurl }}/assets/images/crypto2.png" alt="Hashing Basics" class="room-image">
       <h3>Hashing Basics</h3>
       <p class="room-description">Learn about hashing functions and their uses in password verification and file integrity checking.</p>
@@ -438,7 +430,7 @@ body {
       </div>
     </a>
 
-  <a href="#" class="room-card">
+   <a href="#" class="room-card">
       <img src="{{ site.baseurl }}/assets/images/jhon.png" alt="John the Ripper" class="room-image">
       <h3>John the Ripper: The Basics</h3>
       <p class="room-description">Learn how to use John the Ripper, a powerful and adaptable hash-cracking tool.</p>
@@ -449,15 +441,12 @@ body {
     </a>
 
   <a href="#" class="room-card">
-    <img src="https://github.com/user-attachments/assets/2efe9da6-482f-48d3-a956-d7f432cc3204"class="room-image" />
-
- <h3>Governance & Regulation</h3>
-  <a href="#" class="room-card">
- <img src="{{ site.baseurl }}/assets/images/Gouv.png" alt="Governance & Regulation" class="room-image">
+      <img src="{{ site.baseurl }}/assets/images/Gouv.png" alt="Governance & Regulation" class="room-image">
+      <h3>Governance & Regulation</h3>
       <p class="room-description">Explore policies and frameworks vital for regulating cyber security in an organisation.</p>
-      <div class="status-badge">
-        <span class="status-dot"></span>
-        À venir
+      <div class="status-badge done">
+        <span class="status-dot done"></span>
+        Done
       </div>
     </a>
   </div>
