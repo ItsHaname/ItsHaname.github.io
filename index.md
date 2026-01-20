@@ -1,10 +1,8 @@
----
 layout: default
 title: Accueil
 nav: home
 ---
 <link rel="icon" href="https://raw.githubusercontent.com/ItsHaname/ItsHaname.github.io/main/logo" type="image/png">
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@900&family=Rajdhani:wght@500&display=swap" rel="stylesheet">
 <style>
 @keyframes matrixRain {
   0% { transform: translateY(-100vh); }
@@ -40,28 +38,13 @@ nav: home
   0% { clip-path: inset(25% 0 58% 0); }
   100% { clip-path: inset(75% 0 1% 0); }
 }
-@keyframes scanLine {
-  0% { transform: translateX(-100%); }
-  100% { transform: translateX(100%); }
-}
-@keyframes ampersandPulse {
-  0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.1); }
-}
-@keyframes borderGlow {
-  0%, 100% { box-shadow: 0 0 30px rgba(0, 255, 255, 0.3), inset 0 0 20px rgba(0, 20, 40, 0.5); }
-  50% { box-shadow: 0 0 40px rgba(0, 255, 255, 0.5), inset 0 0 25px rgba(0, 255, 255, 0.2); }
-}
-
 body {
   background: #0a0e1a;
   min-height: 100vh;
   margin: 0;
   position: relative;
   overflow-x: hidden;
-  font-family: 'Rajdhani', sans-serif;
 }
-
 .binary-background {
   position: fixed;
   top: 0;
@@ -71,7 +54,6 @@ body {
   pointer-events: none;
   z-index: -1;
 }
-
 .binary-digit {
   position: absolute;
   font-family: 'Courier New', monospace;
@@ -80,11 +62,9 @@ body {
   opacity: 0;
   animation: matrixRain linear infinite;
 }
-
 .binary-digit.float {
   animation: floatUpDown 3s ease-in-out infinite;
 }
-
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -92,66 +72,70 @@ body {
   position: relative;
   z-index: 1;
 }
-
-/* LOGO SVG CYBERIA */
+/* CYBERIA Header - Style néon avec couleurs bleues marines */
 .cyberia-header {
   text-align: center;
   margin-bottom: 60px;
-  padding: 30px 20px;
+  padding: 40px 20px;
   position: relative;
-  background: rgba(0, 10, 20, 0.7);
-  border-radius: 20px;
-  border: 2px solid rgba(0, 255, 255, 0.3);
-  animation: borderGlow 4s ease-in-out infinite;
-  overflow: hidden;
+  background: rgba(0, 20, 40, 0.6);
+  border-radius: 30px;
+  border: 3px solid #1e4d7b;
+  box-shadow: 0 0 40px rgba(30, 77, 123, 0.5), inset 0 0 30px rgba(30, 77, 123, 0.2);
 }
-
-.cyberia-header::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 2px;
-  background: linear-gradient(90deg, transparent, rgba(0, 255, 255, 0.8), transparent);
-  animation: scanLine 3s linear infinite;
+.cyberia-title {
+  font-size: 5em;
+  color: #ff6b4a;
+  text-shadow: 
+    0 0 10px #ff6b4a,
+    0 0 20px #ff6b4a,
+    0 0 30px #ff6b4a,
+    0 0 40px #ff3300;
+  margin: 0;
+  font-weight: 900;
+  letter-spacing: 10px;
+  text-transform: uppercase;
+  position: relative;
+  font-style: italic;
+  -webkit-text-stroke: 2px #ff3300;
+  paint-order: stroke fill;
 }
-
-.cyberia-logo {
-  display: inline-block;
-  max-width: 600px;
-  width: 100%;
-  transition: all 0.3s ease;
-  cursor: pointer;
-}
-
-.cyberia-logo:hover {
-  transform: scale(1.02);
-}
-
-.cyberia-logo:hover .ampersand-container {
-  animation: ampersandPulse 0.5s ease;
-}
-
-.cyberia-logo:hover .ampersand-square {
-  stroke: #ff6b4a;
-  stroke-width: 3;
-  filter: drop-shadow(0 0 10px #ff6b4a);
-}
-
-/* Cacher l'ancien texte */
-.cyberia-title,
-.cyberia-subtitle,
+/* Ligne horizontale */
 .cyberia-line {
-  display: none;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, 
+    transparent, 
+    #1e4d7b, 
+    #3b82f6, 
+    #1e4d7b, 
+    transparent);
+  margin: 20px auto;
+  max-width: 500px;
+  box-shadow: 0 0 15px #3b82f6;
 }
-
+.cyberia-subtitle {
+  font-size: 1.8em;
+  color: #60a5fa;
+  margin: 10px 0 0 0;
+  text-shadow: 
+    0 0 10px #60a5fa,
+    0 0 20px #3b82f6,
+    0 0 30px #2563eb;
+  letter-spacing: 4px;
+  font-weight: 300;
+  font-style: italic;
+}
+.cyberia-subtitle::after {
+  content: '_';
+  animation: blink 1s infinite;
+  color: #60a5fa;
+}
 /* Rest of the page - theme bleu marine */
 .cyber-header {
   text-align: center;
   margin-bottom: 60px;
 }
-
 .neon-title {
   font-size: 3em;
   text-align: center;
@@ -165,7 +149,6 @@ body {
   font-weight: 900;
   letter-spacing: 2px;
 }
-
 .subtitle {
   font-size: 1.5em;
   color: #94a3b8;
@@ -173,7 +156,6 @@ body {
   margin-bottom: 40px;
   font-style: italic;
 }
-
 .glitch-text {
   font-size: 1.8em;
   font-weight: bold;
@@ -182,7 +164,6 @@ body {
   display: inline-block;
   margin: 10px 0 40px 0;
 }
-
 .glitch-text:before,
 .glitch-text:after {
   content: attr(data-text);
@@ -192,26 +173,22 @@ body {
   width: 100%;
   height: 100%;
 }
-
 .glitch-text:before {
   left: 2px;
   text-shadow: -1px 0 #3b82f6;
   animation: glitch-1 2s infinite linear alternate-reverse;
 }
-
 .glitch-text:after {
   left: -2px;
   text-shadow: -1px 0 #60a5fa;
   animation: glitch-2 3s infinite linear alternate-reverse;
 }
-
 .hologram-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
   margin: 60px 0;
 }
-
 .holo-card {
   background: rgba(15, 23, 42, 0.85);
   border: 1px solid rgba(59, 130, 246, 0.3);
@@ -225,7 +202,6 @@ body {
   color: inherit;
   display: block;
 }
-
 .holo-card:before {
   content: '';
   position: absolute;
@@ -238,30 +214,25 @@ body {
   opacity: 0;
   transition: opacity 0.4s;
 }
-
 .holo-card:hover:before {
   opacity: 0.5;
 }
-
 .holo-card:hover {
   transform: translateY(-10px) scale(1.02);
   border-color: #60a5fa;
   box-shadow: 0 15px 35px rgba(59, 130, 246, 0.3);
 }
-
 .holo-card h3 {
   color: #3b82f6;
   margin: 0 0 15px 0;
   font-size: 1.5em;
   font-weight: 600;
 }
-
 .holo-card p {
   color: #cbd5e1;
   margin: 0;
   line-height: 1.6;
 }
-
 .welcome-text {
   text-align: center;
   font-size: 1.2em;
@@ -273,7 +244,6 @@ body {
   border-left: 4px solid #3b82f6;
   animation: slideIn 1s ease-out;
 }
-
 .mission-statement {
   text-align: center;
   font-size: 1.1em;
@@ -284,11 +254,9 @@ body {
   border-radius: 10px;
   border: 1px solid rgba(59, 130, 246, 0.2);
 }
-
 .mission-statement strong {
   color: #3b82f6;
 }
-
 .badge-container {
   display: flex;
   gap: 20px;
@@ -296,7 +264,6 @@ body {
   margin: 40px 0;
   flex-wrap: wrap;
 }
-
 .floating-badge {
   display: inline-block;
   padding: 12px 25px;
@@ -309,7 +276,6 @@ body {
   transition: all 0.3s;
   animation: pulse 2s infinite;
 }
-
 .floating-badge:hover {
   background: #3b82f6;
   color: white;
@@ -317,7 +283,6 @@ body {
   box-shadow: 0 10px 20px rgba(59, 130, 246, 0.4);
   animation: none;
 }
-
 .cyber-footer {
   text-align: center;
   margin-top: 80px;
@@ -326,15 +291,23 @@ body {
   color: #64748b;
   font-size: 0.9em;
 }
-
 @media (max-width: 1024px) {
   .hologram-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
-
 @media (max-width: 768px) {
-  .cyberia-logo {
+  .cyberia-title {
+    font-size: 3em;
+    letter-spacing: 5px;
+  }
+  
+  .cyberia-subtitle {
+    font-size: 1.2em;
+    letter-spacing: 2px;
+  }
+  
+  .cyberia-line {
     max-width: 300px;
   }
   
@@ -444,208 +417,69 @@ document.addEventListener('DOMContentLoaded', function() {
     card.style.animation = 'slideIn 0.8s ease-out forwards';
     card.style.opacity = '0';
   });
-  
-  // Effet interactif pour le logo
-  const logo = document.querySelector('.cyberia-logo');
-  if (logo) {
-    logo.addEventListener('click', function() {
-      // Effet de flash
-      const svg = this.querySelector('svg');
-      svg.style.filter = 'drop-shadow(0 0 20px #00ffff) brightness(1.2)';
-      
-      // Animation du & carré
-      const ampersand = this.querySelector('.ampersand-container');
-      if (ampersand) {
-        ampersand.style.transform = 'scale(1.3)';
-        ampersand.style.transition = 'transform 0.3s';
-      }
-      
-      setTimeout(() => {
-        svg.style.filter = '';
-        if (ampersand) {
-          ampersand.style.transform = 'scale(1)';
-        }
-      }, 500);
-      
-      // Message console
-      console.log('⚡ CYBERIA Cafe & Club activated ⚡');
-    });
-  }
 });
 </script>
-
 <div class="container">
-  <!-- LOGO SVG CYBERIA AVEC & DANS UN CARRÉ -->
+  <!-- CYBERIA Header avec ligne horizontale -->
   <div class="cyberia-header">
-    <div class="cyberia-logo">
-      <svg viewBox="0 0 500 150" xmlns="http://www.w3.org/2000/svg">
-        <defs>
-          <linearGradient id="cyberGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-            <stop offset="0%" stop-color="#00ffff"/>
-            <stop offset="50%" stop-color="#ff00ff"/>
-            <stop offset="100%" stop-color="#00ffff"/>
-          </linearGradient>
-          <filter id="neonGlow">
-            <feGaussianBlur stdDeviation="2" result="blur"/>
-            <feMerge>
-              <feMergeNode in="blur"/>
-              <feMergeNode in="SourceGraphic"/>
-            </feMerge>
-          </filter>
-          <filter id="ampersandGlow">
-            <feGaussianBlur stdDeviation="1.5" result="blur"/>
-            <feFlood flood-color="#ff6b4a" flood-opacity="0.8"/>
-            <feComposite in2="blur" operator="in"/>
-            <feMerge>
-              <feMergeNode/>
-              <feMergeNode in="SourceGraphic"/>
-            </feMerge>
-          </filter>
-        </defs>
-        
-        <!-- CYBERIA -->
-  <text x="250" y="65" text-anchor="middle"
-              font-family="Orbitron, sans-serif"
-              font-size="58" font-weight="900"
-              fill="url(#cyberGradient)"
-              filter="url(#neonGlow)"
-              letter-spacing="5">
-          CYBERIA
-          <animate attributeName="fill"
-                   values="url(#cyberGradient);#ff00ff;url(#cyberGradient)"
-                   dur="4s" repeatCount="indefinite"/>
-        </text>
-        
-        <!-- Ligne de séparation cyber -->
-  <line x1="120" y1="80" x2="380" y2="80"
-              stroke="#00ff00" stroke-width="2"
-              stroke-dasharray="10,5">
-          <animate attributeName="stroke-dashoffset"
-                   values="0;20" dur="1s"
-                   repeatCount="indefinite"/>
-        </line>
-        
-        <!-- Cafe & Club avec & dans un carré -->
-  <g transform="translate(250, 115)">
-          <!-- "Cafe " -->
-          <text x="-95" y="0" text-anchor="end"
-                font-family="'Courier New', monospace"
-                font-size="26" font-weight="bold"
-                fill="#ffffff" letter-spacing="3">
-            Cafe
-          </text>
-          
-          <!-- & DANS UN CARRÉ -->
-  <g class="ampersand-container" transform="translate(0, 0)">
-            <!-- Le carré -->
-            <rect class="ampersand-square"
-                  x="-15" y="-15" width="30" height="30"
-                  rx="4" fill="none" stroke="#ff6b4a"
-                  stroke-width="2" filter="url(#ampersandGlow)"/>
-            
-            <!-- Le & stylisé -->
-   <text x="0" y="6" text-anchor="middle"
-                  font-family="'Arial Black', sans-serif"
-                  font-size="22" font-weight="900"
-                  fill="#ff6b4a">
-              &
-            </text>
-            
-            <!-- Animation de pulsation -->
- <animate attributeName="transform"
-                     type="scale"
-                     values="1;1.1;1"
-                     dur="2s"
-                     repeatCount="indefinite"/>
-          </g>
-          
-          <!-- " Club" -->
-<text x="95" y="0" text-anchor="start"
-                font-family="'Courier New', monospace"
-                font-size="26" font-weight="bold"
-                fill="#ffffff" letter-spacing="3">
-            Club
-          </text>
-        </g>
-        
-        <!-- Points décoratifs cyber -->
- <circle cx="140" cy="65" r="3" fill="#00ffff">
-          <animate attributeName="opacity"
-                   values="0.3;1;0.3"
-                   dur="1.5s"
-                   repeatCount="indefinite"/>
-        </circle>
-        <circle cx="360" cy="65" r="3" fill="#ff00ff">
-          <animate attributeName="opacity"
-                   values="1;0.3;1"
-                   dur="1.5s"
-                   repeatCount="indefinite"
-                   begin="0.75s"/>
-        </circle>
-      </svg>
-    </div>
+    <div class="cyberia-title">CYBERIA</div>
+    <div class="cyberia-line"></div>
+    <div class="cyberia-subtitle">Cafe & Club</div>
   </div>
-  
   <div class="cyber-header">
     <div class="neon-title">WELCOME TO MY CYBERSPACE</div>
     <div class="subtitle">A digital notebook for everything I learn</div>
     <div class="glitch-text" data-text="CYBERSECURITY KNOWLEDGE BASE">CYBERSECURITY KNOWLEDGE BASE</div>
   </div>
-  
   <div class="mission-statement">
     <p>In this website, I document <strong>every concept I learn</strong>, <strong>every challenge I solve</strong>, and <strong>every skill I develop</strong> in cybersecurity.<br>
     From academic notes to hands-on labs, this is my personal knowledge repository.</p>
   </div>
-  
   <div class="hologram-grid">
     <a href="/about/me" class="holo-card">
       <h3>À PROPOS</h3>
       <p>Mon parcours, passions et motivation dans la cybersécurité</p>
     </a>
     
-<a href="/fssm/" class="holo-card">
+   <a href="/fssm/" class="holo-card">
       <h3>FSSM</h3>
       <p>Formation académique, projets et compétences acquises</p>
     </a>
     
-<a href="/tryhackme/" class="holo-card">
+   <a href="/tryhackme/" class="holo-card">
       <h3>TRYHACKME</h3>
       <p>Paths complétés, badges et write-ups de challenges</p>
     </a>
     
-   <a href="/my-lab/" class="holo-card">
+  <a href="/my-lab/" class="holo-card">
       <h3>MON LAB</h3>
       <p>Environnement de test, machines virtuelles et expériences</p>
-    </a>
+   </a>
   </div>
-  
   <div class="welcome-text">
     <p>Salut — je suis <strong style="color: #3b82f6;">Haname</strong>, étudiante en cybersécurité à la FSSM.<br>
     Bienvenue sur mon site où je partage mon parcours, mes parcours (paths) TryHackMe, la formation FSSM, et mes laboratoires personnels.</p>
   </div>
-  
   <!-- COMPTEUR SIMPLE -->
-  <div style="text-align: center; margin: 30px 0;">
-    <div style="display: inline-block; background: rgba(15, 23, 42, 0.7); border: 1px solid #3b82f6; border-radius: 10px; padding: 15px 30px; box-shadow: 0 0 15px rgba(59, 130, 246, 0.3);">
-      <div style="color: #94a3b8; font-size: 0.9em; margin-bottom: 8px; letter-spacing: 2px;">👁️ VISITEURS</div>
-      <div style="color: #60a5fa; font-size: 2em; font-weight: 700; text-shadow: 0 0 10px #60a5fa;" id="visitorCount">0</div>
-    </div>
+<div style="text-align: center; margin: 30px 0;">
+  <div style="display: inline-block; background: rgba(15, 23, 42, 0.7); border: 1px solid #3b82f6; border-radius: 10px; padding: 15px 30px; box-shadow: 0 0 15px rgba(59, 130, 246, 0.3);">
+    <div style="color: #94a3b8; font-size: 0.9em; margin-bottom: 8px; letter-spacing: 2px;">👁️ VISITEURS</div>
+    <div style="color: #60a5fa; font-size: 2em; font-weight: 700; text-shadow: 0 0 10px #60a5fa;" id="visitorCount">0</div>
   </div>
-  
-  <script>
-  let visits = parseInt(localStorage.getItem('cyberiaVisits') || '0');
-  visits++;
-  localStorage.setItem('cyberiaVisits', visits);
-  document.getElementById('visitorCount').textContent = visits;
-  </script>
-  
+</div>
+
+<script>
+let visits = parseInt(localStorage.getItem('cyberiaVisits') || '0');
+visits++;
+localStorage.setItem('cyberiaVisits', visits);
+document.getElementById('visitorCount').textContent = visits;
+</script>
   <div class="badge-container">
     <a href="/tryhackme/" class="floating-badge">TRYHACKME</a>
     <a href="https://github.com/ItsHaname" class="floating-badge" target="_blank">GITHUB</a>
     <a href="#" class="floating-badge">TWITTER</a>
     <a href="#" class="floating-badge">LINKEDIN</a>
   </div>
-  
   <div class="cyber-footer">
     © 2025 CYBERIA — HANAME — FSSM — Personal Knowledge Repository
   </div>
