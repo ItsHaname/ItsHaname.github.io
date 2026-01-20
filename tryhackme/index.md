@@ -473,6 +473,15 @@ body {
    <a href="https://www.canva.com/design/DAG--7v-mEA/3uK8rfMVrBx5uzCo0pEYsw/edit?utm_content=DAG--7v-mEA&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" class="room-card">
       <img src="{{ site.baseurl }}/assets/images/hu.png" class="room-image">
       <h3>Humans as Attack Vectors</h3>
+      <p class="room-description">Learn how attackers exploit vulnerable and misconfigured systems, and how you can protect them.</p>
+      <div class="status-badge done">
+        <span class="status-dot done"></span>
+        Done
+      </div>
+    </a>
+     <a href="https://www.canva.com/design/DAG-_zfcGMY/qSU10HYB2cA10WGS2jMgpA/edit?utm_content=DAG-_zfcGMY&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" class="room-card">
+      <img src="{{ site.baseurl }}/assets/images/hu.png" class="room-image">
+      <h3>Systems as Attack Vectors</h3>
       <p class="room-description">Understand why and how people are targeted in cyber attacks and how the SOC helps defend them.</p>
       <div class="status-badge done">
         <span class="status-dot done"></span>
