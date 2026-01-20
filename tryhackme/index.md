@@ -474,7 +474,6 @@ body {
       <div class="status-badge done">
         <span class="status-dot done"></span>
         Done
-      </div>
     </a>
   </div>
 
