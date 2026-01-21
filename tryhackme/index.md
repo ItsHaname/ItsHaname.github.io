@@ -488,6 +488,15 @@ body {
         Done
       </div>
     </a>
+   <a href="#" class="room-card">
+      <img src="{{ site.baseurl }}/assets/images/l1.png" class="room-image">
+      <h3>SOC L1 Alert Triage</h3>
+      <p class="room-description">Learn more about SOC alerts and build a systematic approach to efficiently triaging them.</p>
+      <div class="status-badge done">
+        <span class="status-dot done"></span>
+        Done
+      </div>
+    </a> 
   </div>
 
   <div class="footer-nav">
