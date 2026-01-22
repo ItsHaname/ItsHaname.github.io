@@ -506,6 +506,15 @@ body {
         Done
       </div>
     </a> 
+    <a href="https://www.canva.com/design/DAG_JxoRkVI/amTj5_EcQS_3j8cBCar6RQ/edit?utm_content=DAG_JxoRkVI&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" class="room-card">
+      <img src="{{ site.baseurl }}/assets/images/l3.png" class="room-image">
+      <h3> SOC Workbooks and Lookups </h3>
+      <p class="room-description">Discover useful corporate resources to help you structure and simplify L1 alert triage.</p>
+      <div class="status-badge done">
+        <span class="status-dot done"></span>
+        Done
+      </div>
+    </a> 
   </div>
 
   <div class="footer-nav">
