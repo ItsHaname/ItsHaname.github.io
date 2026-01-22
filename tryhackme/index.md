@@ -497,6 +497,15 @@ body {
         Done
       </div>
     </a> 
+    <a href="https://www.canva.com/design/DAG_JsoJXms/AeSRz2hOuRoT2bq4AmFS-A/edit?utm_content=DAG_JsoJXms&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" class="room-card">
+      <img src="{{ site.baseurl }}/assets/images/l2.png" class="room-image">
+      <h3>SOC L1 Alert Reporting</h3>
+      <p class="room-description">Learn how to properly report, escalate, and communicate about high-risk SOC alerts.</p>
+      <div class="status-badge done">
+        <span class="status-dot done"></span>
+        Done
+      </div>
+    </a> 
   </div>
 
   <div class="footer-nav">
