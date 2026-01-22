@@ -61,10 +61,30 @@
   0% { top: 0%; }
   100% { top: 100%; }
 }
+@keyframes lain-eyes-blink {
+  0%, 92%, 100% { opacity: 1; }
+  94%, 96% { opacity: 0.3; }
+}
 @keyframes digital-glitch {
   0%, 100% { transform: translate(0); filter: hue-rotate(0deg); }
   33% { transform: translate(-2px, 2px); filter: hue-rotate(90deg); }
   66% { transform: translate(2px, -2px); filter: hue-rotate(180deg); }
+}
+@keyframes neon-flicker {
+  0%, 100% { opacity: 1; text-shadow: 0 0 10px #ff6b4a, 0 0 20px #ff6b4a, 0 0 30px #ff6b4a, 0 0 40px #ff3300; }
+  50% { opacity: 0.8; text-shadow: 0 0 5px #ff6b4a, 0 0 10px #ff6b4a; }
+}
+@keyframes card-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+@keyframes border-glow {
+  0%, 100% { border-color: #1e4d7b; box-shadow: 0 0 20px rgba(30, 77, 123, 0.3); }
+  50% { border-color: #3b82f6; box-shadow: 0 0 40px rgba(59, 130, 246, 0.6); }
+}
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
 }
 
 body {
@@ -207,6 +227,7 @@ body {
   margin: 40px 0 10px 0;
   font-weight: 900;
   letter-spacing: 2px;
+  position: relative;
 }
 .subtitle {
   font-size: 1.5em;
@@ -292,50 +313,18 @@ body {
   margin: 0;
   line-height: 1.6;
 }
-
-/* Welcome Section avec Lain */
 .welcome-text {
-  display: flex;
-  align-items: center;
-  gap: 30px;
+  text-align: center;
   font-size: 1.2em;
   color: #94a3b8;
-  margin: 50px auto;
+  margin: 50px 0;
   padding: 30px;
   background: rgba(15, 23, 42, 0.7);
   border-radius: 15px;
   border-left: 4px solid #3b82f6;
   animation: slideIn 1s ease-out;
-  max-width: 900px;
   box-shadow: 0 0 20px rgba(59, 130, 246, 0.2);
 }
-
-.welcome-lain-container {
-  position: relative;
-  flex-shrink: 0;
-}
-
-.welcome-lain-image {
-  width: 180px;
-  height: auto;
-  border-radius: 10px;
-  border: 3px solid #3b82f6;
-  box-shadow: 
-    0 0 20px rgba(59, 130, 246, 0.6),
-    inset 0 0 15px rgba(59, 130, 246, 0.3);
-  animation: glow-pulse 3s ease-in-out infinite;
-  transition: transform 0.3s;
-}
-
-.welcome-lain-image:hover {
-  transform: scale(1.05);
-}
-
-.welcome-text-content {
-  flex: 1;
-  text-align: left;
-}
-
 .mission-statement {
   text-align: center;
   font-size: 1.1em;
@@ -440,11 +429,10 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  height: 3px;
+  height: 2px;
   background: linear-gradient(90deg, transparent, #60a5fa, transparent);
   animation: scanline 4s linear infinite;
-  opacity: 0.8;
-  box-shadow: 0 0 10px #60a5fa;
+  opacity: 0.6;
 }
 
 .counter-box:hover {
@@ -471,7 +459,7 @@ body {
   box-shadow: 
     0 0 20px rgba(59, 130, 246, 0.8),
     inset 0 0 15px rgba(59, 130, 246, 0.4);
-  animation: glow-pulse 3s ease-in-out infinite;
+  animation: glow-pulse 3s ease-in-out infinite, lain-eyes-blink 6s infinite;
   transition: all 0.3s;
 }
 
@@ -482,6 +470,7 @@ body {
     inset 0 0 25px rgba(96, 165, 250, 0.6);
 }
 
+/* Effet de scan sur l'image */
 .eye-overlay {
   position: absolute;
   top: 50%;
@@ -492,6 +481,17 @@ body {
   border-radius: 50%;
   background: radial-gradient(circle, transparent 40%, rgba(59, 130, 246, 0.15) 80%);
   pointer-events: none;
+}
+
+.eye-overlay::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(96, 165, 250, 0.8), transparent);
+  animation: scanline 3s linear infinite;
 }
 
 .counter-content {
@@ -612,19 +612,6 @@ body {
 
   .counter-number {
     font-size: 2.5em;
-  }
-
-  .welcome-text {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .welcome-text-content {
-    text-align: center;
-  }
-
-  .welcome-lain-image {
-    width: 150px;
   }
 }
 </style>
@@ -762,7 +749,6 @@ document.addEventListener('DOMContentLoaded', function() {
    </a>
   </div>
 
-  <!-- WELCOME SECTION AVEC LAIN -->
   <div class="welcome-text">
     <div class="welcome-lain-container">
       <img src="/assets/images/li.png" 
@@ -785,7 +771,7 @@ document.addEventListener('DOMContentLoaded', function() {
         <div class="eye-overlay"></div>
       </div>
       
-   <div class="counter-content">
+  <div class="counter-content">
         <div class="counter-label">
           <span class="eye-icon">👁️</span>
           <span>Big Sister is watching</span>
@@ -813,4 +799,4 @@ document.addEventListener('DOMContentLoaded', function() {
   <div class="cyber-footer">
     © 2025 CYBERIA — HANAME — FSSM — Personal Knowledge Repository
   </div>
-</div>
+</div
