@@ -39,6 +39,26 @@
   0% { clip-path: inset(25% 0 58% 0); }
   100% { clip-path: inset(75% 0 1% 0); }
 }
+@keyframes glow-pulse {
+  0%, 100% {
+    box-shadow: 
+      0 0 15px rgba(59, 130, 246, 0.6),
+      inset 0 0 10px rgba(59, 130, 246, 0.3);
+  }
+  50% {
+    box-shadow: 
+      0 0 25px rgba(96, 165, 250, 0.8),
+      inset 0 0 15px rgba(96, 165, 250, 0.4);
+  }
+}
+@keyframes eye-blink {
+  0%, 90%, 100% {
+    opacity: 1;
+  }
+  95% {
+    opacity: 0.3;
+  }
+}
 body {
   background: #0a0e1a;
   min-height: 100vh;
@@ -73,7 +93,6 @@ body {
   position: relative;
   z-index: 1;
 }
-/* CYBERIA Header - Style néon avec couleurs bleues marines */
 .cyberia-header {
   text-align: center;
   margin-bottom: 60px;
@@ -101,7 +120,6 @@ body {
   -webkit-text-stroke: 2px #ff3300;
   paint-order: stroke fill;
 }
-/* Ligne horizontale */
 .cyberia-line {
   width: 100%;
   height: 3px;
@@ -132,7 +150,6 @@ body {
   animation: blink 1s infinite;
   color: #60a5fa;
 }
-/* Rest of the page - theme bleu marine */
 .cyber-header {
   text-align: center;
   margin-bottom: 60px;
@@ -292,11 +309,113 @@ body {
   color: #64748b;
   font-size: 0.9em;
 }
+
+/* Big Sister Counter Styles */
+.counter-container {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.counter-box {
+  display: inline-flex;
+  align-items: center;
+  gap: 20px;
+  background: rgba(15, 23, 42, 0.85);
+  border: 2px solid #3b82f6;
+  border-radius: 15px;
+  padding: 20px 30px;
+  box-shadow: 
+    0 0 20px rgba(59, 130, 246, 0.4),
+    inset 0 0 20px rgba(59, 130, 246, 0.1);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.counter-box:hover {
+  border-color: #60a5fa;
+  box-shadow: 
+    0 0 30px rgba(96, 165, 250, 0.6),
+    inset 0 0 30px rgba(96, 165, 250, 0.15);
+  transform: translateY(-2px);
+}
+
+.lain-image-container {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  flex-shrink: 0;
+}
+
+.lain-image {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #3b82f6;
+  box-shadow: 
+    0 0 15px rgba(59, 130, 246, 0.6),
+    inset 0 0 10px rgba(59, 130, 246, 0.3);
+  animation: glow-pulse 3s ease-in-out infinite;
+}
+
+.eye-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  height: 90%;
+  border-radius: 50%;
+  background: radial-gradient(circle, transparent 30%, rgba(59, 130, 246, 0.1) 70%);
+  pointer-events: none;
+}
+
+.counter-content {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  text-align: left;
+}
+
+.counter-label {
+  color: #94a3b8;
+  font-size: 0.95em;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.eye-icon {
+  font-size: 1.2em;
+  animation: eye-blink 4s infinite;
+}
+
+.counter-number {
+  color: #60a5fa;
+  font-size: 2.5em;
+  font-weight: 700;
+  text-shadow: 
+    0 0 10px #60a5fa,
+    0 0 20px #3b82f6;
+  font-family: 'Courier New', monospace;
+  letter-spacing: 3px;
+}
+
+.counter-subtitle {
+  color: #64748b;
+  font-size: 0.85em;
+  font-style: italic;
+  margin-top: -5px;
+}
+
 @media (max-width: 1024px) {
   .hologram-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
+
 @media (max-width: 768px) {
   .cyberia-title {
     font-size: 3em;
@@ -337,8 +456,32 @@ body {
     padding: 10px 20px;
     font-size: 0.9em;
   }
+
+  .counter-box {
+    flex-direction: column;
+    gap: 15px;
+    padding: 25px 20px;
+  }
+
+  .counter-content {
+    text-align: center;
+  }
+
+  .counter-label {
+    justify-content: center;
+  }
+
+  .lain-image-container {
+    width: 100px;
+    height: 100px;
+  }
+
+  .counter-number {
+    font-size: 2.2em;
+  }
 }
 </style>
+
 <script>
 // Create binary rain background with moving 0 and 1
 document.addEventListener('DOMContentLoaded', function() {
@@ -352,23 +495,15 @@ document.addEventListener('DOMContentLoaded', function() {
     digit.className = 'binary-digit';
     digit.textContent = Math.random() > 0.5 ? '1' : '0';
     
-    // Random position
     digit.style.left = Math.random() * 100 + 'vw';
-    
-    // Random size
     const size = Math.random() * 18 + 12;
     digit.style.fontSize = size + 'px';
-    
-    // Random animation speed
     const duration = Math.random() * 10 + 5;
     const delay = Math.random() * 5;
     digit.style.animationDuration = duration + 's';
     digit.style.animationDelay = delay + 's';
-    
-    // Random opacity
     digit.style.opacity = Math.random() * 0.2 + 0.05;
     
-    // Blue marine colors
     const colors = [
       'rgba(59, 130, 246, 0.15)',
       'rgba(96, 165, 250, 0.15)',
@@ -380,27 +515,19 @@ document.addEventListener('DOMContentLoaded', function() {
     binaryContainer.appendChild(digit);
   }
   
-  // Create floating binary digits (up and down movement)
+  // Create floating binary digits
   for (let i = 0; i < 30; i++) {
     const floatDigit = document.createElement('div');
     floatDigit.className = 'binary-digit float';
     floatDigit.textContent = Math.random() > 0.5 ? '1' : '0';
     
-    // Random position
     floatDigit.style.left = Math.random() * 100 + 'vw';
     floatDigit.style.top = Math.random() * 100 + 'vh';
-    
-    // Random size
     const floatSize = Math.random() * 22 + 14;
     floatDigit.style.fontSize = floatSize + 'px';
-    
-    // Random animation delay
     floatDigit.style.animationDelay = Math.random() * 2 + 's';
-    
-    // Random opacity
     floatDigit.style.opacity = Math.random() * 0.3 + 0.1;
     
-    // Blue marine colors - brighter for floating ones
     const floatColors = [
       'rgba(59, 130, 246, 0.25)',
       'rgba(96, 165, 250, 0.25)',
@@ -411,7 +538,7 @@ document.addEventListener('DOMContentLoaded', function() {
     binaryContainer.appendChild(floatDigit);
   }
   
-  // Add subtle floating animation to cards
+  // Add animation to cards
   const cards = document.querySelectorAll('.holo-card');
   cards.forEach((card, index) => {
     card.style.animationDelay = (index * 0.1) + 's';
@@ -420,22 +547,26 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 </script>
+
 <div class="container">
-  <!-- CYBERIA Header avec ligne horizontale -->
+  <!-- CYBERIA Header -->
   <div class="cyberia-header">
     <div class="cyberia-title">CYBERIA</div>
     <div class="cyberia-line"></div>
     <div class="cyberia-subtitle">Cafe & Club</div>
   </div>
+
   <div class="cyber-header">
     <div class="neon-title">WELCOME TO MY CYBERSPACE</div>
     <div class="subtitle">A digital notebook for everything I learn</div>
     <div class="glitch-text" data-text="CYBERSECURITY KNOWLEDGE BASE">CYBERSECURITY KNOWLEDGE BASE</div>
   </div>
+
   <div class="mission-statement">
     <p>In this website, I document <strong>every concept I learn</strong>, <strong>every challenge I solve</strong>, and <strong>every skill I develop</strong> in cybersecurity.<br>
     From academic notes to hands-on labs, this is my personal knowledge repository.</p>
   </div>
+
   <div class="hologram-grid">
     <a href="/about/me" class="holo-card">
       <h3>À PROPOS</h3>
@@ -457,31 +588,48 @@ document.addEventListener('DOMContentLoaded', function() {
       <p>Environnement de test, machines virtuelles et expériences</p>
    </a>
   </div>
+
   <div class="welcome-text">
     <p>Salut — je suis <strong style="color: #3b82f6;">Haname</strong>, étudiante en cybersécurité à la FSSM.<br>
     Bienvenue sur mon site où je partage mon parcours, mes parcours (paths) TryHackMe, la formation FSSM, et mes laboratoires personnels.</p>
   </div>
-  <!-- COMPTEUR SIMPLE -->
-<div style="text-align: center; margin: 30px 0;">
-  <div style="display: inline-block; background: rgba(15, 23, 42, 0.7); border: 1px solid #3b82f6; border-radius: 10px; padding: 15px 30px; box-shadow: 0 0 15px rgba(59, 130, 246, 0.3);">
-    <div style="color: #94a3b8; font-size: 0.9em; margin-bottom: 8px; letter-spacing: 2px;">👁️ Big Sister is watching you</div>
-    <div style="color: #60a5fa; font-size: 2em; font-weight: 700; text-shadow: 0 0 10px #60a5fa;" id="visitorCount">0</div>
-  </div>
-</div>
 
-<script>
-let visits = parseInt(localStorage.getItem('cyberiaVisits') || '0');
-visits++;
-localStorage.setItem('cyberiaVisits', visits);
-document.getElementById('visitorCount').textContent = visits;
-</script>
+  <!-- BIG SISTER COUNTER AVEC LAIN -->
+  <div class="counter-container">
+    <div class="counter-box">
+      <div class="lain-image-container">
+        <img src="/assets/images/watch.png" 
+             alt="Lain watching" 
+             class="lain-image">
+        <div class="eye-overlay"></div>
+      </div>
+      
+   <div class="counter-content">
+        <div class="counter-label">
+          <span class="eye-icon">👁️</span>
+          <span>Big Sister is watching</span>
+        </div>
+        <div class="counter-number" id="visitorCount">0</div>
+        <div class="counter-subtitle">visitors observed</div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    let visits = parseInt(localStorage.getItem('cyberiaVisits') || '0');
+    visits++;
+    localStorage.setItem('cyberiaVisits', visits);
+    document.getElementById('visitorCount').textContent = visits;
+  </script>
+
   <div class="badge-container">
     <a href="/tryhackme/" class="floating-badge">TRYHACKME</a>
     <a href="https://github.com/ItsHaname" class="floating-badge" target="_blank">GITHUB</a>
     <a href="#" class="floating-badge">TWITTER</a>
     <a href="#" class="floating-badge">LINKEDIN</a>
   </div>
+
   <div class="cyber-footer">
-    © 2025 CYBERIA — HANAME — FSSM — Personal Knowledge Repository
+    © 2026CYBERIA — HANAME — FSSM — Personal Knowledge Repository
   </div>
 </div>
