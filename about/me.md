@@ -252,7 +252,7 @@ section p {
         <h1>HANANE AIT BAH</h1>
         <p class="role">Network Security Student | Cybersecurity Enthusiast</p>
         <p class="bio">
-            Passionate about <span class="highlight">offensive security</span>, <span class="highlight">vulnerability analysis</span>, and <span class="highlight">reverse engineering</span>. Currently pursuing a Bachelor's in Networking and Cybersecurity at FSSM, Cadi Ayyad University.
+            Passionate about <span class="highlight">offensive security</span>, <span class="highlight">vulnerability analysis</span>. Currently pursuing a Bachelor's in Networking and Cybersecurity at FSSM, Cadi Ayyad University.
         </p>
         
  <div class="stats">
