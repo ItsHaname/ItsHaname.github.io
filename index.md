@@ -6,10 +6,8 @@
 <link rel="icon" href="https://raw.githubusercontent.com/ItsHaname/ItsHaname.github.io/main/logo" type="image/png">
 <style>
 @keyframes matrixRain {
-  0% { transform: translateY(-100vh); opacity: 0; }
-  10% { opacity: 1; }
-  90% { opacity: 1; }
-  100% { transform: translateY(100vh); opacity: 0; }
+  0% { transform: translateY(-100vh); }
+  100% { transform: translateY(100vh); }
 }
 @keyframes floatUpDown {
   0%, 100% { transform: translateY(0); }
@@ -41,52 +39,6 @@
   0% { clip-path: inset(25% 0 58% 0); }
   100% { clip-path: inset(75% 0 1% 0); }
 }
-@keyframes glow-pulse {
-  0%, 100% {
-    box-shadow: 
-      0 0 15px rgba(59, 130, 246, 0.6),
-      inset 0 0 10px rgba(59, 130, 246, 0.3);
-  }
-  50% {
-    box-shadow: 
-      0 0 30px rgba(96, 165, 250, 0.9),
-      inset 0 0 20px rgba(96, 165, 250, 0.5);
-  }
-}
-@keyframes eye-blink {
-  0%, 90%, 100% { opacity: 1; }
-  93%, 96% { opacity: 0.2; }
-}
-@keyframes scanline {
-  0% { top: 0%; }
-  100% { top: 100%; }
-}
-@keyframes lain-eyes-blink {
-  0%, 92%, 100% { opacity: 1; }
-  94%, 96% { opacity: 0.3; }
-}
-@keyframes digital-glitch {
-  0%, 100% { transform: translate(0); filter: hue-rotate(0deg); }
-  33% { transform: translate(-2px, 2px); filter: hue-rotate(90deg); }
-  66% { transform: translate(2px, -2px); filter: hue-rotate(180deg); }
-}
-@keyframes neon-flicker {
-  0%, 100% { opacity: 1; text-shadow: 0 0 10px #ff6b4a, 0 0 20px #ff6b4a, 0 0 30px #ff6b4a, 0 0 40px #ff3300; }
-  50% { opacity: 0.8; text-shadow: 0 0 5px #ff6b4a, 0 0 10px #ff6b4a; }
-}
-@keyframes card-float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-5px); }
-}
-@keyframes border-glow {
-  0%, 100% { border-color: #1e4d7b; box-shadow: 0 0 20px rgba(30, 77, 123, 0.3); }
-  50% { border-color: #3b82f6; box-shadow: 0 0 40px rgba(59, 130, 246, 0.6); }
-}
-@keyframes typing {
-  from { width: 0; }
-  to { width: 100%; }
-}
-
 body {
   background: #0a0e1a;
   min-height: 100vh;
@@ -94,39 +46,6 @@ body {
   position: relative;
   overflow-x: hidden;
 }
-
-/* Scanline effect overlay */
-.scanline-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  z-index: 9999;
-  background: repeating-linear-gradient(
-    0deg,
-    rgba(0, 0, 0, 0.1) 0px,
-    transparent 1px,
-    transparent 2px,
-    rgba(0, 0, 0, 0.1) 3px
-  );
-  opacity: 0.05;
-}
-
-/* Noise/grain effect */
-.noise-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  z-index: 9998;
-  opacity: 0.03;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' /%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' /%3E%3C/svg%3E");
-}
-
 .binary-background {
   position: fixed;
   top: 0;
@@ -154,6 +73,7 @@ body {
   position: relative;
   z-index: 1;
 }
+/* CYBERIA Header - Style néon avec couleurs bleues marines */
 .cyberia-header {
   text-align: center;
   margin-bottom: 60px;
@@ -181,6 +101,7 @@ body {
   -webkit-text-stroke: 2px #ff3300;
   paint-order: stroke fill;
 }
+/* Ligne horizontale */
 .cyberia-line {
   width: 100%;
   height: 3px;
@@ -211,6 +132,7 @@ body {
   animation: blink 1s infinite;
   color: #60a5fa;
 }
+/* Rest of the page - theme bleu marine */
 .cyber-header {
   text-align: center;
   margin-bottom: 60px;
@@ -219,7 +141,7 @@ body {
   font-size: 3em;
   text-align: center;
   color: transparent;
-  background: linear-gradient(90deg, #3b82f6, #60a5fa, #2563eb, #3b82f6);
+  background: linear-gradient(90deg, #3b82f6, #60a5fa, #2563eb);
   background-size: 200% auto;
   -webkit-background-clip: text;
   background-clip: text;
@@ -227,7 +149,6 @@ body {
   margin: 40px 0 10px 0;
   font-weight: 900;
   letter-spacing: 2px;
-  position: relative;
 }
 .subtitle {
   font-size: 1.5em;
@@ -255,12 +176,12 @@ body {
 }
 .glitch-text:before {
   left: 2px;
-  text-shadow: -2px 0 #3b82f6;
+  text-shadow: -1px 0 #3b82f6;
   animation: glitch-1 2s infinite linear alternate-reverse;
 }
 .glitch-text:after {
   left: -2px;
-  text-shadow: 2px 0 #60a5fa;
+  text-shadow: -1px 0 #60a5fa;
   animation: glitch-2 3s infinite linear alternate-reverse;
 }
 .hologram-grid {
@@ -323,7 +244,6 @@ body {
   border-radius: 15px;
   border-left: 4px solid #3b82f6;
   animation: slideIn 1s ease-out;
-  box-shadow: 0 0 20px rgba(59, 130, 246, 0.2);
 }
 .mission-statement {
   text-align: center;
@@ -334,11 +254,9 @@ body {
   background: rgba(15, 23, 42, 0.5);
   border-radius: 10px;
   border: 1px solid rgba(59, 130, 246, 0.2);
-  box-shadow: 0 0 15px rgba(59, 130, 246, 0.15);
 }
 .mission-statement strong {
   color: #3b82f6;
-  text-shadow: 0 0 5px rgba(59, 130, 246, 0.5);
 }
 .badge-container {
   display: flex;
@@ -351,43 +269,20 @@ body {
   display: inline-block;
   padding: 12px 25px;
   background: rgba(15, 23, 42, 0.8);
-  border: 2px solid #1e40af;
+  border: 1px solid #1e40af;
   border-radius: 25px;
   color: #60a5fa;
   text-decoration: none;
   font-weight: 500;
   transition: all 0.3s;
-  position: relative;
-  overflow: hidden;
-}
-.floating-badge::before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 0;
-  height: 0;
-  background: rgba(59, 130, 246, 0.3);
-  border-radius: 50%;
-  transform: translate(-50%, -50%);
-  transition: width 0.6s, height 0.6s;
-}
-.floating-badge:hover::before {
-  width: 200px;
-  height: 200px;
+  animation: pulse 2s infinite;
 }
 .floating-badge:hover {
   background: #3b82f6;
   color: white;
-  transform: translateY(-5px) scale(1.05);
-  box-shadow: 
-    0 10px 25px rgba(59, 130, 246, 0.5),
-    0 0 20px rgba(59, 130, 246, 0.3);
-  border-color: #60a5fa;
-}
-.floating-badge span {
-  position: relative;
-  z-index: 1;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(59, 130, 246, 0.4);
+  animation: none;
 }
 .cyber-footer {
   text-align: center;
@@ -397,159 +292,11 @@ body {
   color: #64748b;
   font-size: 0.9em;
 }
-
-/* === BIG SISTER COUNTER ENHANCED === */
-.counter-container {
-  text-align: center;
-  margin: 40px 0;
-  position: relative;
-}
-
-.counter-box {
-  display: inline-flex;
-  align-items: center;
-  gap: 25px;
-  background: rgba(15, 23, 42, 0.9);
-  border: 2px solid #3b82f6;
-  border-radius: 20px;
-  padding: 25px 35px;
-  box-shadow: 
-    0 0 30px rgba(59, 130, 246, 0.5),
-    inset 0 0 30px rgba(59, 130, 246, 0.15);
-  backdrop-filter: blur(15px);
-  transition: all 0.4s ease;
-  position: relative;
-  overflow: hidden;
-}
-
-/* Scanline effect sur le compteur */
-.counter-box::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background: linear-gradient(90deg, transparent, #60a5fa, transparent);
-  animation: scanline 4s linear infinite;
-  opacity: 0.6;
-}
-
-.counter-box:hover {
-  border-color: #60a5fa;
-  box-shadow: 
-    0 0 50px rgba(96, 165, 250, 0.8),
-    inset 0 0 40px rgba(96, 165, 250, 0.2);
-  transform: translateY(-5px) scale(1.02);
-}
-
-.lain-image-container {
-  position: relative;
-  width: 90px;
-  height: 90px;
-  flex-shrink: 0;
-}
-
-.lain-image {
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 3px solid #3b82f6;
-  box-shadow: 
-    0 0 20px rgba(59, 130, 246, 0.8),
-    inset 0 0 15px rgba(59, 130, 246, 0.4);
-  animation: glow-pulse 3s ease-in-out infinite, lain-eyes-blink 6s infinite;
-  transition: all 0.3s;
-}
-
-.lain-image:hover {
-  transform: scale(1.05);
-  box-shadow: 
-    0 0 35px rgba(96, 165, 250, 1),
-    inset 0 0 25px rgba(96, 165, 250, 0.6);
-}
-
-/* Effet de scan sur l'image */
-.eye-overlay {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  background: radial-gradient(circle, transparent 40%, rgba(59, 130, 246, 0.15) 80%);
-  pointer-events: none;
-}
-
-.eye-overlay::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background: linear-gradient(90deg, transparent, rgba(96, 165, 250, 0.8), transparent);
-  animation: scanline 3s linear infinite;
-}
-
-.counter-content {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  text-align: left;
-}
-
-.counter-label {
-  color: #94a3b8;
-  font-size: 1.1em;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  text-shadow: 0 0 10px rgba(148, 163, 184, 0.5);
-}
-
-.eye-icon {
-  font-size: 1.5em;
-  animation: eye-blink 5s infinite;
-  filter: drop-shadow(0 0 8px #60a5fa);
-}
-
-.counter-number {
-  color: #60a5fa;
-  font-size: 3em;
-  font-weight: 700;
-  text-shadow: 
-    0 0 15px #60a5fa,
-    0 0 30px #3b82f6,
-    0 0 45px #2563eb;
-  font-family: 'Courier New', monospace;
-  letter-spacing: 5px;
-  position: relative;
-}
-
-/* Glitch effect occasionnel sur le nombre */
-.counter-number.glitch {
-  animation: digital-glitch 0.3s;
-}
-
-.counter-subtitle {
-  color: #64748b;
-  font-size: 0.9em;
-  font-style: italic;
-  margin-top: -5px;
-  letter-spacing: 1px;
-}
-
 @media (max-width: 1024px) {
   .hologram-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
-
 @media (max-width: 768px) {
   .cyberia-title {
     font-size: 3em;
@@ -590,67 +337,42 @@ body {
     padding: 10px 20px;
     font-size: 0.9em;
   }
-
-  .counter-box {
-    flex-direction: column;
-    gap: 20px;
-    padding: 30px 25px;
-  }
-
-  .counter-content {
-    text-align: center;
-  }
-
-  .counter-label {
-    justify-content: center;
-  }
-
-  .lain-image-container {
-    width: 110px;
-    height: 110px;
-  }
-
-  .counter-number {
-    font-size: 2.5em;
-  }
 }
 </style>
-
 <script>
+// Create binary rain background with moving 0 and 1
 document.addEventListener('DOMContentLoaded', function() {
-  // Binary background
   const binaryContainer = document.createElement('div');
   binaryContainer.className = 'binary-background';
   document.body.appendChild(binaryContainer);
   
-  // Scanline overlay
-  const scanlineOverlay = document.createElement('div');
-  scanlineOverlay.className = 'scanline-overlay';
-  document.body.appendChild(scanlineOverlay);
-  
-  // Noise overlay
-  const noiseOverlay = document.createElement('div');
-  noiseOverlay.className = 'noise-overlay';
-  document.body.appendChild(noiseOverlay);
-  
-  // Create falling binary digits
-  for (let i = 0; i < 120; i++) {
+  // Create falling binary digits (matrix rain style)
+  for (let i = 0; i < 100; i++) {
     const digit = document.createElement('div');
     digit.className = 'binary-digit';
     digit.textContent = Math.random() > 0.5 ? '1' : '0';
     
+    // Random position
     digit.style.left = Math.random() * 100 + 'vw';
+    
+    // Random size
     const size = Math.random() * 18 + 12;
     digit.style.fontSize = size + 'px';
-    const duration = Math.random() * 12 + 6;
+    
+    // Random animation speed
+    const duration = Math.random() * 10 + 5;
     const delay = Math.random() * 5;
     digit.style.animationDuration = duration + 's';
     digit.style.animationDelay = delay + 's';
     
+    // Random opacity
+    digit.style.opacity = Math.random() * 0.2 + 0.05;
+    
+    // Blue marine colors
     const colors = [
-      'rgba(59, 130, 246, 0.2)',
-      'rgba(96, 165, 250, 0.2)',
-      'rgba(37, 99, 235, 0.2)',
+      'rgba(59, 130, 246, 0.15)',
+      'rgba(96, 165, 250, 0.15)',
+      'rgba(37, 99, 235, 0.15)',
       'rgba(30, 64, 175, 0.15)'
     ];
     digit.style.color = colors[Math.floor(Math.random() * colors.length)];
@@ -658,21 +380,30 @@ document.addEventListener('DOMContentLoaded', function() {
     binaryContainer.appendChild(digit);
   }
   
-  // Create floating binary digits
-  for (let i = 0; i < 40; i++) {
+  // Create floating binary digits (up and down movement)
+  for (let i = 0; i < 30; i++) {
     const floatDigit = document.createElement('div');
     floatDigit.className = 'binary-digit float';
     floatDigit.textContent = Math.random() > 0.5 ? '1' : '0';
     
+    // Random position
     floatDigit.style.left = Math.random() * 100 + 'vw';
     floatDigit.style.top = Math.random() * 100 + 'vh';
-    const floatSize = Math.random() * 24 + 14;
+    
+    // Random size
+    const floatSize = Math.random() * 22 + 14;
     floatDigit.style.fontSize = floatSize + 'px';
+    
+    // Random animation delay
     floatDigit.style.animationDelay = Math.random() * 2 + 's';
     
+    // Random opacity
+    floatDigit.style.opacity = Math.random() * 0.3 + 0.1;
+    
+    // Blue marine colors - brighter for floating ones
     const floatColors = [
-      'rgba(59, 130, 246, 0.3)',
-      'rgba(96, 165, 250, 0.3)',
+      'rgba(59, 130, 246, 0.25)',
+      'rgba(96, 165, 250, 0.25)',
       'rgba(37, 99, 235, 0.25)'
     ];
     floatDigit.style.color = floatColors[Math.floor(Math.random() * floatColors.length)];
@@ -680,53 +411,31 @@ document.addEventListener('DOMContentLoaded', function() {
     binaryContainer.appendChild(floatDigit);
   }
   
-  // Animate cards
+  // Add subtle floating animation to cards
   const cards = document.querySelectorAll('.holo-card');
   cards.forEach((card, index) => {
     card.style.animationDelay = (index * 0.1) + 's';
     card.style.animation = 'slideIn 0.8s ease-out forwards';
     card.style.opacity = '0';
   });
-  
-  // Counter glitch effect
-  const counterNumber = document.getElementById('visitorCount');
-  setInterval(() => {
-    if (Math.random() > 0.95) {
-      counterNumber.classList.add('glitch');
-      setTimeout(() => {
-        counterNumber.classList.remove('glitch');
-      }, 300);
-    }
-  }, 2000);
-  
-  // Add text wrap to badges
-  const badges = document.querySelectorAll('.floating-badge');
-  badges.forEach(badge => {
-    const text = badge.textContent;
-    badge.innerHTML = `<span>${text}</span>`;
-  });
 });
 </script>
-
 <div class="container">
-  <!-- CYBERIA Header -->
+  <!-- CYBERIA Header avec ligne horizontale -->
   <div class="cyberia-header">
     <div class="cyberia-title">CYBERIA</div>
     <div class="cyberia-line"></div>
     <div class="cyberia-subtitle">Cafe & Club</div>
   </div>
-
   <div class="cyber-header">
     <div class="neon-title">WELCOME TO MY CYBERSPACE</div>
     <div class="subtitle">A digital notebook for everything I learn</div>
     <div class="glitch-text" data-text="CYBERSECURITY KNOWLEDGE BASE">CYBERSECURITY KNOWLEDGE BASE</div>
   </div>
-
   <div class="mission-statement">
     <p>In this website, I document <strong>every concept I learn</strong>, <strong>every challenge I solve</strong>, and <strong>every skill I develop</strong> in cybersecurity.<br>
     From academic notes to hands-on labs, this is my personal knowledge repository.</p>
   </div>
-
   <div class="hologram-grid">
     <a href="/about/me" class="holo-card">
       <h3>À PROPOS</h3>
@@ -748,55 +457,31 @@ document.addEventListener('DOMContentLoaded', function() {
       <p>Environnement de test, machines virtuelles et expériences</p>
    </a>
   </div>
-
   <div class="welcome-text">
-    <div class="welcome-lain-container">
-      <img src="/assets/images/li.png" 
-           alt="Lain at her Navi" 
-           class="welcome-lain-image">
-    </div>
-    <div class="welcome-text-content">
-      <p>Salut — je suis <strong style="color: #3b82f6;">Haname</strong>, étudiante en cybersécurité à la FSSM.<br>
-      Bienvenue sur mon site où je partage mon parcours, mes parcours (paths) TryHackMe, la formation FSSM, et mes laboratoires personnels.</p>
-    </div>
+    <p>Salut — je suis <strong style="color: #3b82f6;">Haname</strong>, étudiante en cybersécurité à la FSSM.<br>
+    Bienvenue sur mon site où je partage mon parcours, mes parcours (paths) TryHackMe, la formation FSSM, et mes laboratoires personnels.</p>
   </div>
-
-  <!-- BIG SISTER COUNTER ENHANCED -->
-  <div class="counter-container">
-    <div class="counter-box">
-      <div class="lain-image-container">
-        <img src="/assets/images/watch.png" 
-             alt="Lain watching" 
-             class="lain-image">
-        <div class="eye-overlay"></div>
-      </div>
-      
-   <div class="counter-content">
-        <div class="counter-label">
-          <span class="eye-icon">👁️</span>
-          <span>Big Sister is watching</span>
-        </div>
-        <div class="counter-number" id="visitorCount">0</div>
-        <div class="counter-subtitle">visitors observed</div>
-      </div>
-    </div>
+  <!-- COMPTEUR SIMPLE -->
+<div style="text-align: center; margin: 30px 0;">
+  <div style="display: inline-block; background: rgba(15, 23, 42, 0.7); border: 1px solid #3b82f6; border-radius: 10px; padding: 15px 30px; box-shadow: 0 0 15px rgba(59, 130, 246, 0.3);">
+    <div style="color: #94a3b8; font-size: 0.9em; margin-bottom: 8px; letter-spacing: 2px;">👁️ Big Sister is watching you</div>
+    <div style="color: #60a5fa; font-size: 2em; font-weight: 700; text-shadow: 0 0 10px #60a5fa;" id="visitorCount">0</div>
   </div>
+</div>
 
-  <script>
-    let visits = parseInt(localStorage.getItem('cyberiaVisits') || '0');
-    visits++;
-    localStorage.setItem('cyberiaVisits', visits);
-    document.getElementById('visitorCount').textContent = visits;
-  </script>
-
+<script>
+let visits = parseInt(localStorage.getItem('cyberiaVisits') || '0');
+visits++;
+localStorage.setItem('cyberiaVisits', visits);
+document.getElementById('visitorCount').textContent = visits;
+</script>
   <div class="badge-container">
     <a href="/tryhackme/" class="floating-badge">TRYHACKME</a>
     <a href="https://github.com/ItsHaname" class="floating-badge" target="_blank">GITHUB</a>
     <a href="#" class="floating-badge">TWITTER</a>
     <a href="#" class="floating-badge">LINKEDIN</a>
   </div>
-
   <div class="cyber-footer">
     © 2025 CYBERIA — HANAME — FSSM — Personal Knowledge Repository
   </div>
-</div
+</div>
