@@ -483,10 +483,19 @@ It’s still cooking , definitely not done yet But u’re welcome to peek in the
         <div class="eye-overlay"></div>
       </div>
       
+   <!-- BIG SISTER COUNTER ENHANCED -->
+  <div class="counter-container">
+    <div class="counter-box">
+      <div class="lain-image-container">
+        <img src="/assets/images/watch.png" 
+             alt="Lain watching" 
+             class="lain-image">
+      </div>
+      
    <div class="counter-content">
         <div class="counter-label">
           <span class="eye-icon">👁️</span>
-          <span>Big Sister is watching</span>
+          <span>BIG SISTER IS WATCHING</span>
         </div>
         <div class="counter-number" id="visitorCount">0</div>
         <div class="counter-subtitle">visitors observed</div>
