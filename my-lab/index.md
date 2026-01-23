@@ -363,7 +363,7 @@ document.addEventListener('DOMContentLoaded', function() {
         <img src="/assets/images/tor.png" alt="Other Labs">
       </div>
       <h3>Anonymity & Privacy</h3>
-      <p>Labs pratiques sur Tails OS, réseau Tor et techniques de confidentialité</p>
+        <p>Fresh to Tails. Let's see how deep the privacy rabbit hole goes.</p>
     </a>
   </div>
 
@@ -371,7 +371,6 @@ document.addEventListener('DOMContentLoaded', function() {
   <div class="construction-banner">
     <h3>Lab en Construction</h3>
     <p>Les machines, challenges et write-ups seront ajoutés progressivement.</p>
-    <p>Fresh to Tails. Let's see how deep the privacy rabbit hole goes.</p>
   </div>
 
   <!-- Footer -->
