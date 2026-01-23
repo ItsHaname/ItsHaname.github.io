@@ -473,14 +473,26 @@ It’s still cooking , definitely not done yet But u’re welcome to peek in the
     <p>Salut — je suis <strong style="color: #3b82f6;">Haname</strong>, étudiante en cybersécurité à la FSSM.<br>
     Bienvenue sur mon site où je partage mon parcours, mes parcours (paths) TryHackMe, la formation FSSM, et mes laboratoires personnels.</p>
   </div>
-  <!-- COMPTEUR SIMPLE -->
-<div style="text-align: center; margin: 30px 0;">
-  <div style="display: inline-block; background: rgba(15, 23, 42, 0.7); border: 1px solid #3b82f6; border-radius: 10px; padding: 15px 30px; box-shadow: 0 0 15px rgba(59, 130, 246, 0.3);">
-    <div style="color: #94a3b8; font-size: 0.9em; margin-bottom: 8px; letter-spacing: 2px;">Big Sister is watching you</div>
-    <div style="color: #60a5fa; font-size: 2em; font-weight: 700; text-shadow: 0 0 10px #60a5fa;" id="visitorCount">0</div>
+  <!-- BIG SISTER COUNTER ENHANCED -->
+  <div class="counter-container">
+    <div class="counter-box">
+      <div class="lain-image-container">
+        <img src="/assets/images/watch.png" 
+             alt="Lain watching" 
+             class="lain-image">
+        <div class="eye-overlay"></div>
+      </div>
+      
+   <div class="counter-content">
+        <div class="counter-label">
+          <span class="eye-icon">👁️</span>
+          <span>Big Sister is watching</span>
+        </div>
+        <div class="counter-number" id="visitorCount">0</div>
+        <div class="counter-subtitle">visitors observed</div>
+      </div>
+    </div>
   </div>
-</div>
-
 <script>
 let visits = parseInt(localStorage.getItem('cyberiaVisits') || '0');
 visits++;
