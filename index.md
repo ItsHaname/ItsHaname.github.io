@@ -489,10 +489,10 @@ document.getElementById('visitorCount').textContent = visits;
     <a href="/tryhackme/" class="floating-badge">TRYHACKME</a>
     <a href="https://github.com/ItsHaname" class="floating-badge" target="_blank">GITHUB</a>
     <a href="https://cyberia-1.gitbook.io" class="floating-badge" target="_blank">CYBERIA GITBOOK</a>
-    <a href="#" class="floating-badge">TWITTER</a>
-    <a href="#" class="floating-badge">LINKEDIN</a>
+    <a href="https://discord.com/users/1395011739006930957" class="floating-badge">Discored</a>
+    <a href="https://www.linkedin.com/in/hanane-ait-bah-746ba5357/" class="floating-badge">LINKEDIN</a>
   </div>
   <div class="cyber-footer">
-    © 2025 CYBERIA — HANAME — FSSM — Personal Knowledge Repository
+    © 2026 CYBERIA — HANAME — FSSM — Personal Knowledge Repository
   </div>
 </div>
