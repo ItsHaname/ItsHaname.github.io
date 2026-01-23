@@ -159,6 +159,10 @@ body {
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
   overflow: hidden;
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+  display: block;
 }
 
 .cve-card::before {
@@ -242,7 +246,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 .tag {
@@ -255,46 +259,26 @@ body {
   font-weight: 600;
 }
 
-.notes-section {
-  background: rgba(15, 23, 42, 0.9);
-  border-left: 3px solid #fbbf24;
-  padding: 20px;
-  margin-top: 20px;
-  border-radius: 8px;
+.view-details {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #60a5fa;
+  font-size: 0.95em;
+  font-weight: 600;
+  margin-top: 10px;
+  transition: all 0.3s;
 }
 
-.notes-section h4 {
-  color: #fbbf24;
-  margin-bottom: 15px;
-  font-size: 1em;
-  font-weight: 700;
-}
-
-.notes-section ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.notes-section li {
-  color: #cbd5e1;
-  margin-bottom: 10px;
-  padding-left: 20px;
-  position: relative;
-  line-height: 1.6;
-}
-
-.notes-section li::before {
-  content: '▸';
-  position: absolute;
-  left: 0;
-  color: #fbbf24;
-  font-size: 1.2em;
+.cve-card:hover .view-details {
+  gap: 10px;
+  color: #93c5fd;
 }
 
 .coming-soon {
   opacity: 0.7;
   border-style: dashed !important;
+  cursor: default;
 }
 
 .contact-box {
@@ -428,11 +412,14 @@ document.addEventListener('DOMContentLoaded', function() {
       Each CVE here is something I've actually tested and documented. 
       No fancy writeups, just practical notes on what works, what doesn't, and what I learned.
     </p>
+    <p>
+      <strong>Note:</strong> These are learning experiments. Only use in authorized lab environments.
+    </p>
   </div>
 
   <div class="cve-grid">
-    <!-- NotPetya -->
-    <div class="cve-card">
+    <!-- NotPetya - Add your Canva link in the href -->
+    <a href="YOUR_CANVA_LINK_HERE" target="_blank" class="cve-card">
       <div class="cve-header">
         <span class="cve-id">CVE-2017-0144</span>
         <span class="severity critical">Critical</span>
@@ -449,20 +436,13 @@ document.addEventListener('DOMContentLoaded', function() {
         <span class="tag">Worm</span>
         <span class="tag">Windows</span>
       </div>
-      <div class="notes-section">
-        <h4>Key Findings</h4>
-        <ul>
-          <li>Uses EternalBlue exploit for lateral movement across networks</li>
-          <li>Actually a wiper, not real ransomware (no decryption possible)</li>
-          <li>Spreads through SMBv1 vulnerability in Windows systems</li>
-          <li>Uses Mimikatz for credential harvesting from memory</li>
-          <li>Main lesson: patch management is critical for network security</li>
-        </ul>
+      <div class="view-details">
+        View Full Analysis →
       </div>
-    </div>
+    </a>
 
     <!-- Coming Soon 1 -->
-   <div class="cve-card coming-soon">
+  <div class="cve-card coming-soon">
       <div class="cve-header">
         <span class="cve-id">CVE-????-????</span>
         <span class="severity high">High</span>
@@ -500,7 +480,7 @@ document.addEventListener('DOMContentLoaded', function() {
   <div class="contact-box">
     <h3>Got CVE Suggestions?</h3>
     <p>
-     If u know any interesting vulnerabilities I should research, or if u have questions about my findings, DM me on Discord. (Specifically, the ones that Vulhub missed.)
+      If you know any interesting vulnerabilities I should research, or if you have questions about my findings, DM me on Discord. (Specifically, the ones that Vulhub missed.)
     </p>
     <a href="https://discord.com/users/1395011739006930957" class="discord-link" target="_blank">
       Contact on Discord
