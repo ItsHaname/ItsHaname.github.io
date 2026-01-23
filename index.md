@@ -456,6 +456,11 @@ document.addEventListener('DOMContentLoaded', function() {
       <h3>MON LAB</h3>
       <p>Environnement de test, machines virtuelles et expériences</p>
    </a>
+   
+   <a href="https://cyberia-1.gitbook.io" target="_blank" class="holo-card">
+      <h3>CYBERIA GITBOOK</h3>
+      <p>You can check also this, kinda good tho — Documentation complète</p>
+    </a>
   </div>
   <div class="welcome-text">
     <p>Salut — je suis <strong style="color: #3b82f6;">Haname</strong>, étudiante en cybersécurité à la FSSM.<br>
@@ -464,7 +469,7 @@ document.addEventListener('DOMContentLoaded', function() {
   <!-- COMPTEUR SIMPLE -->
 <div style="text-align: center; margin: 30px 0;">
   <div style="display: inline-block; background: rgba(15, 23, 42, 0.7); border: 1px solid #3b82f6; border-radius: 10px; padding: 15px 30px; box-shadow: 0 0 15px rgba(59, 130, 246, 0.3);">
-    <div style="color: #94a3b8; font-size: 0.9em; margin-bottom: 8px; letter-spacing: 2px;">👁️ Big Sister is watching you</div>
+    <div style="color: #94a3b8; font-size: 0.9em; margin-bottom: 8px; letter-spacing: 2px;">Big Sister is watching you</div>
     <div style="color: #60a5fa; font-size: 2em; font-weight: 700; text-shadow: 0 0 10px #60a5fa;" id="visitorCount">0</div>
   </div>
 </div>
@@ -478,6 +483,7 @@ document.getElementById('visitorCount').textContent = visits;
   <div class="badge-container">
     <a href="/tryhackme/" class="floating-badge">TRYHACKME</a>
     <a href="https://github.com/ItsHaname" class="floating-badge" target="_blank">GITHUB</a>
+    <a href="https://cyberia-1.gitbook.io" class="floating-badge" target="_blank">CYBERIA GITBOOK</a>
     <a href="#" class="floating-badge">TWITTER</a>
     <a href="#" class="floating-badge">LINKEDIN</a>
   </div>
