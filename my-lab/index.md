@@ -299,6 +299,7 @@ document.addEventListener('DOMContentLoaded', function() {
   <div class="page-header">
     <h1 class="page-title">HOME LAB SETUP</h1>
     <p class="page-subtitle">Raspberry Pi • Docker • Arch Linux</p>
+    <p class="page-subtitle">breaking things & learning stuff</p>
   </div>
 
   <!-- Terminal Box -->
@@ -327,7 +328,7 @@ document.addEventListener('DOMContentLoaded', function() {
         <img src="/assets/images/pi.png" alt="Raspberry Pi">
       </div>
       <h3>Raspberry Pi</h3>
-      <p>Serveur principal du lab, héberge les containers Docker et services réseau</p>
+      <p>just some projects </p>
     </a>
  <!-- Docker -->
     <a href="/my-lab/dockerlab" class="lab-card">
@@ -335,7 +336,7 @@ document.addEventListener('DOMContentLoaded', function() {
         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker">
       </div>
       <h3>Docker Containers</h3>
-      <p>Environnements isolés pour tests et déploiement d'applications vulnérables</p>
+      <p>My journey to learn Docker, because it's so wow... and I'm tired of VMs 🐋✨ </p>
     </a>
 
     <!-- Arch Linux -->
@@ -344,7 +345,7 @@ document.addEventListener('DOMContentLoaded', function() {
         <img src="/assets/images/arch-mascot.png" alt="Arch Linux">
       </div>
       <h3>Arch Linux</h3>
-      <p>Machines virtuelles pour pentesting et développement d'outils</p>
+      <p>If you know, you know. If you don’t… "pacman -Syu" and pray</p>
     </a>
 
     <!-- VulHub -->
@@ -353,7 +354,7 @@ document.addEventListener('DOMContentLoaded', function() {
         <img src="/assets/images/vulhub.png" alt="VulHub">
       </div>
       <h3>VulHub CVE</h3>
-      <p>Environnements Docker pour exploitation de CVE réels</p>
+      <p>Click here and let's break some containers</p>
     </a>
 
     <!-- Other Labs -->
