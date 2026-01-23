@@ -465,6 +465,8 @@ document.addEventListener('DOMContentLoaded', function() {
    <a href="https://cyberia-1.gitbook.io" target="_blank" class="holo-card gitbook-wide">
       <h3>CYBERIA GITBOOK</h3>
       <p>You can check also this, kinda good tho — Documentation complète</p>
+    <p> so this is my GitBook for the labs I find interesting and fun.
+It’s still cooking , definitely not done yet But u’re welcome to peek in the kitchen</p>
     </a>
   </div>
   <div class="welcome-text">
