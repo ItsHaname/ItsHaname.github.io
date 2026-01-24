@@ -337,6 +337,16 @@ body {
     grid-template-columns: 1fr;
   }
 }
+.status-badge.progress {
+  background: rgba(245, 158, 11, 0.15);
+  border-color: rgba(245, 158, 11, 0.3);
+  color: #f59e0b;
+}
+
+.status-dot.progress {
+  background: #f59e0b;
+  animation: pulse 2s infinite;
+}
 </style>
 
 <div class="binary-background"></div>
@@ -525,14 +535,14 @@ body {
       </div>
     </a> 
     <a href="https://www.canva.com/design/DAG_Xc-gmfo/AOFWs5p31jWbFQK0bOapIw/edit?utm_content=DAG_Xc-gmfo&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" class="room-card">
-      <img src="{{ site.baseurl }}/assets/images/ci.png" class="room-image">
-      <h3> First Shift CTF </h3>
-      <p class="room-description">The first SOC shift won't be that challenging, right?</p>
-      <div class="status-badge 32% progress">
-        <span class="statu"></span>
-        Done
-      </div>
-    </a> 
+  <img src="{{ site.baseurl }}/assets/images/ci.png" class="room-image">
+  <h3>First Shift CTF</h3>
+  <p class="room-description">The first SOC shift won't be that challenging, right?</p>
+  <div class="status-badge progress">
+    <span class="status-dot progress"></span>
+    32% Progress
+  </div>
+  </a>
   </div>
 
   <div class="footer-nav">
