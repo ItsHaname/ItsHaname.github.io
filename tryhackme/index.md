@@ -543,6 +543,15 @@ body {
     32% Progress
   </div>
   </a>
+   <a href="#" class="room-card">
+  <img src="{{ site.baseurl }}/assets/images/curl.png" class="room-image">
+  <h3>Exploitation with cURL - Hoperation Eggsploit</h3>
+  <p class="room-description">The evil Easter bunnies operate a web control panel that holds the wormhole open. Using cURL, identify the endpoints, send the required requests, and shut the wormhole once and for all.</p>
+  <div class="status-badge done">
+        <span class="status-dot done"></span>
+        Done
+  </div>
+  </a>
   </div>
 
   <div class="footer-nav">
