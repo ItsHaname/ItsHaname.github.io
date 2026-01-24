@@ -419,7 +419,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   <div class="cve-grid">
     <!-- NotPetya - Add your Canva link in the href -->
-    <a href="YOUR_CANVA_LINK_HERE" target="_blank" class="cve-card">
+    <a href="https://www.canva.com/design/DAG_SuknGG4/0Hy_DdLaBnxiTEk-kHgBDg/edit?utm_content=DAG_SuknGG4&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" target="_blank" class="cve-card">
       <div class="cve-header">
         <span class="cve-id">CVE-2017-7494 </span>
         <span class="severity critical">Critical</span>
