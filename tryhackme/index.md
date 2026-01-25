@@ -552,6 +552,16 @@ body {
                 Done
             </div>
   </a>
+     <a href="https://www.canva.com/design/DAG_dOdT248/qnxPdLoJp4mogljHcgREzQ/edit?utm_content=DAG_dOdT248&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" class="room-card">
+  <img src="{{ site.baseurl }}/assets/images/sec.png" class="room-image">
+  <h3>Security Principles</h3>
+    <p class="room-description">Learn about the security triad and common security models and principles.</p>
+          <div class="status-badge done">
+                <span class="status-dot done"></span>
+                Done
+            </div>
+  </a>
+  /a>
      <a href="https://www.canva.com/design/DAG_boAdx-s/Ka6N7nbz_9HEEUa8KEPL7w/edit?utm_content=DAG_boAdx-s&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" class="room-card">
   <img src="{{ site.baseurl }}/assets/images/ing.png" class="room-image">
   <h3>Security Engineer Intro</h3>
