@@ -546,11 +546,20 @@ body {
    <a href="#" class="room-card">
   <img src="{{ site.baseurl }}/assets/images/curl.png" class="room-image">
   <h3>Exploitation with cURL - Hoperation Eggsploit</h3>
-  <p class="room-description">The evil Easter bunnies operate a web control panel that holds the wormhole open. Using cURL, identify the endpoints, send the required requests, and shut the wormhole once and for all.</p>
-  <div class="status-badge done">
-        <span class="status-dot done"></span>
-        Done
-  </div>
+    <p class="room-description">The evil Easter bunnies operate a web control panel that holds the wormhole open. Using cURL, identify the endpoints, send the required requests, and shut the wormhole once               and for all.</p>
+          <div class="status-badge done">
+                <span class="status-dot done"></span>
+                Done
+            </div>
+  </a>
+     <a href="https://www.canva.com/design/DAG_boAdx-s/Ka6N7nbz_9HEEUa8KEPL7w/edit?utm_content=DAG_boAdx-s&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" class="room-card">
+  <img src="{{ site.baseurl }}/assets/images/ing.png" class="room-image">
+  <h3>Security Engineer Intro</h3>
+    <p class="room-description">What does a day in the life of a security engineer look like?</p>
+          <div class="status-badge done">
+                <span class="status-dot done"></span>
+                Done
+            </div>
   </a>
   </div>
 
