@@ -690,6 +690,15 @@ body {
         Done
       </div>
     </a>
+    <a href="https://www.canva.com/design/DAG_pGzHXdk/bKGk2bqZ04byurvMZ3arcA/edit?utm_content=DAG_pGzHXdk&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" class="room-card">
+      <img src="{{ site.baseurl }}/assets/images/man.png" alt="Cryptography" class="room-image">
+      <h3>Identity and Access Management</h3>
+      <p class="room-description">Learn about identification, authentication, authorisation, accounting, and identity management.</p>
+      <div class="status-badge done">
+        <span class="status-dot done"></span>
+        Done
+      </div>
+    </a>
   </div>
 
   <!-- Navigation footer -->
