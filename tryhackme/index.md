@@ -717,6 +717,15 @@ body {
         Done
       </div>
     </a>
+    <a href="https://www.canva.com/design/DAHAqiiIml0/65HtqhiTowXaQDIjAkvjQQ/edit?utm_content=DAHAqiiIml0&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" class="room-card">
+      <img src="{{ site.baseurl }}/assets/images/risk.png" alt="Secure Network Architecture" class="room-image">
+      <h3>Risk Management</h3>
+      <p class="room-description">Learn about framing, assessing, responding, and monitoring risk.</p>
+      <div class="status-badge done">
+        <span class="status-dot done"></span>
+        Done
+      </div>
+    </a>
   </div>
 
   <!-- Navigation footer -->
