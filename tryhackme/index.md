@@ -726,6 +726,15 @@ body {
         Done
       </div>
     </a>
+    <a href="https://www.canva.com/design/DAHAzw1kY24/RymRpMvXZME69UpfU6BLJw/edit?utm_content=DAHAzw1kY24&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" class="room-card">
+      <img src="{{ site.baseurl }}/assets/images/risk.png" alt="Secure Network Architecture" class="room-image">
+      <h3>Virtualisation Basics</h3>
+      <p class="room-description">Learn why virtualisation powers modern IT, improving efficiency and safely isolating environments.</p>
+      <div class="status-badge done">
+        <span class="status-dot done"></span>
+        Done
+      </div>
+    </a>
   </div>
 
   <!-- Navigation footer -->
