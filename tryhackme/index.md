@@ -735,6 +735,15 @@ body {
         Done
       </div>
     </a>
+    <a href="https://www.canva.com/design/DAHA5yh_CRg/baGEylS-AsHKsvPaOBTB2w/edit?utm_content=DAHA5yh_CRg&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" class="room-card">
+      <img src="{{ site.baseurl }}/assets/images/owasp.png" alt="Secure Network Architecture" class="room-image">
+      <h3>OWASP Top 10 2025: IAAA Failures</h3>
+      <p class="room-description">Learn about A01, A07, and A09 in how they related to failures in the applied IAAA model..</p>
+      <div class="status-badge done">
+        <span class="status-dot done"></span>
+        Done
+      </div>
+    </a>
   </div>
 
   <!-- Navigation footer -->
