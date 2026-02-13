@@ -356,15 +356,6 @@ document.addEventListener('DOMContentLoaded', function() {
       <h3>VulHub CVE</h3>
       <p>Click here and let's break some containers</p>
     </a>
-
-    <!-- Other Labs -->
-  <a href="/my-lab/tor" class="lab-card">
-      <div class="lab-icon">
-        <img src="/assets/images/tor.png" alt="Other Labs">
-      </div>
-      <h3>Anonymity & Privacy</h3>
-        <p>Fresh to Tails. Let's see how deep the privacy rabbit hole goes.</p>
-    </a>
   </div>
 
   <!-- Construction Banner -->
